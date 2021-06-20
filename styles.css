@@ -56,7 +56,13 @@ footer {
 @media (max-width: 500px) {
     
     /* Show/Hide Menu on Small Devices */
-label[for="toggle"], #toggle, label[for="close"] {position:absolute; right:10px; z-index:4; cursor:pointer; font-size: 3em;
+label[for="toggle"], #toggle, label[for="close"] {
+    position:absolute; 
+    right:10px; 
+    top: 0;
+    z-index:4; 
+    cursor:pointer; 
+    font-size: 3em;
 	color: white;}
 #toggle:checked + label + #menu {z-index:3; opacity: 1; height: auto; visibility:visible; transition: transform 500ms ease;}
 #toggle:not(:checked) + label + #menu{z-index:3; opacity: 0; height: 0; visibility: hidden; transform: translateY(-180px); transition: transform 500ms ease; }
