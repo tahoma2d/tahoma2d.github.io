@@ -16,8 +16,10 @@ header, .temp {align-items: center;}
 nav ul, .temp {justify-content: space-around;}
 
 /* Dropdown menu */
-nav ul {list-style: none; }
-nav ul ul {position: absolute;  
+nav ul {list-style: none; 
+    padding-inline-start: 0;}
+nav ul ul {position: absolute; 
+    padding-inline-start: 0;
     border-radius: .5em;
     box-shadow: 0px 3px 3px rgba(0,0,0,.5);
 }
@@ -42,4 +44,34 @@ footer {
     position: relative; 
     top: -1em;
     text-align: center;
+}
+
+/* Button for Menu on Small Devices */
+#toggle {display:none; opacity:0;} 
+ label[for="toggle"] {opacity:0;}
+
+
+
+
+@media (max-width: 500px) {
+    
+    /* Show/Hide Menu on Small Devices */
+label[for="toggle"], #toggle, label[for="close"] {position:absolute; right:10px; z-index:4; cursor:pointer; font-size: 3em;
+	color: white;}
+#toggle:checked + label + #menu {z-index:3; opacity: 1; height: auto; visibility:visible; transition: transform 500ms ease;}
+#toggle:not(:checked) + label + #menu{z-index:3; opacity: 0; height: 0; visibility: hidden; transform: translateY(-180px); transition: transform 500ms ease; }
+#toggle:checked ~ label, label[for="close"]:not(:hover){ transform: rotateZ(45deg); transition: transform 500ms ease; }
+#toggle:not(:checked) ~ label {transition: transform 500ms ease;}
+label[for="close"]:hover {transform: rotateZ(135deg); transition: transform 500ms ease;}
+#toggle:not(:checked) ~ #menu, #toggle:checked ~ #menu{transform: none;  opacity: 1; height: auto; visibility:visible;} 
+    #menu {flex-flow: column; 
+        position: absolute; 
+        width: calc(100% - 2em); 
+        left: 0;
+        border-radius: .5em;
+        box-shadow: 0px 3px 3px rgba(0,0,0,.5);
+        padding: 1em;
+    }
+  label[for="toggle"] {opacity:1;}  
+    #menu ul {position: relative; box-shadow: 0px 0px 5px rgba(0,0,0,.5) inset;}
 }
