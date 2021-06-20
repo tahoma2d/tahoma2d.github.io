@@ -1,7 +1,11 @@
 /* Colors */
 body {background: #5c5a5a;}
 nav a, footer, .temp {color: white;}
-.orange {color: orange;}
+.orange,
+nav a:hover, nav a:focus {color: orange;}
+
+/* Fonts */
+body {font-family: 'Helvetica Neue', 'Rubrik', sans-serif;}
 
 
 /* Flexible Layout */
@@ -13,15 +17,27 @@ nav ul, .temp {justify-content: space-around;}
 
 /* Dropdown menu */
 nav ul {list-style: none; }
-nav ul ul {position: absolute;}
+nav ul ul {position: absolute;  
+    border-radius: .5em;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.5);
+}
 nav + ul + li {position: relative;}
 nav li ul {display: none; margin: 0; padding: 0;}
 nav li:hover ul, nav li:focus ul {display: block;}
 nav a {text-decoration: none; font-weight: bold;}
+nav ul ul li {border-bottom: transparent solid thin;}
+nav ul ul li:hover, nav ul ul li:focus {border-bottom: solid white thin;}
 
 /* Size/Spacing */
-body {min-height: 100vh; margin: 1em 1em 0 1em;}
+body {min-height: 100vh; 
+    margin: 1em 1em 0 1em;
+    box-sizing: border-box;
+}
 nav {width: 100%;}
+nav a {display: block;
+     width: 100%;
+    padding: .5em;
+}
 footer {
     position: relative; 
     top: -1em;
