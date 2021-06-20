@@ -1,0 +1,29 @@
+/* Colors */
+body {background: #5c5a5a;}
+nav a, footer, .temp {color: white;}
+.orange {color: orange;}
+
+
+/* Flexible Layout */
+body, header, nav ul, .temp {display: flex;}
+body {flex-flow: column;}
+main {flex-grow: 1;}
+header, .temp {align-items: center;}
+nav ul, .temp {justify-content: space-around;}
+
+/* Dropdown menu */
+nav ul {list-style: none; }
+nav ul ul {position: absolute;}
+nav + ul + li {position: relative;}
+nav li ul {display: none; margin: 0; padding: 0;}
+nav li:hover ul, nav li:focus ul {display: block;}
+nav a {text-decoration: none; font-weight: bold;}
+
+/* Size/Spacing */
+body {min-height: 100vh; margin: 1em 1em 0 1em;}
+nav {width: 100%;}
+footer {
+    position: relative; 
+    top: -1em;
+    text-align: center;
+}
