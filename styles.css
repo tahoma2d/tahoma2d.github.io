@@ -1,11 +1,21 @@
 /* Colors */
 
+
 body {
     background-color: #f9fafb;
     opacity: 1;
     background-image: radial-gradient(#d2d5d8 2px, transparent 2px), radial-gradient(#d2d5d8 2px, #f9fafb 2px);
     background-size: 80px 80px;
-    background-position: 0 0, 40px 40px;
+    background-position: 0 0, 40px 40px;}
+ 
+header, 
+#menu,
+#menu ul {
+    background: #5c5a5a;
+}
+
+footer {
+    background-color: #222F3E;
 }
 
 a {
@@ -19,7 +29,11 @@ a:hover {
 
 nav a,
 footer,
-.temp {
+.temp,
+label[for="toggle"],
+#toggle,
+label[for="close"] {
+    /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
 }
 
@@ -40,7 +54,7 @@ nav ul,
     display: flex;
 }
 
-body {
+body, #menu {
     flex-flow: column;
 }
 
@@ -64,12 +78,13 @@ nav ul,
 nav ul {
     list-style: none;
     padding-inline-start: 0;
+    margin: 0;
 }
 
 nav ul ul {
-    position: absolute;
     padding-inline-start: 0;
-    border-radius: 15px;
+    /* It is often better to use em as a unit rather than pixels as it is a more responsive unit */
+    border-radius: 1em;
     box-shadow: 0px 5px 0px #d62196;
     background-color: #222F3E;
 }
@@ -82,6 +97,7 @@ nav li ul {
     display: none;
     margin: 0;
     padding: 0;
+    width: calc(100% - 2em);
 }
 
 nav li:hover ul,
@@ -121,89 +137,129 @@ nav a {
     width: 100%;
     padding: .5em;
 }
+header {position: relative;}
 
 footer {
     position: relative;
     text-align: center;
     font-weight: bold;
-    background-color: #222F3E;
-    color: #FFFFFF;
-    padding: 15px;
+    /* Again, em is more responsive. */
+    padding: 1em;
 }
 
 
 /* Button for Menu on Small Devices */
 
+
+
+
+    /* Show/Hide Menu on Small Devices */
 #toggle {
     display: none;
     opacity: 0;
 }
 
-label[for="toggle"] {
-    opacity: 0;
-}
+label[for="toggle"],
+#toggle,
+label[for="close"] {
+    position: absolute;
+    right: 10px;
+    top: -.25em;
+    z-index: 4;
+    cursor: pointer;
+    font-size: 3em;
+    }
 
-@media (max-width: 500px) {
-    /* Show/Hide Menu on Small Devices */
-    label[for="toggle"],
-    #toggle,
-    label[for="close"] {
-        position: absolute;
-        right: 10px;
-        top: 0;
-        z-index: 4;
-        cursor: pointer;
-        font-size: 3em;
-        color: white;
+ #toggle:checked + label + #menu {
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    transition: transform 500ms ease;
     }
-    #toggle:checked+label+#menu {
-        z-index: 3;
-        opacity: 1;
-        height: auto;
-        visibility: visible;
-        transition: transform 500ms ease;
+
+#toggle:not(:checked) + label + #menu {
+    z-index: 3;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transform: translateY(-180px);
+    transition: transform 500ms ease;
     }
-    #toggle:not(:checked)+label+#menu {
-        z-index: 3;
+
+#toggle:checked + label,
+label[for="close"]:not(:hover) {
+    transform: rotateZ(45deg);
+    transition: transform 500ms ease;
+    }
+
+#toggle:not(:checked) + label {
+    transition: transform 500ms ease;
+    }
+
+label[for="close"]:hover {
+    transform: rotateZ(135deg);
+    transition: transform 500ms ease;
+    }
+   
+#menu {
+    flex-flow: column;
+    position: absolute;
+    width: 100%;
+    top: 38px;
+    left: 0;
+    border-radius: .5em;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+    padding: 1em;
+    }
+
+label[for="toggle"] {
+    opacity: 1;
+    }
+
+#menu ul {
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) inset;
+    }
+
+/* Style adjustments for larger screens */
+
+@media (min-width:500px) {
+    header {
+        position: fixed;
+        width: 100vw;
+    }
+    .home a {
+        width: 7.4em;
+    }
+    
+    label[for="toggle"] {
         opacity: 0;
-        height: 0;
-        visibility: hidden;
-        transform: translateY(-180px);
-        transition: transform 500ms ease;
-    }
-    #toggle:checked~label,
-    label[for="close"]:not(:hover) {
-        transform: rotateZ(45deg);
-        transition: transform 500ms ease;
-    }
-    #toggle:not(:checked)~label {
-        transition: transform 500ms ease;
-    }
-    label[for="close"]:hover {
-        transform: rotateZ(135deg);
-        transition: transform 500ms ease;
-    }
-    #toggle:not(:checked)~#menu,
-    #toggle:checked~#menu {
-        transform: none;
-        opacity: 1;
-        height: auto;
-        visibility: visible;
     }
     #menu {
-        flex-flow: column;
-        position: absolute;
-        width: calc(100% - 2em);
-        left: 0;
-        border-radius: .5em;
-        box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
-        padding: 1em;
-    }
-    label[for="toggle"] {
-        opacity: 1;
+        flex-flow: row;
+        border-radius: 0;
+        box-shadow: none;
+        top: 0;
+        left: auto;
+        position: relative;
+        padding: 0 1em;
     }
     #menu ul {
-        position: relative;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) inset;
+        position: absolute;
+    }
+
+    #toggle:not(:checked) + label + #menu,
+    #toggle:checked + label + #menu {
+        transform: none;
+        transition: none;
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+    
+    nav li ul {
+    padding: .5em;
+    width: auto;
     }
 }
