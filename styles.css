@@ -74,46 +74,54 @@ nav ul ul {
     background-color: #222F3E;
 }
 
-
-}
 nav+ul+li {
     position: relative;
 }
+
 nav li ul {
     display: none;
     margin: 0;
     padding: 0;
 }
+
 nav li:hover ul,
 nav li:focus ul {
     display: block;
 }
+
 nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
 nav ul ul li {
     border-bottom: transparent solid thin;
 }
+
 nav ul ul li:hover,
 nav ul ul li:focus {
     border-bottom: solid white thin;
 }
 
+
 /* Size/Spacing */
+
 body {
     min-height: 100vh;
     margin: auto;
     box-sizing: border-box;
 }
+
 nav {
     width: 100%;
 }
+
 nav a {
     display: block;
     width: 100%;
     padding: .5em;
 }
+
 footer {
     position: relative;
     text-align: center;
@@ -123,17 +131,20 @@ footer {
     padding: 15px;
 }
 
+
 /* Button for Menu on Small Devices */
+
 #toggle {
     display: none;
     opacity: 0;
 }
+
 label[for="toggle"] {
     opacity: 0;
 }
+
 @media (max-width: 500px) {
     /* Show/Hide Menu on Small Devices */
-    
     label[for="toggle"],
     #toggle,
     label[for="close"] {
@@ -145,7 +156,6 @@ label[for="toggle"] {
         font-size: 3em;
         color: white;
     }
-    
     #toggle:checked+label+#menu {
         z-index: 3;
         opacity: 1;
@@ -153,7 +163,6 @@ label[for="toggle"] {
         visibility: visible;
         transition: transform 500ms ease;
     }
-    
     #toggle:not(:checked)+label+#menu {
         z-index: 3;
         opacity: 0;
@@ -162,22 +171,18 @@ label[for="toggle"] {
         transform: translateY(-180px);
         transition: transform 500ms ease;
     }
-    
     #toggle:checked~label,
     label[for="close"]:not(:hover) {
         transform: rotateZ(45deg);
         transition: transform 500ms ease;
     }
-    
     #toggle:not(:checked)~label {
         transition: transform 500ms ease;
     }
-    
     label[for="close"]:hover {
         transform: rotateZ(135deg);
         transition: transform 500ms ease;
     }
-    
     #toggle:not(:checked)~#menu,
     #toggle:checked~#menu {
         transform: none;
@@ -185,7 +190,6 @@ label[for="toggle"] {
         height: auto;
         visibility: visible;
     }
-    
     #menu {
         flex-flow: column;
         position: absolute;
@@ -195,11 +199,9 @@ label[for="toggle"] {
         box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
         padding: 1em;
     }
-    
     label[for="toggle"] {
         opacity: 1;
     }
-    
     #menu ul {
         position: relative;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) inset;
