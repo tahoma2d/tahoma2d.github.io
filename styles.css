@@ -10,10 +10,6 @@ body {
  
 header, 
 #menu,
-#menu ul {
-    background: #5c5a5a;
-}
-
 footer {
     background-color: #222F3E;
 }
@@ -85,7 +81,7 @@ nav ul ul {
     padding-inline-start: 0;
     /* It is often better to use em as a unit rather than pixels as it is a more responsive unit */
     border-radius: 1em;
-    box-shadow: 0px 5px 0px #d62196;
+    box-shadow: 0px 5px 4px #d62196;
     background-color: #222F3E;
 }
 
@@ -209,7 +205,6 @@ label[for="close"]:hover {
     top: 38px;
     left: 0;
     border-radius: .5em;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
     padding: 1em;
     }
 
@@ -219,7 +214,6 @@ label[for="toggle"] {
 
 #menu ul {
     position: relative;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) inset;
     }
 
 /* Style adjustments for larger screens */
@@ -261,5 +255,9 @@ label[for="toggle"] {
     nav li ul {
     padding: .5em;
     width: auto;
+    }
+    
+    nav ul ul { 
+        box-shadow: 0px 5px 0px #d62196;
     }
 }
