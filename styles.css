@@ -27,8 +27,7 @@ nav a,
 footer,
 .temp,
 label[for="toggle"],
-#toggle,
-label[for="close"] {
+#toggle {
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
 }
@@ -160,8 +159,7 @@ footer {
 }
 
 label[for="toggle"],
-#toggle,
-label[for="close"] {
+#toggle {
     position: absolute;
     right: 10px;
     top: .08em;
@@ -188,18 +186,12 @@ label[for="close"] {
     transition: transform 500ms ease;
     }
 
-#toggle:checked + label,
-label[for="close"]:not(:hover) {
+#toggle:checked + label {
     transform: rotateZ(45deg);
     transition: transform 500ms ease;
     }
 
 #toggle:not(:checked) + label {
-    transition: transform 500ms ease;
-    }
-
-label[for="close"]:hover {
-    transform: rotateZ(135deg);
     transition: transform 500ms ease;
     }
    
@@ -232,6 +224,10 @@ label[for="toggle"] {
 
 #menu ul {
     position: relative;
+    }
+    
+.nopointer {
+    cursor: default;
     }
 
 /* Style adjustments for larger screens */
@@ -287,8 +283,5 @@ label[for="toggle"] {
     #menu li li a {
         padding: .5em;
     }
-    
-    .nopointer {
-        cursor: default;
-    }
+
 }
