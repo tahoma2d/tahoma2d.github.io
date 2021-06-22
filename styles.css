@@ -93,7 +93,7 @@ nav li ul {
     display: none;
     margin: 0;
     padding: 0;
-    width: calc(100% - 2em);
+    width: 100%;
 }
 
 nav li:hover ul,
@@ -118,10 +118,14 @@ nav ul ul li:focus {
 
 /* Size/Spacing */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     min-height: 100vh;
     margin: auto;
-    box-sizing: border-box;
+    position: relative;
 }
 
 nav {
@@ -160,10 +164,11 @@ label[for="toggle"],
 label[for="close"] {
     position: absolute;
     right: 10px;
-    top: -.25em;
+    top: .08em;
     z-index: 4;
     cursor: pointer;
     font-size: 3em;
+    line-height: .6em;
     }
 
  #toggle:checked + label + #menu {
@@ -202,11 +207,24 @@ label[for="close"]:hover {
     flex-flow: column;
     position: absolute;
     width: 100%;
-    top: 38px;
+    top: 37px;
     left: 0;
     border-radius: .5em;
-    padding: 1em;
+    padding: 0;
     }
+
+#menu > li > a {
+    padding: .5em 1em;
+}
+#menu > li:first-child > a {
+    padding-top: 1em;
+}
+#menu > li:last-child > a {
+    padding-bottom: 1em;
+}
+#menu li li a {
+    padding: .5em 2em;
+}
 
 label[for="toggle"] {
     opacity: 1;
@@ -218,13 +236,13 @@ label[for="toggle"] {
 
 /* Style adjustments for larger screens */
 
-@media (min-width:500px) {
+@media (min-width:558px) {
     header {
         position: fixed;
         width: 100vw;
     }
     .home a {
-        width: 7.4em;
+        width: 7.5em;
     }
     
     label[for="toggle"] {
@@ -259,5 +277,18 @@ label[for="toggle"] {
     
     nav ul ul { 
         box-shadow: 0px 5px 0px #d62196;
+    }
+    
+    #menu > li:first-child > a,
+    #menu > li:last-child > a, 
+    .home a {
+        padding: .5em 1em;
+    }
+    #menu li li a {
+        padding: .5em;
+    }
+    
+    .nopointer {
+        cursor: default;
     }
 }
