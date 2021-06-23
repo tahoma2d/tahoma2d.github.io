@@ -10,7 +10,7 @@ body {
  
 header, 
 #menu,
-footer {
+footer, section:nth-of-type(odd) {
     background-color: #222F3E;
 }
 
@@ -19,15 +19,20 @@ a {
     text-decoration: underline;
 }
 
+#intro div {
+    background: #4c4e4e;
+    box-shadow: 0 0 4px 4px #4c4e4e;
+}
+
 a:hover {
     text-decoration: none;
 }
 
 nav a,
 footer,
-.temp,
 label[for="toggle"],
-#toggle {
+#toggle,
+#intro {
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
 }
@@ -38,6 +43,12 @@ label[for="toggle"],
 body {
     font-family: 'Rubik', sans-serif;
 }
+#intro h1 {
+    font-size: 7.5vw;
+    font-weight:900;
+    margin: 0;
+}
+#intro p {font-size: 3vw;}
 
 
 /* Flexible Layout */
@@ -45,11 +56,14 @@ body {
 body,
 header,
 nav ul,
-.temp {
+.flex,
+#intro div {
     display: flex;
 }
 
-body, #menu {
+body, 
+#menu,
+#intro div {
     flex-flow: column;
 }
 
@@ -57,14 +71,17 @@ main {
     flex-grow: 1;
 }
 
-header,
-.temp {
+header {
     align-items: center;
 }
 
-nav ul,
-.temp {
+nav ul {
     justify-content: space-around;
+}
+
+#intro div {
+    justify-content: center;
+    align-items: flex-start;
 }
 
 
@@ -102,7 +119,7 @@ nav li:focus ul {
 
 nav a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav ul ul li {
@@ -136,7 +153,10 @@ nav a {
     width: 100%;
     padding: .5em;
 }
-header {position: relative;}
+header {
+    position: relative;
+    z-index: 2;
+}
 
 footer {
     position: relative;
@@ -146,6 +166,25 @@ footer {
     padding: 1em;
 }
 
+#intro * {
+    margin: 0;
+}
+
+#intro {
+    padding: 5vw;
+    padding-left: 0;
+}
+
+#intro div {
+    padding: 0 2vw 0 14vw;
+}
+
+#intro img {
+    position: relative;
+    left: 12vw;
+    width:40%;
+    z-index: 1;
+}
 
 /* Button for Menu on Small Devices */
 
