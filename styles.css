@@ -10,7 +10,9 @@ body {
  
 header, 
 #menu,
-footer, section:nth-of-type(odd) {
+footer, 
+section:nth-of-type(odd),
+#compare li{
     background-color: #222F3E;
 }
 
@@ -23,18 +25,42 @@ a {
     background: #4c4e4e;
     box-shadow: 0 0 4px 4px #4c4e4e;
 }
-
-a:hover {
-    text-decoration: none;
-}
+.dash {color: #d62196;}
 
 nav a,
 footer,
 label[for="toggle"],
 #toggle,
-#intro {
+#intro,
+#system,
+#compare ul,
+#faq h2
+{
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
+}
+
+#faq article {
+    background: white;
+}
+
+#intro {
+    background: url(img/backgrounds/header_bg.png);
+}
+
+#system {
+    background: url(img/backgrounds/system_bg.png); 
+}
+
+#faq {
+    background: url(img/backgrounds/footer_bg.png);
+}
+
+#system,
+#intro,
+#faq {
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -48,8 +74,24 @@ body {
     font-weight:900;
     margin: 0;
 }
+
+h2 {
+    font-size: 4.5vw;
+}
+
 #intro p {font-size: 3vw;}
 
+.nomarker {list-style: none;}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bold {font-weight: 600;}
+
+#compare li {
+    border-radius: .2em;
+}
 
 /* Flexible Layout */
 
@@ -57,13 +99,19 @@ body,
 header,
 nav ul,
 .flex,
-#intro div {
+#intro div,
+#system,
+#compare,
+#features,
+#faq {
     display: flex;
 }
 
 body, 
 #menu,
-#intro div {
+#intro div,
+#system,
+#faq {
     flex-flow: column;
 }
 
@@ -71,17 +119,28 @@ main {
     flex-grow: 1;
 }
 
-header {
+header,
+#system, 
+#compare,
+#features,
+#faq {
     align-items: center;
 }
 
-nav ul {
+nav ul,
+#system,
+#compare,
+#features,
+#faq {
     justify-content: space-around;
 }
 
 #intro div {
     justify-content: center;
     align-items: flex-start;
+}
+#compare {
+    flex-wrap: wrap;
 }
 
 
@@ -130,6 +189,8 @@ nav ul ul li:hover,
 nav ul ul li:focus {
     border-bottom: solid white thin;
 }
+
+.emphasize {font-style: italic; }
 
 
 /* Size/Spacing */
@@ -186,10 +247,37 @@ footer {
     z-index: 1;
 }
 
-/* Button for Menu on Small Devices */
+section {
+    padding-bottom: 2em;
+}
 
+#compare h2 {
+    width:100%;
+    text-align: center;
+}
 
+#compare figure,
+#compare ul {
+    width: 80%;
+}
 
+#compare img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+#compare ul {
+    margin: 0;
+    padding: 0;
+}
+
+#compare li {
+    margin: .5em;
+    padding: .2em .5em;
+    width: fit-content;
+}
+
+#faq ol {margin-left: .5em;}
 
     /* Show/Hide Menu on Small Devices */
 #toggle {
@@ -253,7 +341,8 @@ label[for="toggle"],
 #menu > li:last-child > a {
     padding-bottom: 1em;
 }
-#menu li li a {
+#menu li li a,
+#faq p {
     padding: .5em 2em;
 }
 
@@ -268,6 +357,36 @@ label[for="toggle"] {
 .nopointer {
     cursor: default;
     }
+
+/* Expand or Close FAQ */
+#faq input {display: none;}
+#faq input:not(:checked) ~ p,
+#faq input:not(:checked) ~ ol
+{display: none;}
+#faq input:checked ~ p {display: block;}
+#faq input:not(:checked) + label .open,
+#faq input:checked + label .close {
+    display:block;
+}
+#faq input:not(:checked) + label .close,
+#faq input:checked + label .open {
+    display:none;
+}
+#faq .close,
+#faq .open {
+    position: absolute;
+    right: .5em;
+    top:.5em;
+}
+#faq label {width:100%;}
+#faq article {
+    position: relative;
+    padding: .5em 1em;
+    padding-right: 1.5em;
+    width: 80%;
+    margin: .5em;
+    border-radius: .5em;
+}
 
 /* Style adjustments for larger screens */
 
@@ -321,6 +440,12 @@ label[for="toggle"] {
     }
     #menu li li a {
         padding: .5em;
+    }
+    
+    #compare ul,
+    #compare figure
+    {
+        width: 40%;
     }
 
 }
