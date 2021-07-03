@@ -47,7 +47,8 @@ label[for="toggle"],
 #features figcaption,
 #features label,
 #windows,
-#linux
+#linux,
+#plugins
 {
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
@@ -57,7 +58,8 @@ label[for="toggle"],
 
 #faq label,
 #faq div,
-#download figure {
+#download figure,
+#plugins a:link{
     background: white;
 }
 
@@ -71,7 +73,8 @@ label[for="toggle"],
     background: url(img/backgrounds/system_bg.png); 
 }
 
-#faq {
+#faq,
+#plugins {
     background: url(img/backgrounds/footer_bg.png);
 }
 
@@ -79,7 +82,8 @@ label[for="toggle"],
 #intro,
 #faq,
 #windows,
-#linux {
+#linux,
+#plugins {
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -90,11 +94,15 @@ nav label {text-shadow: 0 0 2px rgba(0,0,0,1);}
 #download a:focus img {filter:hue-rotate(287deg) brightness(.8);}
 #download figure:hover {opacity: .9;}
 
-#plugins a { 
+#plugins a,
+#nightly a { 
     box-shadow: 0px 3px 2px #d62196;
     background-color: #222F3E;
 }
-#plugins a:hover {
+#plugins a:hover,
+#plugins a:focus
+#nightly a:hover,
+#nightly a:focus {
     opacity: .9;
 }
 /* Fonts */
@@ -150,7 +158,8 @@ nav ul,
 #mac,
 #windows,
 #download aside,
-#plugins {
+#plugins,
+#nightly {
     display: flex;
 }
 
@@ -160,7 +169,8 @@ body,
 #system,
 #faq,
 #features,
-#download aside {
+#download aside,
+#nightly {
     flex-flow: column;
 }
 
@@ -180,7 +190,8 @@ header,
 #linux,
 #windows,
 #download aside,
-#plugins {
+#plugins,
+#nightly {
     align-items: center;
 }
 
@@ -201,7 +212,8 @@ nav ul,
 }
 
 #intro div,
-#linux,{
+#linux,
+#nightly {
     justify-content: center;}
 
 #intro div
@@ -446,6 +458,14 @@ section {
     width: 100%;
     text-align: center;
 }
+
+#nightly a {
+    padding: 1em;
+    text-align: center;
+    border-radius: .5em;
+}
+
+#download p {margin: 1em 5vw;}
 
     /* Show/Hide Menu on Small Devices */
 #toggle {
