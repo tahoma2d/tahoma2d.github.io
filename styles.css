@@ -159,7 +159,8 @@ nav ul,
 #windows,
 #download aside,
 #plugins,
-#nightly {
+#nightly,
+#mac div{
     display: flex;
 }
 
@@ -191,7 +192,8 @@ header,
 #windows,
 #download aside,
 #plugins,
-#nightly {
+#nightly,
+#mac div {
     align-items: center;
 }
 
@@ -207,7 +209,8 @@ nav ul,
 #linux,
 #windows,
 #download aside,
-#plugins {
+#plugins,
+#mac div {
     justify-content: space-around;
 }
 
@@ -225,7 +228,8 @@ nav ul,
 #mac,
 #linux,
 #windows,
-#plugins {
+#plugins,
+#mac div {
     flex-wrap: wrap;
 }
 
@@ -695,5 +699,6 @@ label[for="toggle"] {
     }
     #download a {width: 20%;}
     #download aside {width:60%;}
+    #mac div {flex-flow: row-reverse;}
 
 }
