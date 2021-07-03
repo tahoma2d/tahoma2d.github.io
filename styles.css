@@ -50,6 +50,8 @@ label[for="toggle"],
     color: #ffffff;
 }
 
+#compare h3 {color: black;}
+
 #faq label,
 #faq div {
     background: white;
@@ -364,6 +366,11 @@ section {
     margin-top: .5em;
     border-radius: .3em;
     padding: .4em;
+}
+
+#compare h3 {
+    width: 100%;
+    text-align: center;
 }
 
     /* Show/Hide Menu on Small Devices */
