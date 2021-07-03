@@ -16,7 +16,8 @@ section:nth-of-type(odd),
 #compare li,
 #features figcaption,
 #features .left,
-#features .right {
+#features .right,
+#mac a figure {
     background-color: #222F3E;
 }
 
@@ -44,7 +45,9 @@ label[for="toggle"],
 #compare ul,
 #faq h2,
 #features figcaption,
-#features label
+#features label,
+#windows,
+#linux
 {
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
@@ -53,15 +56,18 @@ label[for="toggle"],
 #compare h3 {color: black;}
 
 #faq label,
-#faq div {
+#faq div,
+#download figure {
     background: white;
 }
 
-#intro {
+#intro,
+#windows {
     background: url(img/backgrounds/header_bg.png);
 }
 
-#system {
+#system,
+#linux  {
     background: url(img/backgrounds/system_bg.png); 
 }
 
@@ -71,12 +77,18 @@ label[for="toggle"],
 
 #system,
 #intro,
-#faq {
+#faq,
+#windows,
+#linux {
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 nav label {text-shadow: 0 0 2px rgba(0,0,0,1);}
+
+#download a:hover img,
+#download a:focus img {filter:hue-rotate(287deg) brightness(.8);}
+#download figure:hover {opacity: .9;}
 
 /* Fonts */
 
@@ -97,7 +109,7 @@ h2 {
 
 .nomarker {list-style: none;}
 
-a:hover {
+a:hover, a:focus {
     text-decoration: none;
 }
 
@@ -112,6 +124,9 @@ a:hover {
 #features .left,
 #features .right {font-size: 6vw;}
 
+#download figure {margin: 0;}
+#download figcaption {text-align: center;}
+
 /* Flexible Layout */
 
 body,
@@ -123,7 +138,11 @@ nav ul,
 #compare,
 #features,
 #faq,
-#features figure {
+#features figure,
+#linux,
+#mac,
+#windows,
+#download aside {
     display: flex;
 }
 
@@ -132,7 +151,8 @@ body,
 #intro div,
 #system,
 #faq,
-#features {
+#features,
+#download aside {
     flex-flow: column;
 }
 
@@ -147,7 +167,11 @@ header,
 #faq,
 #features figure, 
 #features .left,
-#features .right {
+#features .right,
+#mac,
+#linux,
+#windows,
+#download aside {
     align-items: center;
 }
 
@@ -158,16 +182,27 @@ nav ul,
 #faq,
 #features figure,
 #features .left,
-#features .right{
+#features .right,
+#mac,
+#linux,
+#windows,
+#download aside {
     justify-content: space-around;
 }
 
-#intro div {
-    justify-content: center;
+#intro div,
+#linux {
+    justify-content: center;}
+
+#intro div
+{
     align-items: flex-start;
 }
 #compare,
-#features figure {
+#features figure,
+#mac,
+#linux,
+#windows {
     flex-wrap: wrap;
 }
 
@@ -283,7 +318,8 @@ section {
 }
 
 #compare h2,
-#features h2 {
+#features h2,
+#download h2{
     width:100%;
     text-align: center;
 }
@@ -372,6 +408,18 @@ section {
     width: 100%;
     text-align: center;
 }
+
+#download figure {width:100%; max-width: 450px;}
+#download img,
+#download figcaption {
+    width:100%;
+}
+#download figure {
+    position: relative;
+    border-radius: 1em;
+}
+
+#download a { width: 50%;}
 
     /* Show/Hide Menu on Small Devices */
 #toggle {
@@ -599,5 +647,7 @@ label[for="toggle"] {
     {
         width: 40%;
     }
+    #download a {width: 20%;}
+    #download aside {width:60%;}
 
 }
