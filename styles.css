@@ -90,6 +90,13 @@ nav label {text-shadow: 0 0 2px rgba(0,0,0,1);}
 #download a:focus img {filter:hue-rotate(287deg) brightness(.8);}
 #download figure:hover {opacity: .9;}
 
+#plugins a { 
+    box-shadow: 0px 3px 2px #d62196;
+    background-color: #222F3E;
+}
+#plugins a:hover {
+    opacity: .9;
+}
 /* Fonts */
 
 body {
@@ -142,7 +149,8 @@ nav ul,
 #linux,
 #mac,
 #windows,
-#download aside {
+#download aside,
+#plugins {
     display: flex;
 }
 
@@ -171,7 +179,8 @@ header,
 #mac,
 #linux,
 #windows,
-#download aside {
+#download aside,
+#plugins {
     align-items: center;
 }
 
@@ -186,12 +195,13 @@ nav ul,
 #mac,
 #linux,
 #windows,
-#download aside {
+#download aside,
+#plugins {
     justify-content: space-around;
 }
 
 #intro div,
-#linux {
+#linux,{
     justify-content: center;}
 
 #intro div
@@ -202,7 +212,8 @@ nav ul,
 #features figure,
 #mac,
 #linux,
-#windows {
+#windows,
+#plugins {
     flex-wrap: wrap;
 }
 
@@ -254,6 +265,8 @@ nav ul ul li:focus {
 }
 
 .emphasize {font-style: italic; }
+#plugins a { text-align: center;
+}
 
 
 /* Size/Spacing */
@@ -420,6 +433,19 @@ section {
 }
 
 #download a { width: 50%;}
+
+#plugins a { 
+    width: 30vw;
+    padding: 1em;
+    border-radius: .5em;
+    display: block;
+    margin-bottom: 2em;
+}
+
+#plugins p {
+    width: 100%;
+    text-align: center;
+}
 
     /* Show/Hide Menu on Small Devices */
 #toggle {
