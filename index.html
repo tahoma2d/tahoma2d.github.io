@@ -68,6 +68,73 @@
             <h2>
                <span class="dash">-</span> Features <span class="dash">-</span>
             </h2>
+            <input type="radio" name="features" id="brush" checked>
+            <input type="radio" name="features" id="palettes">
+            <input type="radio" name="features" id="type">
+            <input type="radio" name="features" id="sync">
+            <input type="radio" name="features" id="sfx">
+            <label for="brush">
+                <span class="left">&lang;</span>
+                <span class="right">&rang;</span>
+            </label>
+            <label for="palettes">
+                <span class="left">&lang;</span>
+                <span class="right">&rang;</span>
+            </label>
+            <label for="type">
+                <span class="left">&lang;</span>
+                <span class="right">&rang;</span>
+            </label>
+            <label for="sync">
+                <span class="left">&lang;</span>
+                <span class="right">&rang;</span>
+            </label>
+            <label for="sfx">
+                <span class="left">&lang;</span>
+                <span class="right">&rang;</span>
+            </label>
+            
+            <figure id="brushes">
+                <img src="img/gifs/rodney.png" alt="The example image should display" title="Example of brushwork in Tahoma2D by Rodney" style="max-width: 800px;">
+                <img src="img/screenshots/brushs.png" alt="The example image should display" title="Example of brushes in Tahoma2D" style="max-width: 442px;">
+                <figcaption>
+                    A variety of brushes for different tastes
+                </figcaption>
+            </figure>
+            <figure id="palette">
+                <img src="img/screenshots/palette.png" alt="The example image should display" title="Example of brushwork in Tahoma2D" style="max-width: 442px;">
+                <img src="img/gifs/rattus.gif" alt="The example image should display" title="Example animation made in Tahoma2D by Rattus" style="max-width: 800px;">
+                <figcaption>
+                    Palettes for organizing and animating colors/styles
+                </figcaption>
+            </figure>
+            <figure id="types">
+                <img src="img/gifs/jerhenning-1.gif" alt="The example image should display" title="Example of cut out animation in Tahoma2D by Jerhenning" style="max-width: 800px;">
+                
+                <img src="img/gifs/jerhenning-2.gif" alt="The example image should display" title="Example of stop motion in Tahoma2D by Jerhenning" style="max-width: 800px;">
+                <figcaption>
+                    Cut Out Animation
+                </figcaption>
+                <figcaption>
+                    Stop Motion Animation
+                </figcaption>
+            </figure>
+            <figure id="lipsync">
+                <img src="img/gifs/pikhosh-1.gif" alt="The example image should display" title="Example of lip-synching in Tahoma2D by Pikhosh" style="max-width: 800px;">
+                
+                <img src="img/screenshots/lip_sync.png" alt="The example image should display" title="Example of lipsync window in Tahoma2D" style="max-width: 442px;">
+                <figcaption>
+                    Automated lip-syching with Rhubarb Lip Sync
+                </figcaption>
+            </figure>
+            <figure id="fx">
+                <img src="img/gifs/pikhosh-2.gif" alt="The example image should display" title="Example of FX at work in Tahoma2D by Pikhosh" style="max-width: 800px;">
+                
+                <img src="img/screenshots/fx.png" alt="The example image should display" title="Example of FX nodes" style="max-width: 442px;">
+                <figcaption>
+                    Special FX
+                </figcaption>
+            </figure>
         </section>
         <section id="system">
            <h2>
@@ -102,16 +169,15 @@
                 <img src="img/screenshots/tahoma2d_ui.png" alt="The UI image is missing" title="Example of Tahoma2D's UI" style="max-width:1680px;" class="sideimg">
             </figure>
             <ul class="nomarker">
-                <li>
-                    + &nbsp;The simplified workspace
+                <li> &nbsp;The simplified workspace
                 </li>
-                <li>+ &nbsp;Easier project management</li>
-                <li>+ &nbsp;Rhubarb Lip Sync integration for automatic lip syncing</li>
-                <li>+ &nbsp;Perspective guides and grids for precision drawing</li>
-                <li>+ &nbsp;A status bar with helpful hints for new users</li>
-                <li>+ &nbsp;No additional libraries needed to export in common formats like mp4 and gif</li>
-                <li>+ &nbsp;Support for Canon DSLR cameras on macOS - not just Windows</li>
-                <li>+ &nbsp;And many more small quality of life improvements</li>
+                <li> &nbsp;Easier project management</li>
+                <li> &nbsp;Rhubarb Lip Sync integration for automatic lip syncing</li>
+                <li> &nbsp;Perspective guides and grids for precision drawing</li>
+                <li> &nbsp;A status bar with helpful hints for new users</li>
+                <li> &nbsp;No additional libraries needed to export in common formats like mp4 and gif</li>
+                <li> &nbsp;Support for Canon DSLR cameras on macOS - not just Windows</li>
+                <li> &nbsp;And many more small quality of life improvements</li>
             </ul>
         </section>
         <section id="faq">
@@ -121,15 +187,20 @@
             <article><input type="checkbox" name="faq" id="bug">
                 <label for="bug">I found a bug in the software. How can I report it?
                 <span class="open">&or;</span><span class="close">&and;</span></label>
-                <p>If this is an unreported issue, create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues/new?assignees=&labels=bug&template=bug_report.md&title=" target="_blank">to start a new issue</a>.</p>
-                <p>The more information you can add <span class="emphasize">(ie. screenshots, screencaptures, crash reports, and/or repeatable steps)</span>, the more likely it is that a developer will be able to fix the problem in a timely manner.</p>
-                <p>If there is already <a href="https://github.com/tahoma2d/tahoma2d/issues" target="_blank">an existing bug report</a> for the same issue, please add more information to it instead of creating a new issue.</p>
+                <div>
+                    <p>If this is an unreported issue, create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues/new?assignees=&labels=bug&template=bug_report.md&title=" target="_blank">to start a new issue</a>.</p>
+                    <p>The more information you can add <span class="emphasize">(ie. screenshots, screencaptures, crash reports, and/or repeatable steps)</span>, the more likely it is that a developer will be able to fix the problem in a timely manner.</p>
+                    <p>If there is already <a href="https://github.com/tahoma2d/tahoma2d/issues" target="_blank">an existing bug report</a> for the same issue, please add more information to it instead of creating a new issue.</p>
+                </div>
             </article>
              <article><input type="checkbox" name="faq" id="request">
                 <label for="request">I have an idea for a new feature. How can I send it to you?
                 <span class="open">&or;</span><span class="close">&and;</span></label>
-                <p>
-                    Create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues"> to submit a feature request.</a></p>
+                <div>
+                    <p>
+                    Create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues"> to submit a feature request.</a>
+                    </p>
+                </div>
             </article>
              <article><input type="checkbox" name="faq" id="upgrade">
                  <label for="upgrade">
@@ -137,19 +208,21 @@
                     <span class="open">&or;</span>
                     <span class="close">&and;</span>
                  </label>
-                <p>Tahoma2D are portables so you can still keep prior versions around if you want. Just put the Tahoma2D 1.2 folder in a different place, or rename the old version's folder <span class="emphasize">(ie: "Tahoma2D" -> "Tahoma2D 1.1")</span>. On macOS, rename the Tahoma2D app instead <span class="emphasize">(ie. "Tahoma2D.app" -> "Tahoma2D 1.1.app")</span>.</p>
-                 <p>Transfering all your settings and configurations from v1.x to v1.2 is easy with the following steps:</p>
-                 <ol>
-                     <li>Open the latest version of Tahoma2D</li>
-                     <li>Go to File -> Preferences</li>
-                     <li>Click on the "Import Preferences" button</li>
-                     <li>Select the Tahoma2D v1.x folder, wherever you placed it</li>
-                     <li>Select all the things you want to bring over
-                         <ul><li>Please do not migrate Plugins</li></ul>
-                     </li>
-                     <li>Click the "Import" button</li>
-                     <li>Close and restart Tahoma2d 1.2</li>
-                 </ol>
+                 <div>
+                    <p>Tahoma2D are portables so you can still keep prior versions around if you want. Just put the Tahoma2D 1.2 folder in a different place, or rename the old version's folder <span class="emphasize">(ie: "Tahoma2D" -> "Tahoma2D 1.1")</span>. On macOS, rename the Tahoma2D app instead <span class="emphasize">(ie. "Tahoma2D.app" -> "Tahoma2D 1.1.app")</span>.</p>
+                    <p>Transfering all your settings and configurations from v1.x to v1.2 is easy with the following steps:</p>
+                     <ol>
+                         <li>Open the latest version of Tahoma2D</li>
+                         <li>Go to File -> Preferences</li>
+                         <li>Click on the "Import Preferences" button</li>
+                         <li>Select the Tahoma2D v1.x folder, wherever you placed it</li>
+                         <li>Select all the things you want to bring over
+                             <ul><li>Please do not migrate Plugins</li></ul>
+                         </li>
+                         <li>Click the "Import" button</li>
+                         <li>Close and restart Tahoma2d 1.2</li>
+                     </ol>
+                 </div>
             </article>
         </section>
     </main>

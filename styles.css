@@ -12,7 +12,10 @@ header,
 #menu,
 footer, 
 section:nth-of-type(odd),
-#compare li{
+#compare li,
+#features figcaption,
+#features .left,
+#features .right {
     background-color: #222F3E;
 }
 
@@ -21,11 +24,15 @@ a {
     text-decoration: underline;
 }
 
-#intro div {
-    background: #4c4e4e;
-    box-shadow: 0 0 4px 4px #4c4e4e;
-}
 .dash {color: #d62196;}
+
+#faq div {
+    color: rgba(0,0,0,.55);
+}
+
+#features img {
+    border: solid thick #4c4e4e;
+}
 
 nav a,
 footer,
@@ -34,13 +41,16 @@ label[for="toggle"],
 #intro,
 #system,
 #compare ul,
-#faq h2
+#faq h2,
+#features figcaption,
+#features label
 {
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
 }
 
-#faq article {
+#faq label,
+#faq div {
     background: white;
 }
 
@@ -91,7 +101,12 @@ a:hover {
 
 #compare li {
     border-radius: .2em;
+    list-style-type: circle;
+    list-style-position: inside;
 }
+
+#features .left,
+#features .right {font-size: 2vw;}
 
 /* Flexible Layout */
 
@@ -103,7 +118,8 @@ nav ul,
 #system,
 #compare,
 #features,
-#faq {
+#faq,
+#features figure {
     display: flex;
 }
 
@@ -111,7 +127,8 @@ body,
 #menu,
 #intro div,
 #system,
-#faq {
+#faq,
+#features {
     flex-flow: column;
 }
 
@@ -123,7 +140,10 @@ header,
 #system, 
 #compare,
 #features,
-#faq {
+#faq,
+#features figure, 
+#features .left,
+#features .right {
     align-items: center;
 }
 
@@ -131,7 +151,10 @@ nav ul,
 #system,
 #compare,
 #features,
-#faq {
+#faq,
+#features figure,
+#features .left,
+#features .right{
     justify-content: space-around;
 }
 
@@ -139,7 +162,8 @@ nav ul,
     justify-content: center;
     align-items: flex-start;
 }
-#compare {
+#compare,
+#features figure {
     flex-wrap: wrap;
 }
 
@@ -238,12 +262,14 @@ footer {
 
 #intro div {
     padding: 0 2vw 0 14vw;
+    width: 56vw;
 }
 
 #intro img {
     position: relative;
     left: 12vw;
-    width:40%;
+    width:30%;
+    height: 30%;
     z-index: 1;
 }
 
@@ -251,7 +277,8 @@ section {
     padding-bottom: 2em;
 }
 
-#compare h2 {
+#compare h2,
+#features h2 {
     width:100%;
     text-align: center;
 }
@@ -278,6 +305,63 @@ section {
 }
 
 #faq ol {margin-left: .5em;}
+
+#features img,
+#features #types figcaption {
+    width:48%;
+}
+
+#features img {
+    border-radius: .6em;
+}
+
+#features .left,
+#features .right {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+#features figure {
+    width: 90vw;
+}
+
+#features .left {border-radius: 0 .5vw .5vw 0;}
+
+#features .right {border-radius: .5vw 0 0 .5vw;}
+
+#brushes img:first-of-type {
+    width: 60%;
+}
+#brushes img:last-of-type{
+    width: 37%;
+}
+
+#palette img:last-of-type,
+#fx img:first-of-type {
+    width: 59%;
+}
+#palette img:first-of-type,
+#fx img:last-of-type
+{
+    width: 38%;
+}
+
+#lipsync img:first-of-type {
+    width:56%;
+}
+
+#lipsync img:last-of-type {
+    width:40%;
+}
+
+
+#features figcaption {
+    width: 100%;
+    text-align: center;
+    margin-top: .5em;
+    border-radius: .3em;
+    padding: .4em;
+}
 
     /* Show/Hide Menu on Small Devices */
 #toggle {
@@ -343,7 +427,7 @@ label[for="toggle"],
 }
 #menu li li a,
 #faq p {
-    padding: .5em 2em;
+    padding: .2em 2em;
 }
 
 label[for="toggle"] {
@@ -360,10 +444,9 @@ label[for="toggle"] {
 
 /* Expand or Close FAQ */
 #faq input {display: none;}
-#faq input:not(:checked) ~ p,
-#faq input:not(:checked) ~ ol
+#faq input:not(:checked) ~ div
 {display: none;}
-#faq input:checked ~ p {display: block;}
+#faq input:checked ~ div {display: block;}
 #faq input:not(:checked) + label .open,
 #faq input:checked + label .close {
     display:block;
@@ -378,14 +461,72 @@ label[for="toggle"] {
     right: .5em;
     top:.5em;
 }
-#faq label {width:100%;}
-#faq article {
-    position: relative;
-    padding: .5em 1em;
+#faq label {
+    display: block;
+    width:100%;
+    margin-bottom: .5em;
     padding-right: 1.5em;
+}
+#faq article {
     width: 80%;
     margin: .5em;
+    
+}
+#faq div,
+#faq label {
+    position: relative;
+    width:100%;
+    padding: .5em 1em;
     border-radius: .5em;
+}
+
+/* Featured Slideshow */
+
+#features input,
+#features label .right,
+#features label .left {
+    display: none;
+    position: absolute;
+}
+#features label .right {
+    right: 0em;
+    top: 50%;
+}
+#features label .left {
+    left: 0em;
+    top: 50%;
+}
+#features {position: relative;}
+
+#brush:checked ~ #brushes,
+#palettes:checked ~ #palette,
+#sfx:checked ~ #fx,
+#type:checked ~ #types,
+#sync:checked ~ #lipsync{
+    display: flex;
+}
+
+#brush:checked ~ label[for="sfx"] .left,
+#brush:checked ~ label[for="palettes"] .right, 
+#palettes:checked ~ label[for="brush"] .left, 
+#palettes:checked ~ label[for="type"] .right,
+#type:checked ~ label[for="palettes"] .left, 
+#type:checked ~ label[for="sync"] .right,
+#sync:checked ~ label[for="type"] .left, 
+#sync:checked ~ label[for="sfx"] .right,
+#sfx:checked ~ label[for="sync"] .left, 
+#sfx:checked ~ label[for="brush"] .right
+{
+    display: flex;
+}
+
+ 
+#brush:not(:checked) ~ #brushes,
+#palettes:not(:checked) ~ #palette,
+#sfx:not(:checked) ~ #fx,
+#type:not(:checked) ~ #types,
+#sync:not(:checked) ~ #lipsync{
+    display: none;
 }
 
 /* Style adjustments for larger screens */
