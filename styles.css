@@ -8,7 +8,8 @@ body {
     background-size: 80px 80px;
     background-position: 0 0, 40px 40px;}
  
-header, 
+header,
+nav,
 #menu,
 footer, 
 section:nth-of-type(odd),
@@ -73,6 +74,7 @@ label[for="toggle"],
     background-repeat: no-repeat;
 }
 
+nav label {text-shadow: 0 0 2px rgba(0,0,0,1);}
 
 /* Fonts */
 
@@ -106,7 +108,7 @@ a:hover {
 }
 
 #features .left,
-#features .right {font-size: 2vw;}
+#features .right {font-size: 6vw;}
 
 /* Flexible Layout */
 
@@ -231,6 +233,7 @@ body {
 
 nav {
     width: 100%;
+    position: fixed;
 }
 
 nav a {
@@ -317,17 +320,17 @@ section {
 
 #features .left,
 #features .right {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 5vw;
+    height: 8vw;
 }
 
 #features figure {
     width: 90vw;
 }
 
-#features .left {border-radius: 0 .5vw .5vw 0;}
+#features .left {border-radius: 0 .8vw .8vw 0;}
 
-#features .right {border-radius: .5vw 0 0 .5vw;}
+#features .right {border-radius: .8vw 0 0 .8vw;}
 
 #brushes img:first-of-type {
     width: 60%;
@@ -373,7 +376,7 @@ label[for="toggle"],
 #toggle {
     position: absolute;
     right: 10px;
-    top: .08em;
+    top: -.3em;
     z-index: 4;
     cursor: pointer;
     font-size: 3em;
@@ -410,7 +413,7 @@ label[for="toggle"],
     flex-flow: column;
     position: absolute;
     width: 100%;
-    top: 37px;
+    top: 28px;
     left: 0;
     border-radius: .5em;
     padding: 0;
@@ -565,6 +568,7 @@ label[for="toggle"] {
         visibility: visible;
     }
     
+    nav {position: static;}
     nav li ul {
     padding: .5em;
     width: auto;
