@@ -21,6 +21,10 @@ section:nth-of-type(odd),
     background-color: #222F3E;
 }
 
+#compare h2, #features h2, #faq div, #faq label {
+    color: #222F3E;
+}
+
 a {
     color: #FB9300;
     text-decoration: underline;
@@ -29,11 +33,11 @@ a {
 .dash {color: #d62196;}
 
 #faq div {
-    color: rgba(0,0,0,.55);
+    color: #222F3E;
 }
 
 #features img {
-    border: solid thick #4c4e4e;
+    border: solid 0.625em #222F3E;
 }
 
 nav a,
@@ -54,7 +58,7 @@ label[for="toggle"],
     color: #ffffff;
 }
 
-#compare h3 {color: black;}
+#compare h3 {color: #222F3E;}
 
 #faq label,
 #faq div,
@@ -118,9 +122,21 @@ body {
 
 h2 {
     font-size: 4.5vw;
+    font-weight: 900;
 }
 
-#intro p {font-size: 3vw;}
+#features figcaption {
+
+    font-weight: 300;
+    font-size: 2.813em;
+}
+
+nav li li a {
+
+    font-weight: 300;
+}
+
+#intro p {font-size: 3vw; font-weight: 300;}
 
 .nomarker {list-style: none;}
 
@@ -131,9 +147,8 @@ a:hover, a:focus {
 .bold {font-weight: 600;}
 
 #compare li {
-    border-radius: .2em;
-    list-style-type: circle;
-    list-style-position: inside;
+    border-radius: 0.313em;
+    font-weight: 300;
 }
 
 #features .left,
@@ -233,6 +248,12 @@ nav ul,
     flex-wrap: wrap;
 }
 
+#faq label {
+
+    font-weight: 600;
+    
+}
+
 
 /* Dropdown menu */
 
@@ -268,7 +289,7 @@ nav li:focus ul {
 
 nav a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 nav ul ul li {
@@ -315,13 +336,25 @@ header {
 footer {
     position: relative;
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
     /* Again, em is more responsive. */
     padding: 1em;
 }
 
 #intro * {
     margin: 0;
+}
+
+#faq {
+
+    padding-bottom: 16.75em;
+
+}
+
+#faq p {
+
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 #intro {
@@ -360,7 +393,9 @@ section {
 
 #compare img {
     width: 100%;
-    border-radius: 1em;
+    border-radius: 0.938em;
+    border: solid 0.625em #222F3E;
+
 }
 
 #compare ul {
@@ -382,7 +417,7 @@ section {
 }
 
 #features img {
-    border-radius: .6em;
+    border-radius: 0.938em;
 }
 
 #features .left,
@@ -426,11 +461,11 @@ section {
 
 
 #features figcaption {
-    width: 100%;
+    width: 75.25%;
     text-align: center;
-    margin-top: .5em;
-    border-radius: .3em;
-    padding: .4em;
+    margin-top: 0.3em;
+    border-radius: 0.3em;
+    padding: 0.1em;
 }
 
 #compare h3 {
@@ -533,8 +568,7 @@ label[for="toggle"],
 #menu > li:last-child > a {
     padding-bottom: 1em;
 }
-#menu li li a,
-#faq p {
+#menu li li a {
     padding: .2em 2em;
 }
 
@@ -554,7 +588,7 @@ label[for="toggle"] {
 #faq input {display: none;}
 #faq input:not(:checked) ~ div
 {display: none;}
-#faq input:checked ~ div {display: block;}
+#faq input:checked ~ div {display: block; font-weight: 300; margin-bottom: 0.938em;}
 #faq input:not(:checked) + label .open,
 #faq input:checked + label .close {
     display:block;
@@ -572,20 +606,21 @@ label[for="toggle"] {
 #faq label {
     display: block;
     width:100%;
-    margin-bottom: .5em;
+    margin-bottom: 0.938em;
     padding-right: 1.5em;
+    cursor: pointer;
 }
 #faq article {
     width: 80%;
-    margin: .5em;
+    padding-bottom: 0.938em;
     
 }
 #faq div,
 #faq label {
     position: relative;
     width:100%;
-    padding: .5em 1em;
-    border-radius: .5em;
+    padding: 1.063em 1.563em;
+    border-radius: 0.938em;
 }
 
 /* Featured Slideshow */
