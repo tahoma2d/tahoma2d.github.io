@@ -661,6 +661,7 @@ label[for="toggle"] {
 #sfx:checked ~ label[for="brush"] .right
 {
     display: flex;
+    cursor: pointer;
 }
 
  
