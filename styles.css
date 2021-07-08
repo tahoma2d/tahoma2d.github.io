@@ -141,7 +141,7 @@ nav li li a {
 .nomarker {list-style: none;}
 
 .marker {
-    list-style-image: url();
+    list-style-type: square;
     list-style-position: inside;
 }
 
@@ -149,7 +149,7 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-.bold {font-weight: 600;}
+.bold, #compare .bold {font-weight: 600;}
 
 #compare li {
     border-radius: 0.313em;
