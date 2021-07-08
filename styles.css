@@ -141,7 +141,7 @@ nav li li a {
 .nomarker {list-style: none;}
 
 .marker {
-    list-style-type: square;
+    list-style-type: circle;
     list-style-position: inside;
 }
 
