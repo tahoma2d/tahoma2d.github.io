@@ -1,17 +1,17 @@
 /* Colors */
 
-
 body {
     background-color: #f9fafb;
     opacity: 1;
     background-image: radial-gradient(#d2d5d8 2px, transparent 2px), radial-gradient(#d2d5d8 2px, #f9fafb 2px);
     background-size: 80px 80px;
-    background-position: 0 0, 40px 40px;}
- 
+    background-position: 0 0, 40px 40px;
+}
+
 header,
 nav,
 #menu,
-footer, 
+footer,
 section:nth-of-type(odd),
 #compare li,
 #features figcaption,
@@ -21,7 +21,10 @@ section:nth-of-type(odd),
     background-color: #222F3E;
 }
 
-#compare h2, #features h2, #faq div, #faq label {
+#compare h2,
+#features h2,
+#faq div,
+#faq label {
     color: #222F3E;
 }
 
@@ -30,7 +33,9 @@ a {
     text-decoration: underline;
 }
 
-.dash {color: #d62196;}
+.dash {
+    color: #d62196;
+}
 
 #faq div {
     color: #222F3E;
@@ -52,18 +57,19 @@ label[for="toggle"],
 #features label,
 #windows,
 #linux,
-#plugins
-{
+#plugins {
     /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
 }
 
-#compare h3 {color: #222F3E;}
+#compare h3 {
+    color: #222F3E;
+}
 
 #faq label,
 #faq div,
 #download figure,
-#plugins a:link{
+#plugins a:link {
     background: white;
 }
 
@@ -73,8 +79,8 @@ label[for="toggle"],
 }
 
 #system,
-#linux  {
-    background: url(img/backgrounds/system_bg.png); 
+#linux {
+    background: url(img/backgrounds/system_bg.png);
 }
 
 #faq,
@@ -92,64 +98,83 @@ label[for="toggle"],
     background-repeat: no-repeat;
 }
 
-nav label {text-shadow: 0 0 2px rgba(0,0,0,1);}
+nav label {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
 
 #download a:hover img,
-#download a:focus img {filter:hue-rotate(287deg) brightness(.8);}
-#download figure:hover {opacity: .9;}
+#download a:focus img {
+    filter: hue-rotate(287deg) brightness(.8);
+}
+
+#download figure:hover {
+    opacity: .9;
+}
 
 #plugins a,
-#nightly a { 
+#nightly a {
     box-shadow: 0px 3px 2px #d62196;
     background-color: #222F3E;
 }
+
 #plugins a:hover,
-#plugins a:focus
-#nightly a:hover,
+#plugins a:focus #nightly a:hover,
 #nightly a:focus {
     opacity: .9;
 }
+
+
 /* Fonts */
 
 body {
     font-family: 'Rubik', sans-serif;
+    font-size: 1.190vw;
+    font-weight: 300;
 }
+
 #intro h1 {
-    font-size: 7.5vw;
-    font-weight:900;
+    font-size: 5.952vw;
+    font-weight: 900;
     margin: 0;
 }
 
 h2 {
-    font-size: 4.5vw;
+    font-size: 4.166vw;
     font-weight: 900;
 }
 
 #features figcaption {
-
     font-weight: 300;
     font-size: 2.678vw;
 }
 
 nav li li a {
-
     font-weight: 300;
 }
 
-#intro p {font-size: 3vw; font-weight: 300;}
+#intro p {
+    font-size: 2.380vw;
+    font-weight: 300;
+}
 
-.nomarker {list-style: none;}
+.nomarker {
+    list-style: none;
+}
 
 .marker {
     list-style-type: circle;
     list-style-position: inside;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none;
 }
 
-.bold, #compare .bold {font-weight: 600;}
+.bold,
+#compare .bold {
+    font-weight: 600;
+}
 
 #compare li {
     border-radius: 0.313em;
@@ -157,10 +182,18 @@ a:hover, a:focus {
 }
 
 #features .left,
-#features .right {font-size: 6vw;}
+#features .right {
+    font-size: 6vw;
+}
 
-#download figure {margin: 0;}
-#download figcaption {text-align: center;}
+#download figure {
+    margin: 0;
+}
+
+#download figcaption {
+    text-align: center;
+}
+
 
 /* Flexible Layout */
 
@@ -180,11 +213,11 @@ nav ul,
 #download aside,
 #plugins,
 #nightly,
-#mac div{
+#mac div {
     display: flex;
 }
 
-body, 
+body,
 #menu,
 #intro div,
 #system,
@@ -200,11 +233,11 @@ main {
 }
 
 header,
-#system, 
+#system,
 #compare,
 #features,
 #faq,
-#features figure, 
+#features figure,
 #features .left,
 #features .right,
 #mac,
@@ -237,12 +270,13 @@ nav ul,
 #intro div,
 #linux,
 #nightly {
-    justify-content: center;}
+    justify-content: center;
+}
 
-#intro div
-{
+#intro div {
     align-items: flex-start;
 }
+
 #compare,
 #features figure,
 #mac,
@@ -254,9 +288,7 @@ nav ul,
 }
 
 #faq label {
-
     font-weight: 600;
-    
 }
 
 
@@ -306,8 +338,12 @@ nav ul ul li:focus {
     border-bottom: solid white thin;
 }
 
-.emphasize {font-style: italic; }
-#plugins a { text-align: center;
+.emphasize {
+    font-style: italic;
+}
+
+#plugins a {
+    text-align: center;
 }
 
 
@@ -333,6 +369,7 @@ nav a {
     width: 100%;
     padding: .5em;
 }
+
 header {
     position: relative;
     z-index: 2;
@@ -351,13 +388,10 @@ footer {
 }
 
 #faq {
-
     padding-bottom: 13em;
-
 }
 
 #faq p {
-
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
@@ -375,7 +409,7 @@ footer {
 #intro img {
     position: relative;
     left: 12vw;
-    width:30%;
+    width: 30%;
     height: 30%;
     z-index: 1;
 }
@@ -386,8 +420,8 @@ section {
 
 #compare h2,
 #features h2,
-#download h2{
-    width:100%;
+#download h2 {
+    width: 100%;
     text-align: center;
 }
 
@@ -400,7 +434,6 @@ section {
     width: 100%;
     border-radius: 0.938em;
     border: solid 0.625em #222F3E;
-
 }
 
 #compare ul {
@@ -414,11 +447,13 @@ section {
     width: fit-content;
 }
 
-#faq ol {margin-left: .5em;}
+#faq ol {
+    margin-left: .5em;
+}
 
 #features img,
 #features #types figcaption {
-    width:48%;
+    width: 48%;
 }
 
 #features img {
@@ -435,14 +470,19 @@ section {
     width: 90vw;
 }
 
-#features .left {border-radius: 0 .8vw .8vw 0;}
+#features .left {
+    border-radius: 0 .8vw .8vw 0;
+}
 
-#features .right {border-radius: .8vw 0 0 .8vw;}
+#features .right {
+    border-radius: .8vw 0 0 .8vw;
+}
 
 #brushes img:first-of-type {
     width: 60%;
 }
-#brushes img:last-of-type{
+
+#brushes img:last-of-type {
     width: 37%;
 }
 
@@ -450,20 +490,19 @@ section {
 #fx img:first-of-type {
     width: 59%;
 }
+
 #palette img:first-of-type,
-#fx img:last-of-type
-{
+#fx img:last-of-type {
     width: 38%;
 }
 
 #lipsync img:first-of-type {
-    width:56%;
+    width: 56%;
 }
 
 #lipsync img:last-of-type {
-    width:40%;
+    width: 40%;
 }
-
 
 #features figcaption {
     width: 75.25%;
@@ -478,19 +517,26 @@ section {
     text-align: center;
 }
 
-#download figure {width:100%; max-width: 450px;}
+#download figure {
+    width: 100%;
+    max-width: 450px;
+}
+
 #download img,
 #download figcaption {
-    width:100%;
+    width: 100%;
 }
+
 #download figure {
     position: relative;
     border-radius: 1em;
 }
 
-#download a { width: 50%;}
+#download a {
+    width: 50%;
+}
 
-#plugins a { 
+#plugins a {
     width: 30vw;
     padding: 1em;
     border-radius: .5em;
@@ -509,9 +555,13 @@ section {
     border-radius: .5em;
 }
 
-#download p {margin: 1em 5vw;}
+#download p {
+    margin: 1em 5vw;
+}
 
-    /* Show/Hide Menu on Small Devices */
+
+/* Show/Hide Menu on Small Devices */
+
 #toggle {
     display: none;
     opacity: 0;
@@ -526,34 +576,34 @@ label[for="toggle"],
     cursor: pointer;
     font-size: 3em;
     line-height: .6em;
-    }
+}
 
- #toggle:checked + label + #menu {
+#toggle:checked+label+#menu {
     z-index: 3;
     opacity: 1;
     height: auto;
     visibility: visible;
     transition: transform 500ms ease;
-    }
+}
 
-#toggle:not(:checked) + label + #menu {
+#toggle:not(:checked)+label+#menu {
     z-index: 3;
     opacity: 0;
     height: 0;
     visibility: hidden;
     transform: translateY(-180px);
     transition: transform 500ms ease;
-    }
+}
 
-#toggle:checked + label {
+#toggle:checked+label {
     transform: rotateZ(45deg);
     transition: transform 500ms ease;
-    }
+}
 
-#toggle:not(:checked) + label {
+#toggle:not(:checked)+label {
     transition: transform 500ms ease;
-    }
-   
+}
+
 #menu {
     flex-flow: column;
     position: absolute;
@@ -562,72 +612,92 @@ label[for="toggle"],
     left: 0;
     border-radius: .5em;
     padding: 0;
-    }
+}
 
-#menu > li > a {
+#menu>li>a {
     padding: .5em 1em;
 }
-#menu > li:first-child > a {
+
+#menu>li:first-child>a {
     padding-top: 1em;
 }
-#menu > li:last-child > a {
+
+#menu>li:last-child>a {
     padding-bottom: 1em;
 }
+
 #menu li li a {
     padding: .2em 2em;
 }
 
 label[for="toggle"] {
     opacity: 1;
-    }
+}
 
 #menu ul {
     position: relative;
-    }
-    
+}
+
 .nopointer {
     cursor: default;
     pointer-events: none;
-    }
+}
+
 
 /* Expand or Close FAQ */
-#faq input {display: none;}
-#faq input:not(:checked) ~ div
-{display: none;}
-#faq input:checked ~ div {display: block; font-weight: 300; margin-bottom: 0.938em;}
-#faq input:not(:checked) + label .open,
-#faq input:checked + label .close {
-    display:block;
+
+#faq input {
+    display: none;
 }
-#faq input:not(:checked) + label .close,
-#faq input:checked + label .open {
-    display:none;
+
+#faq input:not(:checked)~div {
+    display: none;
 }
+
+#faq input:checked~div {
+    display: block;
+    font-weight: 300;
+    margin-bottom: 0.938em;
+}
+
+#faq input:not(:checked)+label .open,
+#faq input:checked+label .close {
+    display: block;
+}
+
+#faq input:not(:checked)+label .close,
+#faq input:checked+label .open {
+    display: none;
+}
+
 #faq .close,
 #faq .open {
     position: absolute;
     right: .5em;
-    top:.5em;
+    top: .5em;
 }
+
 #faq label {
     display: block;
-    width:100%;
+    width: 100%;
     margin-bottom: 0.938em;
     padding-right: 1.5em;
     cursor: pointer;
 }
+
 #faq article {
     width: 80%;
     padding-bottom: 0.938em;
-    
 }
+
 #faq div,
 #faq label {
     position: relative;
-    width:100%;
+    width: 100%;
     padding: 1.063em 1.563em;
     border-radius: 0.938em;
 }
+
 
 /* Featured Slideshow */
 
@@ -637,47 +707,51 @@ label[for="toggle"] {
     display: none;
     position: absolute;
 }
+
 #features label .right {
     right: 0em;
     top: 50%;
 }
+
 #features label .left {
     left: 0em;
     top: 50%;
 }
-#features {position: relative;}
 
-#brush:checked ~ #brushes,
-#palettes:checked ~ #palette,
-#sfx:checked ~ #fx,
-#type:checked ~ #types,
-#sync:checked ~ #lipsync{
+#features {
+    position: relative;
+}
+
+#brush:checked~#brushes,
+#palettes:checked~#palette,
+#sfx:checked~#fx,
+#type:checked~#types,
+#sync:checked~#lipsync {
     display: flex;
 }
 
-#brush:checked ~ label[for="sfx"] .left,
-#brush:checked ~ label[for="palettes"] .right, 
-#palettes:checked ~ label[for="brush"] .left, 
-#palettes:checked ~ label[for="type"] .right,
-#type:checked ~ label[for="palettes"] .left, 
-#type:checked ~ label[for="sync"] .right,
-#sync:checked ~ label[for="type"] .left, 
-#sync:checked ~ label[for="sfx"] .right,
-#sfx:checked ~ label[for="sync"] .left, 
-#sfx:checked ~ label[for="brush"] .right
-{
+#brush:checked~label[for="sfx"] .left,
+#brush:checked~label[for="palettes"] .right,
+#palettes:checked~label[for="brush"] .left,
+#palettes:checked~label[for="type"] .right,
+#type:checked~label[for="palettes"] .left,
+#type:checked~label[for="sync"] .right,
+#sync:checked~label[for="type"] .left,
+#sync:checked~label[for="sfx"] .right,
+#sfx:checked~label[for="sync"] .left,
+#sfx:checked~label[for="brush"] .right {
     display: flex;
     cursor: pointer;
 }
 
- 
-#brush:not(:checked) ~ #brushes,
-#palettes:not(:checked) ~ #palette,
-#sfx:not(:checked) ~ #fx,
-#type:not(:checked) ~ #types,
-#sync:not(:checked) ~ #lipsync{
+#brush:not(:checked)~#brushes,
+#palettes:not(:checked)~#palette,
+#sfx:not(:checked)~#fx,
+#type:not(:checked)~#types,
+#sync:not(:checked)~#lipsync {
     display: none;
 }
+
 
 /* Style adjustments for larger screens */
 
@@ -689,7 +763,6 @@ label[for="toggle"] {
     .home a {
         width: 7.5em;
     }
-    
     label[for="toggle"] {
         opacity: 0;
     }
@@ -705,42 +778,43 @@ label[for="toggle"] {
     #menu ul {
         position: absolute;
     }
-
-    #toggle:not(:checked) + label + #menu,
-    #toggle:checked + label + #menu {
+    #toggle:not(:checked)+label+#menu,
+    #toggle:checked+label+#menu {
         transform: none;
         transition: none;
         opacity: 1;
         height: auto;
         visibility: visible;
     }
-    
-    nav {position: static;}
-    nav li ul {
-    padding: .5em;
-    width: auto;
+    nav {
+        position: static;
     }
-    
-    nav ul ul { 
+    nav li ul {
+        padding: .5em;
+        width: auto;
+    }
+    nav ul ul {
         box-shadow: 0px 5px 0px #d62196;
     }
-    
-    #menu > li:first-child > a,
-    #menu > li:last-child > a, 
+    #menu>li:first-child>a,
+    #menu>li:last-child>a,
     .home a {
         padding: .5em 1em;
     }
     #menu li li a {
         padding: .5em;
     }
-    
     #compare ul,
-    #compare figure
-    {
+    #compare figure {
         width: 40%;
     }
-    #download a {width: 20%;}
-    #download aside {width:60%;}
-    #mac div {flex-flow: row-reverse;}
-
+    #download a {
+        width: 20%;
+    }
+    #download aside {
+        width: 60%;
+    }
+    #mac div {
+        flex-flow: row-reverse;
+    }
 }
