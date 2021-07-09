@@ -8,6 +8,32 @@ body {
     background-position: 0 0, 40px 40px;
 }
 
+#features label .right img,
+#features label .left img {
+    width: inherit;
+    border: none;
+}
+
+#faq div.top {
+    background: transparent;
+    text-align: right;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 5em 0 0;
+    top: 12.4em;
+    width: -webkit-fill-available;
+}
+
+#faq div.top a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+#faq div.top a img {
+    margin-bottom: -0.313em;
+    margin-right: -0.25em;
+}
+
 header,
 nav,
 #menu,
@@ -158,6 +184,11 @@ nav li li a {
 
 .nomarker {
     list-style: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 0px;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .marker {
@@ -414,7 +445,7 @@ footer {
 }
 
 section {
-    padding-bottom: 2em;
+    padding-bottom: 3.452vw;
 }
 
 #compare h2,
@@ -461,12 +492,16 @@ section {
 
 #features .left,
 #features .right {
-    width: 5vw;
-    height: 8vw;
+    width: 3.571vw;
+    height: 5.952vw;
 }
 
 #features figure {
-    width: 90vw;
+    width: 91.5vw;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 #features .left {
@@ -672,8 +707,8 @@ label[for="toggle"] {
 #faq .close,
 #faq .open {
     position: absolute;
-    right: .5em;
-    top: .5em;
+    right: 1.4em;
+    top: .75em;
 }
 
 #faq label {
@@ -695,6 +730,7 @@ label[for="toggle"] {
     width: 100%;
     padding: 1.063em 1.563em;
     border-radius: 0.938em;
+    padding-right: 4.5em;
 }
 
 
@@ -709,12 +745,12 @@ label[for="toggle"] {
 
 #features label .right {
     right: 0em;
-    top: 50%;
+    top: 45%;
 }
 
 #features label .left {
     left: 0em;
-    top: 50%;
+    top: 45%;
 }
 
 #features {
