@@ -128,7 +128,6 @@ h2 {
 #features figcaption {
 
     font-weight: 300;
-    font-size: 2.813em;
 }
 
 nav li li a {
@@ -734,6 +733,11 @@ label[for="toggle"] {
         padding: .5em;
     }
     
+    #features figcaption {
+
+        font-size: 2.813em;
+    }
+
     #compare ul,
     #compare figure
     {
