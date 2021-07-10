@@ -13,6 +13,36 @@ body {
     background-position: 0 0, 40px 40px;
 }
 
+.coming_soon {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: #222F3E;
+}
+
+#download_button {
+    background-color: #222F3E;
+    width: fit-content;
+    padding: 0.813em 1.375em;
+    border-radius: 0.892vw;
+    text-decoration: none;
+    color: #FFFF;
+    font-weight: 700;
+    box-shadow: 0px 5px #d62196;
+}
+
+#release_notes {
+    font-size: 0.833vw !important;
+    display: inline;
+    padding-left: 1em;
+    padding-right: 0em !important;
+}
+
+#download_section {
+    padding-top: 2.8em;
+}
+
 #features label .right img,
 #features label .left img {
     width: inherit;
@@ -89,7 +119,6 @@ label[for="toggle"],
 #windows,
 #linux,
 #plugins {
-    /* This is exactly the same as "white". There's no real advantage to one format over the other. */
     color: #ffffff;
 }
 
@@ -185,6 +214,7 @@ nav li li a {
 #intro p {
     font-size: 2.380vw;
     font-weight: 300;
+    padding-right: 2.932em;
 }
 
 .nomarker {
@@ -830,8 +860,8 @@ label[for="toggle"] {
         position: static;
     }
     nav li ul {
-        padding: .5em;
-        width: auto;
+        padding: .85em .85em;
+        width: min-content;
     }
     nav ul ul {
         box-shadow: 0px 5px 0px #d62196;
