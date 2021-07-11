@@ -30,6 +30,11 @@ body {
     color: #FFFF;
     font-weight: 700;
     box-shadow: 0px 5px #d62196;
+    transition: box-shadow .5s ease;
+}
+
+#download_button:hover {
+    box-shadow: 0 0 0px 2px #d62196;
 }
 
 #release_notes {
@@ -394,21 +399,26 @@ nav a {
     font-weight: 700;
 }
 
-nav ul ul li {
-    border-bottom: transparent solid thin;
-}
-
-nav ul ul li:hover,
-nav ul ul li:focus {
-    border-bottom: solid white thin;
-}
-
 .emphasize {
     font-style: italic;
 }
 
 #plugins a {
     text-align: center;
+}
+
+.menu_hover a:hover::after {
+    width: 100%;
+    height: 0.027em;
+    border-radius: 5em;
+    transition: width .5s ease;
+}
+
+.menu_hover a::after {
+    background-color: #fff;
+    display: block;
+    width: 0;
+    content: '';
 }
 
 
