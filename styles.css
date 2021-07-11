@@ -31,6 +31,7 @@ body {
     font-weight: 700;
     box-shadow: 0px 5px #d62196;
     transition: box-shadow .5s ease;
+    margin-bottom: 1em !important;
 }
 
 #download_button:hover {
@@ -39,7 +40,6 @@ body {
 
 #release_notes {
     font-size: 0.833vw !important;
-    display: inline;
     padding-left: 1em;
     padding-right: 0em !important;
 }
@@ -137,6 +137,8 @@ label[for="toggle"],
 #plugins a:link {
     background: white;
 }
+
+#download_section {background: transparent;}
 
 #intro,
 #windows {
@@ -283,7 +285,8 @@ nav ul,
 #download aside,
 #plugins,
 #nightly,
-#mac div {
+#mac div,
+#download_section {
     display: flex;
 }
 
@@ -316,7 +319,8 @@ header,
 #download aside,
 #plugins,
 #nightly,
-#mac div {
+#mac div,
+#download_section {
     align-items: center;
 }
 
@@ -333,7 +337,8 @@ nav ul,
 #windows,
 #download aside,
 #plugins,
-#mac div {
+#mac div,
+#download_section {
     justify-content: space-around;
 }
 
@@ -353,7 +358,8 @@ nav ul,
 #linux,
 #windows,
 #plugins,
-#mac div {
+#mac div,
+#download_section {
     flex-wrap: wrap;
 }
 
@@ -857,6 +863,7 @@ label[for="toggle"] {
     }
     #menu ul {
         position: absolute;
+        box-sizing: content-box;
     }
     #toggle:not(:checked)+label+#menu,
     #toggle:checked+label+#menu {
