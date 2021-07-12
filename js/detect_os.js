@@ -1,4 +1,4 @@
-window.onload = function() {
+$(function() {
 
     var button = document.getElementById("home_download_button");
     var os_name = "Download";
@@ -14,4 +14,4 @@ window.onload = function() {
     button.text = os_name;
     button.href = os_link;
 
-}
+});
