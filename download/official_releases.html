@@ -9,11 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/branding/favicon.ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/top.js"></script>
-    <script src="./js/detect_os.js"></script>
+    <link rel="shortcut icon" href="../img/branding/favicon.ico" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/current_page.js"></script>
     <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 <!-- Content that displays on the page goes in the body-->
@@ -28,7 +27,7 @@
         <nav>
             <input type="checkbox" id="toggle" autocomplete="off" />
             <label for="toggle">+</label>
-            <ul id="menu">
+            <ul id="menu" class="menu_hover">
                 <!-- We might need to keep a direct link to the page for dropdown functionality on ios. It's usually a better practice anyway. -->
                 <li><a class="nopointer" href="#">Home <i class="fa fa-caret-down"> </i></a>
 
@@ -60,8 +59,100 @@
         </nav>
     </header>
     <!-- Page content goes in main-->
-    <main class="coming_soon">
-        Coming Soon!
+    <main class="download_page">
+
+        <h2>
+            <span class="dash">-</span> Official Releases <span class="dash">-</span>
+        </h2>
+        <section>
+
+            <div class="download_buttons">
+                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d/releases/download/v1.2/Tahoma2D-win.zip">Windows</a>
+                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d/releases/download/v1.2/Tahoma2D-osx.dmg">macOS</a>
+                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d/releases/download/v1.2/Tahoma2D-linux.tar.gz">Linux</a>
+
+
+            </div>
+            <span class="release_notes">Latest Release:
+                <a href="https://github.com/tahoma2d/tahoma2d/releases/tag/v1.2" target="_blank">1.2.0 - May 13th</a>
+            </span>
+
+        </section>
+
+        <section>
+
+            <div class="download_page_text">
+
+                <span>
+                    Windows
+                </span>
+
+                <aside>
+                    <ol>
+                        <li>Click on the link to download the zipped Tahoma2D directory</li>
+                        <li>Right-click on the zipped file and choose "Extract All"</li>
+                        <li>Save the Tahoma2D directory in the location of your choice
+                            <ul>
+                                <li>DO NOT separate the Tahoma2D executable or the tahomastuff folder from the Tahoma2D directory</li>
+                            </ul>
+                        </li>
+                        <li>Open the Tahoma2D directory and find the file called Tahoma2D</li>
+                        <li>Double-click on Tahoma2D to open</li>
+                    </ol>
+                </aside>
+
+            </div>
+
+            <div class="download_page_text">
+
+                <span>
+                    macOS
+                </span>
+
+                <aside>
+                    <ol>
+                        <li>Click on the link to download the Tahoma2D DMG file</li>
+                        <li>Open the DMG and drag the app to the desired location</li>
+                        <li>Open Tahoma2D</li>
+                        <li>Choose "Cancel" from the unknown developer notification dialog</li>
+                        <li>Right-click on Tahoma2D.app and choose "Open"</li>
+                        <li>Choose "Open" from the unknown developer notification dialog &mdash; afterwards Tahoma2D should open normally</li>
+                        <li class="download_page_no_marker">(For some versions of macOS, Tahoma2D must be granted permission to run for the first time in Security &amp; Privacy, under System Preferences.)</li>
+
+                    </ol>
+                </aside>
+
+            </div>
+
+
+            <div class="download_page_text">
+
+                <span>
+                    Linux
+                </span>
+
+                <aside>
+                    <ol>
+                        <li>Click on the link to download the gzip'd tarball'd Tahoma2D directory</li>
+                        <li>Right-click on the gzip'd tarball and choose "Extract Here"
+                            <ul>
+                                <li>Alternatively from Terminal window: $ tar -xvf *.tar.gz</li>
+                            </ul>
+                        </li>
+                        <li>Save the Tahoma2D directory in the location of your choice
+                            <ul>
+                                <li>DO NOT separate the Tahoma2D AppImage or the tahomastuff folder from the Tahoma2D directory</li>
+                            </ul>
+                        </li>
+                        <li>Open the Tahoma2D directory and find the file called Tahoma2D.AppImage</li>
+                        <li>Double-click on Tahoma2D.AppImage to open</li>
+                    </ol>
+                </aside>
+
+            </div>
+
+        </section>
+
     </main>
     <!-- Copyright goes in the footer-->
     <footer>&copy; 2020-2021 Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>

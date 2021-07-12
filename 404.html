@@ -5,11 +5,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Tahoma2D - Free 2D & stop motion animation software</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Tahoma2D - 404 | Page not found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/branding/favicon.ico" />
-
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -18,12 +18,14 @@
 <body>
     <!-- Branding goes in the header -->
     <header>
-        <img src="img/branding/small_logo.png" title="Tahoma2D Logo" alt="There should be a logo image here" style="width:42px;">
+        <a class="logo" href="index.html" style="z-index: 4;">
+            <img src="img/branding/small_logo.png" alt="There should be a logo image here" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
+        </a>
         <!-- The menu goes in nav. To have a dropdown, it's best to use a list structure. -->
         <nav>
             <input type="checkbox" id="toggle" autocomplete="off" />
             <label for="toggle">+</label>
-            <ul id="menu">
+            <ul id="menu" class="menu_hover">
                 <!-- We might need to keep a direct link to the page for dropdown functionality on ios. It's usually a better practice anyway. -->
                 <li><a class="nopointer" href="#">Home <i class="fa fa-caret-down"> </i></a>
 
@@ -36,11 +38,9 @@
                 </li>
                 <li><a class="nopointer" href="#">Download <i class="fa fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="downloads.html#windows">Windows</a></li>
-                        <li><a href="downloads.html#mac">macOS</a></li>
-                        <li><a href="downloads.html#linux">Linux</a></li>
-                        <li><a href="downloads.html#nightly">Nightly Builds</a></li>
-                        <li><a href="downloads.html#plugins">Plugins</a></li>
+                        <li><a href="./download/official_releases.html">Official Releases</a></li>
+                        <li><a href="./download/nightly_builds.html">Nightly Builds</a></li>
+                        <li><a href="./download/plugins.html">Plugins</a></li>
                     </ul>
                 </li>
                 <li><a href="https://tahoma2d.readthedocs.io/en/latest/" target="_blank">Learn</a></li>
@@ -57,8 +57,12 @@
         </nav>
     </header>
     <!-- Page content goes in main-->
-    <main class="temp">
-        Site Coming Soon!
+    <main class="download_page">
+
+        <h2>
+            <span class="dash">-</span> 404 | Page not found <span class="dash">-</span>
+        </h2>
+
     </main>
     <!-- Copyright goes in the footer-->
     <footer>&copy; 2020-2021 Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>

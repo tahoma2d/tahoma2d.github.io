@@ -9,11 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/branding/favicon.ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/top.js"></script>
-    <script src="./js/detect_os.js"></script>
+    <link rel="shortcut icon" href="../img/branding/favicon.ico" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/current_page.js"></script>
     <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 <!-- Content that displays on the page goes in the body-->
@@ -28,7 +27,7 @@
         <nav>
             <input type="checkbox" id="toggle" autocomplete="off" />
             <label for="toggle">+</label>
-            <ul id="menu">
+            <ul id="menu" class="menu_hover">
                 <!-- We might need to keep a direct link to the page for dropdown functionality on ios. It's usually a better practice anyway. -->
                 <li><a class="nopointer" href="#">Home <i class="fa fa-caret-down"> </i></a>
 
@@ -60,8 +59,46 @@
         </nav>
     </header>
     <!-- Page content goes in main-->
-    <main class="coming_soon">
-        Coming Soon!
+    <main class="download_page">
+
+        <h2>
+            <span class="dash">-</span> Plugins <span class="dash">-</span>
+        </h2>
+        <section>
+
+            <div class="download_buttons">
+                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d_plugins/releases/download/v1.1/Tahoma2D_plugins_win.zip">Windows</a>
+                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d_plugins/releases/download/v1.1/Tahoma2D_plugins_osx.zip">macOS</a>
+                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d_plugins/releases/download/v1.1/Tahoma2D_plugins_linux.zip">Linux</a>
+
+
+            </div>
+            <span class="release_notes">Latest Release:
+                <a href="https://github.com/tahoma2d/tahoma2d_plugins/releases/tag/v1.1" target="_blank">1.1.0 - May 6th</a>
+            </span>
+
+        </section>
+
+        <section>
+
+            <div class="download_page_text">
+
+                <ol>
+                    <li>Download the plugins for your OS</li>
+                    <li>Unzip the plugins directory</li>
+                    <li>Place the plugins in the tahomastuff folder's plugins directory
+                        <ul>
+                            <li>On macOS, right-click on the Tahoma2D.app and choose "Show Package Contents" to access the tahomastuff folder
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Open Tahoma2D and access the plugins with the special FX</li>
+                    <li class="download_page_no_marker">(For macOS only, OpenCV 4.5.1 (or a later version) must be installed on the system.)</li>
+                </ol>
+            </div>
+
+        </section>
+
     </main>
     <!-- Copyright goes in the footer-->
     <footer>&copy; 2020-2021 Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>

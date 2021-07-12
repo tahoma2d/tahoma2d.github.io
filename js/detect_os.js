@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    var button = document.getElementById("download_button");
+    var button = document.getElementById("home_download_button");
     var os_name = "Download";
     var os_link = "download/official_releases.html"
 
