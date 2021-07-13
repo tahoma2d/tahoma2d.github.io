@@ -22,6 +22,13 @@ body {
     flex-flow: column;
 }
 
+#faq,
+#system,
+#intro {
+    background-attachment: fixed !important;
+    background-position: center !important;
+}
+
 .download_page section {
     background-color: transparent !important;
     padding-bottom: 0;
