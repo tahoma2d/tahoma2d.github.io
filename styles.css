@@ -3,6 +3,32 @@ html {
 }
 
 
+/* aos */
+
+body[data-aos-easing="new-easing"] [data-aos],
+[data-aos][data-aos][data-aos-easing="new-easing"] {
+    transition-timing-function: cubic-bezier(.8, 0, .2, 1);
+}
+
+[data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="new-animation"].aos-animate {
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    [data-aos="new-animation"] {
+        transform: translatey(15px);
+    }
+    [data-aos="new-animation"].aos-animate {
+        transform: translatey(0);
+    }
+}
+
+
 /* Colors */
 
 body {
@@ -70,14 +96,14 @@ ul {
 
 .download_button {
     background-color: #222F3E;
-    width: 16.875em;
+    width: 14.119em;
     padding: 0.813em 1.375em;
     border-radius: 0.892vw;
     text-decoration: none;
     color: #FFFF;
     font-weight: 700;
     box-shadow: 0px 5px #d62196;
-    transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease !important;
     text-align: center;
     margin: 0 0.625em;
 }
