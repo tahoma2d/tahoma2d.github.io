@@ -3,33 +3,8 @@ html {
 }
 
 
-/* aos */
 
-body[data-aos-easing="new-easing"] [data-aos],
-[data-aos][data-aos][data-aos-easing="new-easing"] {
-    transition-timing-function: cubic-bezier(.8, 0, .2, 1);
-}
-
-[data-aos="new-animation"] {
-    opacity: 0;
-    transition-property: transform, opacity;
-}
-
-[data-aos="new-animation"].aos-animate {
-    opacity: 1;
-}
-
-@media screen and (min-width: 768px) {
-    [data-aos="new-animation"] {
-        transform: translatey(15px);
-    }
-    [data-aos="new-animation"].aos-animate {
-        transform: translatey(0);
-    }
-}
-
-
-/* Colors */
+/* Colors and Backgrounds */
 
 body {
     background-color: #f9fafb;
@@ -40,13 +15,7 @@ body {
     color: #222F3E;
 }
 
-.download_page {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-flow: column;
-}
+
 
 #faq,
 #system,
@@ -60,11 +29,6 @@ body {
     padding-bottom: 0;
 }
 
-.download_page_text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .download_page_text span {
     font-weight: 700;
@@ -84,9 +48,6 @@ ul {
     text-align: center;
 }
 
-.download_buttons {
-    display: flex;
-}
 
 .download_page h2 {
     width: 100%;
@@ -362,7 +323,10 @@ nav ul,
 #plugins,
 #nightly,
 #mac div,
-#download_section {
+#download_section,
+.download_page,
+.download_page_text,
+.download_buttons {
     display: flex;
 }
 
@@ -373,7 +337,8 @@ body,
 #faq,
 #features,
 #download aside,
-#nightly {
+#nightly,
+.download_page {
     flex-flow: column;
 }
 
@@ -396,7 +361,9 @@ header,
 #plugins,
 #nightly,
 #mac div,
-#download_section {
+#download_section,
+.download_page,
+.download_page_text {
     align-items: center;
 }
 
@@ -414,13 +381,15 @@ nav ul,
 #download aside,
 #plugins,
 #mac div,
-#download_section {
+#download_section,
+.download_page {
     justify-content: space-around;
 }
 
 #intro div,
 #linux,
-#nightly {
+#nightly,
+.download_page_text {
     justify-content: center;
 }
 
@@ -435,7 +404,8 @@ nav ul,
 #windows,
 #plugins,
 #mac div,
-#download_section {
+#download_section,
+.download_page {
     flex-wrap: wrap;
 }
 
@@ -920,6 +890,21 @@ label[for="toggle"] {
     display: none;
 }
 
+/* aos */
+
+body[data-aos-easing="new-easing"] [data-aos],
+[data-aos][data-aos][data-aos-easing="new-easing"] {
+    transition-timing-function: cubic-bezier(.8, 0, .2, 1);
+}
+
+[data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos="new-animation"].aos-animate {
+    opacity: 1;
+}
 
 /* Style adjustments for larger screens */
 
@@ -985,5 +970,14 @@ label[for="toggle"] {
     }
     #mac div {
         flex-flow: row-reverse;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    [data-aos="new-animation"] {
+        transform: translatey(15px);
+    }
+    [data-aos="new-animation"].aos-animate {
+        transform: translatey(0);
     }
 }
