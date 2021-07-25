@@ -3,7 +3,6 @@ html {
 }
 
 
-
 /* Colors and Backgrounds */
 
 body {
@@ -14,8 +13,6 @@ body {
     background-position: 0 0, 40px 40px;
     color: #222F3E;
 }
-
-
 
 #faq,
 #system,
@@ -28,7 +25,6 @@ body {
     background-color: transparent !important;
     padding-bottom: 0;
 }
-
 
 .download_page_text span {
     font-weight: 700;
@@ -47,7 +43,6 @@ ul {
     padding: 1.563em 0 0 0;
     text-align: center;
 }
-
 
 .download_page h2 {
     width: 100%;
@@ -301,6 +296,20 @@ a:focus {
 
 #download figcaption {
     text-align: center;
+}
+
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    font-weight: inherit !important;
+}
+
+#menu_icon {
+    font-size: 0.7em;
+}
+
+#faq_icon {
+    font-size: 1.6em;
+    color: #222F3E;
 }
 
 
@@ -890,6 +899,7 @@ label[for="toggle"] {
     display: none;
 }
 
+
 /* aos */
 
 body[data-aos-easing="new-easing"] [data-aos],
@@ -905,6 +915,7 @@ body[data-aos-easing="new-easing"] [data-aos],
 [data-aos="new-animation"].aos-animate {
     opacity: 1;
 }
+
 
 /* Style adjustments for larger screens */
 

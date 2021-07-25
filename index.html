@@ -14,9 +14,10 @@
     <script src="./js/top.js"></script>
     <script src="./js/detect_os.js"></script>
     <script src="./js/current_page.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <!-- Content that displays on the page goes in the body-->
 
@@ -32,7 +33,7 @@
             <label for="toggle">+</label>
             <ul id="menu" class="menu_hover">
                 <!-- We might need to keep a direct link to the page for dropdown functionality on ios. It's usually a better practice anyway. -->
-                <li><a class="nopointer" href="#">Home <i class="fa fa-caret-down"> </i></a>
+                <li><a class="nopointer" href="#">Home <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
 
                     <ul class="home">
                         <li><a href="#features">Features</a></li>
@@ -41,7 +42,7 @@
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </li>
-                <li><a class="nopointer" href="#">Download <i class="fa fa-caret-down"></i></a>
+                <li><a class="nopointer" href="#">Download <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
                     <ul>
                         <li><a href="download/official_releases.html">Official Releases</a></li>
                         <li><a href="download/nightly_builds.html">Nightly Builds</a></li>
@@ -50,7 +51,7 @@
                 </li>
                 <li><a href="https://tahoma2d.readthedocs.io/en/latest/" target="_blank">Learn</a></li>
                 <li><a href="https://github.com/tahoma2d" target="_blank">Contribute</a></li>
-                <li><a class="nopointer" href="#">Social <i class="fa fa-caret-down"></i></a>
+                <li><a class="nopointer" href="#">Social <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
                     <ul>
                         <li><a href="https://discord.gg/de9C9cZ9Hv" target="_blank">Discord</a></li>
                         <li><a href="https://www.reddit.com/r/Tahoma2D/" target="_blank">Reddit</a></li>
@@ -206,9 +207,10 @@
             <article data-aos="new-animation"><input type="checkbox" name="faq" id="bug">
                 <label for="bug">I found a bug in the software. How can I report it?
                 <span class="open">
-                    <img src="img/icons/faq_down_arrow.png">
+                    <i class="bi bi-chevron-down" id="faq_icon"></i>
                 </span>
-                <span class="close"> <img src="img/icons/faq_up_arrow.png">
+                <span class="close">
+                    <i class="bi bi-chevron-up" id="faq_icon"></i>
                 </span>
             </label>
                 <div>
@@ -220,10 +222,11 @@
             <article data-aos="new-animation"><input type="checkbox" name="faq" id="request">
                 <label for="request">I have an idea for a new feature. How can I send it to you?
                 <span class="open">
-                    <img src="img/icons/faq_down_arrow.png">
+                    <i class="bi bi-chevron-down" id="faq_icon"></i>
                 </span>
                 <span class="close">
-                    <img src="img/icons/faq_up_arrow.png"> </span>
+                    <i class="bi bi-chevron-up" id="faq_icon"></i>
+                 </span>
                 </label>
                 <div>
                     <p>
@@ -235,10 +238,10 @@
                 <label for="upgrade">
                 How can I upgrade to the latest version of Tahoma2D?
                     <span class="open">
-                        <img src="img/icons/faq_down_arrow.png">
+                        <i class="bi bi-chevron-down" id="faq_icon"></i>
                     </span>
                     <span class="close">
-                        <img src="img/icons/faq_up_arrow.png">
+                        <i class="bi bi-chevron-up" id="faq_icon"></i>
                     </span>
                  </label>
                 <div>
@@ -263,7 +266,7 @@
             <div class="top">
 
                 <a href="#">
-                    <img src="img/icons/top.png"> TOP
+                    <i class="bi bi-chevron-double-up" style="font-size: 0.9em;"></i> TOP
                 </a>
             </div>
         </section>
