@@ -40,7 +40,7 @@ ul {
 
 .release_notes {
     display: block;
-    padding: 1.563em 0 0 0;
+    padding: 1.563em 0;
     text-align: center;
 }
 
@@ -335,7 +335,9 @@ nav ul,
 #download_section,
 .download_page,
 .download_page_text,
-.download_buttons {
+.download_buttons,
+.download_page_text div,
+#missing404 {
     display: flex;
 }
 
@@ -347,11 +349,13 @@ body,
 #features,
 #download aside,
 #nightly,
-.download_page {
+.download_page,
+.download_buttons,
+.download_page_text {
     flex-flow: column;
 }
 
-main {
+label[for="deselectrad"] {
     flex-grow: 1;
 }
 
@@ -373,7 +377,8 @@ header,
 #download_section,
 .download_page,
 .download_page_text,
-#intro {
+#intro,
+#missing404 {
     align-items: center;
 }
 
@@ -400,7 +405,8 @@ nav ul,
 #linux,
 #nightly,
 .download_page_text,
-#intro {
+#intro,
+#missing404 {
     justify-content: center;
 }
 
@@ -508,6 +514,10 @@ body {
     min-height: 100vh;
     margin: auto;
     position: relative;
+}
+
+main {
+    min-height: 90vh;
 }
 
 nav {
@@ -718,6 +728,9 @@ section {
     margin: 1em 5vw;
 }
 
+.download_buttons a {
+    margin: 1em 0;
+}
 
 /* Show/Hide Menu on Small Devices */
 
@@ -933,6 +946,9 @@ body[data-aos-easing="new-easing"] [data-aos],
 /* Style adjustments for larger screens */
 
 @media (min-width:558px) {
+    main {
+        margin-top: 2em;
+    }
     header {
         position: fixed;
         width: 100vw;
@@ -995,6 +1011,8 @@ body[data-aos-easing="new-easing"] [data-aos],
     #mac div {
         flex-flow: row-reverse;
     }
+
+    
     #intro #home_release_notes {
         margin-top: 0;
         padding: 0 1em;
@@ -1004,6 +1022,23 @@ body[data-aos-easing="new-easing"] [data-aos],
         width: auto;
     }
 }
+
+@media (min-width:800px) {
+    
+        .download_buttons,
+    .download_page_text {
+        flex-flow: row;
+    } 
+    
+    .download_buttons a {
+        margin: 1em;
+    }
+    
+    .release_notes {
+        padding: 1.563em 0 0 0;
+    }
+}
+
 /*
 @media screen and (min-width: 768px) {
     #intro section {margin-left: 30vw; }
