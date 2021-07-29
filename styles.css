@@ -69,7 +69,7 @@ ul {
 }
 
 #intro #home_release_notes {
-    font-size: 1em !important;
+    font-size: .8em !important;
     margin-top: 1.375em;
 }
 
@@ -1041,6 +1041,9 @@ body[data-aos-easing="new-easing"] [data-aos],
     .release_notes {
         padding: 1.563em 0 0 0;
     }
+    
+    #intro #home_release_notes {
+    font-size: 1em !important;
 }
 
 /*
