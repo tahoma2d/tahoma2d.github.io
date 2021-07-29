@@ -141,6 +141,7 @@ a {
 }
 
 nav a,
+nav label,
 footer,
 label[for="toggle"],
 #toggle,
@@ -452,16 +453,20 @@ nav li ul {
     width: 100%;
 }
 
-nav li:hover ul,
-nav li:focus ul {
+/* nav li:hover ul,
+nav li:focus ul, */
+nav input:checked ~ ul{
     display: block;
 }
 
-nav a {
+nav a,
+nav ul label {
     text-decoration: none;
     font-weight: 700;
 }
-
+nav ul input {
+    display: none;
+}
 .emphasize {
     font-style: italic;
 }
@@ -483,12 +488,14 @@ nav a {
     transition: width .5s ease;
 }
 
-.menu_hover a::after {
+.menu_hover a::after,
+nav ul label::after {
     background-color: #fff;
     display: block;
     width: 0;
     content: '';
 }
+
 
 
 /* Size/Spacing */
@@ -508,7 +515,8 @@ nav {
     position: fixed;
 }
 
-nav a {
+nav a, 
+nav ul label {
     display: block;
     width: 100%;
     padding: .5em;
@@ -765,7 +773,8 @@ label[for="toggle"],
     padding: 0;
 }
 
-#menu>li>a {
+#menu>li>a,
+nav ul label {
     padding: .5em 1em;
 }
 

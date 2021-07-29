@@ -36,7 +36,10 @@ Temporarily disabling some javascript until/unless it can be reworked since it i
             <label for="toggle">+</label>
             <ul id="menu" class="menu_hover">
                 <!-- We might need to keep a direct link to the page for dropdown functionality on ios. It's usually a better practice anyway. -->
-                <li><a class="nopointer" href="#">Home <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
+                <li><input type="radio" name="dropm" id="home">
+                    <label for="home">Home <i class="bi bi-caret-down-fill" id="menu_icon"></i></label>
+                    <!--
+                    <a class="nopointer" href="#">Home <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>-->
 
                     <ul class="home">
                         <li><a href="#features">Features</a></li>
@@ -45,7 +48,11 @@ Temporarily disabling some javascript until/unless it can be reworked since it i
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </li>
-                <li><a class="nopointer" href="#">Download <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
+                <li><input type="radio" name="dropm" id="download">
+                    <label for="download">Download <i class="bi bi-caret-down-fill" id="menu_icon"></i></label>
+                    <!--
+                    <a class="nopointer" href="#">Download <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
+                    -->
                     <ul>
                         <li><a href="download/official_releases.html">Official Releases</a></li>
                         <li><a href="download/nightly_builds.html">Nightly Builds</a></li>
@@ -54,7 +61,11 @@ Temporarily disabling some javascript until/unless it can be reworked since it i
                 </li>
                 <li><a href="https://tahoma2d.readthedocs.io/en/latest/" target="_blank">Learn</a></li>
                 <li><a href="https://github.com/tahoma2d" target="_blank">Contribute</a></li>
-                <li><a class="nopointer" href="#">Social <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
+                <li><input type="radio" name="dropm" id="social">
+                    <label for="social">Social <i class="bi bi-caret-down-fill" id="menu_icon"></i></label>
+                    <!--
+                    <a class="nopointer" href="#">Social <i class="bi bi-caret-down-fill" id="menu_icon"></i></a>
+                    -->
                     <ul>
                         <li><a href="https://discord.gg/de9C9cZ9Hv" target="_blank">Discord</a></li>
                         <li><a href="https://www.reddit.com/r/Tahoma2D/" target="_blank">Reddit</a></li>
