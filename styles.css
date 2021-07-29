@@ -69,8 +69,8 @@ ul {
 }
 
 #intro #home_release_notes {
-    font-size: 0.833vw !important;
-    margin-top: 1em;
+    font-size: 1em !important;
+    margin-top: 1.375em;
 }
 
 #download_section {
