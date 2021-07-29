@@ -68,10 +68,9 @@ ul {
     box-shadow: 0 0 0px 2px #d62196;
 }
 
-#home_release_notes {
+#intro #home_release_notes {
     font-size: 0.833vw !important;
-    padding-left: 1em;
-    padding-right: 0em !important;
+    margin-top: 1em;
 }
 
 #download_section {
@@ -372,7 +371,8 @@ header,
 #mac div,
 #download_section,
 .download_page,
-.download_page_text {
+.download_page_text,
+#intro {
     align-items: center;
 }
 
@@ -398,7 +398,8 @@ nav ul,
 #intro div,
 #linux,
 #nightly,
-.download_page_text {
+.download_page_text,
+#intro {
     justify-content: center;
 }
 
@@ -414,7 +415,8 @@ nav ul,
 #plugins,
 #mac div,
 #download_section,
-.download_page {
+.download_page,
+#intro {
     flex-wrap: wrap;
 }
 
@@ -540,7 +542,6 @@ footer {
 
 #intro {
     padding: 5vw;
-    padding-left: 0;
 }
 
 #intro div {
@@ -554,6 +555,10 @@ footer {
     width: 30%;
     height: 30%;
     z-index: 1;
+}
+
+#intro section {
+    width: 100%;
 }
 
 section {
@@ -982,9 +987,18 @@ body[data-aos-easing="new-easing"] [data-aos],
     #mac div {
         flex-flow: row-reverse;
     }
+    #intro #home_release_notes {
+        margin-top: 0;
+        padding: 0 1em;
+    }
+    
+    #intro section {
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    #intro section {margin-left: 30vw; }
     [data-aos="new-animation"] {
         transform: translatey(15px);
     }
