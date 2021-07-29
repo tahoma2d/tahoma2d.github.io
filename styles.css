@@ -913,9 +913,8 @@ label[for="toggle"] {
     display: none;
 }
 
-
 /* aos */
-
+/*
 body[data-aos-easing="new-easing"] [data-aos],
 [data-aos][data-aos][data-aos-easing="new-easing"] {
     transition-timing-function: cubic-bezier(.8, 0, .2, 1);
@@ -929,7 +928,7 @@ body[data-aos-easing="new-easing"] [data-aos],
 [data-aos="new-animation"].aos-animate {
     opacity: 1;
 }
-
+*/
 
 /* Style adjustments for larger screens */
 
@@ -1005,7 +1004,7 @@ body[data-aos-easing="new-easing"] [data-aos],
         width: auto;
     }
 }
-
+/*
 @media screen and (min-width: 768px) {
     #intro section {margin-left: 30vw; }
     [data-aos="new-animation"] {
@@ -1014,4 +1013,4 @@ body[data-aos-easing="new-easing"] [data-aos],
     [data-aos="new-animation"].aos-animate {
         transform: translatey(0);
     }
-}
+}*/
