@@ -1076,6 +1076,7 @@ body[data-aos-easing="new-easing"] [data-aos],
     #faq article {
         width: 50%;
     }
+
     #features .left {
         border-radius: 0 1vw 1vw 0;
     }
@@ -1091,6 +1092,7 @@ body[data-aos-easing="new-easing"] [data-aos],
     #faq div.top {
         padding: 0 5em 0 0;
     }
+
     .slide-content {
         flex-direction: row;
         gap: 2em;
