@@ -69,7 +69,12 @@
     </main>
     </label>
     <!-- Copyright goes in the footer-->
-    <footer>&copy; 2020-2021 Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>
-</body>
+    <footer>&copy; 2020-<span id="year"></span> Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>
 
+<script>
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("year").innerHTML = year;
+</script>
+</body>
 </html>
