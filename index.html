@@ -9,15 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/branding/favicon.ico" />
+    <link rel="shortcut icon" href="media/branding/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/top.js"></script> 
-
+    <script src="./js/top.js"></script>
     <script src="./js/detect_os.js"></script>
     <script src="./js/current_page.js"></script>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" -->
 
 </head>
 <!-- Content that displays on the page goes in the body-->
@@ -26,7 +27,7 @@
     <!-- Branding goes in the header -->
     <header>
         <a class="logo" href="index.html" style="z-index: 4;">
-            <img src="img/branding/small_logo.png" alt="There should be a logo image here" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
+            <img src="media/branding/small_logo.png" alt="There should be a logo image here" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
         </a>
         <!-- The menu goes in nav. To have a dropdown, it's best to use a list structure. -->
         <nav>
@@ -61,7 +62,7 @@
                         <li><a href="https://groups.google.com/g/tahoma2d" target="_blank">Google Group</a></li>
                     </ul>
                 </li>
-                 <input type="radio" name="dropm" id="deselectrad">
+                <input type="radio" name="dropm" id="deselectrad">
             </ul>
         </nav>
     </header>
@@ -69,18 +70,22 @@
     <label for="deselectrad">
     <main>
         <section id="intro" class="flex">
-            <img data-aos-easing="new-easing" data-aos="fade-right" src="img/branding/moose.png">
-            <div>
-                <h1 data-aos-easing="new-easing" data-aos="fade-left">Tahoma2D</h1>
-                <p data-aos-delay="100" data-aos-easing="new-easing" data-aos="fade-left">Free and powerful software for 2D and stop motion animators.</p>
-            </div>
-            <section data-aos-delay="200" data-aos-easing="new-easing" data-aos="fade-left" id="download_section">
-                    <a id="home_download_button" class="download_button" href="download/official_releases.html">Download</a>
-                    <!-- In terms of syntax, p should only be used for paragraphs and span is better for small spans of text ie. a word, phrase, or sometimes character. -->
-                    <span id="home_release_notes">Latest Release:
-                        <a href="https://github.com/tahoma2d/tahoma2d/releases/tag/v1.2" target="_blank">1.2.0 - May 13th</a>
-                    </span>
+            <img data-aos-easing="new-easing" data-aos="fade-right" src="media/branding/moose.svg">
+            <div id="intro-text-and-button">
+
+                <div>
+                    <h1 data-aos-easing="new-easing" data-aos="fade-left">Tahoma2D</h1>
+                    <p data-aos-delay="100" data-aos-easing="new-easing" data-aos="fade-left">Free and powerful software<br>for 2D and stop motion<br>animators.</p>
+                </div>
+                <section data-aos-delay="200" data-aos-easing="new-easing" data-aos="fade-left" id="download_section">
+                        <a id="home_download_button" class="download_button" href="download/official_releases.html">Download</a>
+                        <!-- In terms of syntax, p should only be used for paragraphs and span is better for small spans of text ie. a word, phrase, or sometimes character. -->
+                        <span id="home_release_notes">Latest Release:
+                            <a href="https://github.com/tahoma2d/tahoma2d/releases/tag/v1.2" target="_blank">1.2.0 - May 13th</a>
+                        </span>
                 </section>
+            </div>
+            
         </section>
         <section id="features">
             <h2 data-aos="new-animation">
@@ -92,119 +97,196 @@
             <input type="radio" name="features" id="sync">
             <input type="radio" name="features" id="sfx">
             <label for="brush">
-                <span class="left"> <img src="img/icons/slider_left.png"> </span>
-                <span class="right"> <img src="img/icons/slider_right.png"> </span>
+                <span class="left"> <img src="media/icons/slider_left.png"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png"> </span>
             </label>
-            <label for="palettes">
-                <span class="left"> <img src="img/icons/slider_left.png"> </span>
-                <span data-aos="new-animation" class="right"> <img src="img/icons/slider_right.png"> </span>
+    <label for="palettes">
+                <span class="left"> <img src="media/icons/slider_left.png"> </span>
+                <span data-aos="new-animation" class="right"> <img src="media/icons/slider_right.png"> </span>
             </label>
-            <label for="type">
-                <span class="left"> <img src="img/icons/slider_left.png"> </span>
-                <span class="right"> <img src="img/icons/slider_right.png"> </span>
+    <label for="type">
+                <span class="left"> <img src="media/icons/slider_left.png"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png"> </span>
             </label>
-            <label for="sync">
-                <span class="left"> <img src="img/icons/slider_left.png"> </span>
-                <span class="right"> <img src="img/icons/slider_right.png"> </span>
+    <label for="sync">
+                <span class="left"> <img src="media/icons/slider_left.png"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png"> </span>
             </label>
-            <label for="sfx">
-                <span data-aos="new-animation" class="left"> <img src="img/icons/slider_left.png"> </span>
-                <span class="right"> <img src="img/icons/slider_right.png"> </span>
+    <label for="sfx">
+                <span data-aos="new-animation" class="left"> <img src="media/icons/slider_left.png"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png"> </span>
             </label>
 
-            <figure id="brushes">
-                <img data-aos="new-animation" src="img/gifs/rodney.png" alt="The example image should display" title="Example of brushwork in Tahoma2D by Rodney" style="max-width: 800px;">
-                <img data-aos="new-animation" src="img/screenshots/brushs.png" alt="The example image should display" title="Example of brushes in Tahoma2D" style="max-width: 442px;">
-                <figcaption data-aos="new-animation">
-                    A variety of brushes for different tastes
-                </figcaption>
-            </figure>
-            <figure id="palette">
-                <img src="img/screenshots/palette.png" alt="The example image should display" title="Example of brushwork in Tahoma2D" style="max-width: 442px;">
-                <img src="img/gifs/rattus.gif" alt="The example image should display" title="Example animation made in Tahoma2D by Rattus" style="max-width: 800px;">
-                <figcaption>
-                    Palettes for organizing and animating colors/styles
-                </figcaption>
-            </figure>
-            <figure id="types">
-                <img src="img/gifs/jerhenning-1.gif" alt="The example image should display" title="Example of cut out animation in Tahoma2D by Jerhenning" style="max-width: 800px;">
+    <div id="brushes" class="slide">
+        <div class="slide-content">
+            <img data-aos="new-animation" src="media/artworks/rodney.png" alt="The example image should display" title="Example of brushwork in Tahoma2D by Rodney" style="max-width: 800px;" id="brushes-art">
+            <img data-aos="new-animation" src="media/screenshots/brushs.png" alt="The example image should display" title="Example of brushes in Tahoma2D" style="min-width: 22vw;">
 
-                <img src="img/gifs/jerhenning-2.gif" alt="The example image should display" title="Example of stop motion in Tahoma2D by Jerhenning" style="max-width: 800px;">
-                <figcaption>
-                    Cut Out Animation
-                </figcaption>
-                <figcaption>
-                    Stop Motion Animation
-                </figcaption>
-            </figure>
-            <figure id="lipsync">
-                <img src="img/gifs/pikhosh-1.gif" alt="The example image should display" title="Example of lip-synching in Tahoma2D by Pikhosh" style="max-width: 800px;">
 
-                <img src="img/screenshots/lip_sync.png" alt="The example image should display" title="Example of lipsync window in Tahoma2D" style="max-width: 442px;">
-                <figcaption>
-                    Automated lip-syching with Rhubarb Lip Sync
-                </figcaption>
-            </figure>
-            <figure id="fx">
-                <img src="img/screenshots/fx.png" alt="The example image should display" title="Example of FX nodes" style="max-width: 442px;">
 
-                <img src="img/gifs/pikhosh-2.gif" alt="The example image should display" title="Example of FX at work in Tahoma2D by Pikhosh" style="max-width: 800px;">
-                <figcaption>
-                    Special FX
-                </figcaption>
-            </figure>
-        </section>
-        <section id="system">
-            <h2 data-aos="new-animation">
-                <span class="dash">-</span> System Requirements <span class="dash">-</span>
-            </h2>
-            <ul class="nomarker">
-                <li data-aos="new-animation">
-                    <span class="bold">OS (Windows)</span>: Microsoft Windows 8.1/10 (64-bit required)
-                </li>
-                <li data-aos="new-animation">
-                    <span class="bold">OS (macOS)</span>: macOS 10.13 or a later version
-                </li>
-                <li data-aos="new-animation">
-                    <span class="bold">CPU</span>: Intel Core i series processor or better
-                </li>
-                <li data-aos="new-animation">
-                    <span class="bold">RAM</span>: 4GB or more RAM
-                </li>
-                <li data-aos="new-animation">
-                    <span class="bold">HDD</span>: 500MB or more available storage space
-                </li>
-                <li data-aos="new-animation">
-                    <span class="bold">Monitor</span>: 1280 x 1024 or higher monitor resolution
-                </li>
-            </ul>
-        </section>
-        <section id="compare">
-            <h2 data-aos="new-animation">
-                <span class="dash">-</span> Tahoma2D Vs. OpenToonz <span class="dash">-</span>
-            </h2>
+        </div>
+        <h3 data-aos="new-animation">
+            A variety of brushes for different tastes
+        </h3>
+    </div>
+    <div id="palette" class="slide">
+        <div class="slide-content">
 
-            <figure data-aos="new-animation">
-                <img src="img/screenshots/tahoma2d_ui.png" alt="The UI image is missing" title="Example of Tahoma2D's UI" style="max-width:1680px;" class="sideimg">
-            </figure>
-            <ul class="marker">
-                <li data-aos="new-animation" class="nomarker bold">Tahoma2D's unique features:</li>
-                <li data-aos="new-animation">The simplified workspace</li>
-                <li data-aos="new-animation">Easier project management</li>
-                <li data-aos="new-animation">Rhubarb Lip Sync integration for automatic lip syncing</li>
-                <li data-aos="new-animation">Perspective guides and grids for precision drawing</li>
-                <li data-aos="new-animation">A status bar with helpful hints for new users</li>
-                <li data-aos="new-animation">No additional libraries needed to export in common formats like mp4 and gif</li>
-                <li data-aos="new-animation">Support for Canon DSLR cameras on macOS - not just Windows</li>
-                <li data-aos="new-animation">And many more small quality of life improvements</li>
-            </ul>
-        </section>
-        <section id="faq">
-            <h2 data-aos="new-animation">
-                <span class="dash">-</span> FAQ <span class="dash">-</span>
-            </h2>
-            <article data-aos="new-animation"><input type="checkbox" name="faq" id="bug">
-                <label for="bug">I found a bug in the software. How can I report it?
+
+            <img src="media/screenshots/palette.png" alt="The example image should display" title="Example of brushwork in Tahoma2D" style="min-width: 24vw;">
+            <video class="js-player">
+                        <source preload="none" src="media/artworks/rattus/rattus.mp4" type="video/mp4" size="1080">
+                        <source preload="none" src="media/artworks/rattus/rattus-720p.mp4" type="video/mp4" size="720">
+                        <source preload="none" src="media/artworks/rattus/rattus-480p.mp4" type="video/mp4" size="480">
+                        <source preload="none" src="media/artworks/rattus/rattus-360p.mp4" type="video/mp4" size="360">
+                        <source preload="none" src="media/artworks/rattus/rattus-240p.mp4" type="video/mp4" size="240">
+    
+            </video>
+
+        </div>
+
+        <h3>
+            Palettes for organizing and animating colors/styles
+        </h3>
+    </div>
+    <div id="types" class="slide-types">
+        <div class="slide-content-types">
+
+
+            <video class="js-player">
+                <source preload="none" src="media/artworks/jerhenning-1/jerhenning-1.mp4" type="video/mp4" size="1080">
+                <source preload="none" src="media/artworks/jerhenning-1/jerhenning-1-720p.mp4" type="video/mp4" size="720">
+                <source preload="none" src="media/artworks/jerhenning-1/jerhenning-1-480p.mp4" type="video/mp4" size="480">
+                <source preload="none" src="media/artworks/jerhenning-1/jerhenning-1-360p.mp4" type="video/mp4" size="360">
+                <source preload="none" src="media/artworks/jerhenning-1/jerhenning-1-240p.mp4" type="video/mp4" size="240">
+
+
+            </video>
+
+
+            <h3>
+                Cut Out Animation
+            </h3>
+
+
+
+        </div>
+
+
+        <div class="slide-content-types">
+
+
+            <video class="js-player">
+                <source preload="none" src="media/artworks/jerhenning-2/jerhenning-2.mp4" type="video/mp4" size="1080">
+                <source preload="none" src="media/artworks/jerhenning-2/jerhenning-2-720p.mp4" type="video/mp4" size="720">
+                <source preload="none" src="media/artworks/jerhenning-2/jerhenning-2-480p.mp4" type="video/mp4" size="480">
+                <source preload="none" src="media/artworks/jerhenning-2/jerhenning-2-360p.mp4" type="video/mp4" size="360">
+                <source preload="none" src="media/artworks/jerhenning-2/jerhenning-2-240p.mp4" type="video/mp4" size="240">
+    
+            </video>
+            <h3>
+                Stop Motion Animation
+            </h3>
+
+        </div>
+
+    </div>
+    <div id="lipsync" class="slide">
+        <div class="slide-content">
+
+            <video class="js-player">
+                <source preload="none" src="media/artworks/pikhosh-1/pikhosh-1.mp4" type="video/mp4" size="1080">
+                <source preload="none" src="media/artworks/pikhosh-1/pikhosh-1-720p.mp4" type="video/mp4" size="720">
+                <source preload="none" src="media/artworks/pikhosh-1/pikhosh-1-480p.mp4" type="video/mp4" size="480">
+                <source preload="none" src="media/artworks/pikhosh-1/pikhosh-1-360p.mp4" type="video/mp4" size="360">
+                <source preload="none" src="media/artworks/pikhosh-1/pikhosh-1-240p.mp4" type="video/mp4" size="240">
+
+            </video>
+
+            <img src="media/screenshots/lip_sync.png" alt="The example image should display" title="Example of lipsync window in Tahoma2D" style="min-width: 29vw;">
+
+
+
+        </div>
+        <h3>
+            Automated lip-syching with Rhubarb Lip Sync
+        </h3>
+    </div>
+    <div id="fx" class="slide">
+
+        <div class="slide-content">
+
+
+            <img src="media/screenshots/fx.png" alt="The example image should display" title="Example of FX nodes" style="min-width: 24vw;">
+
+            <video class="js-player">
+                        <source preload="none" src="media/artworks/pikhosh-2/pikhosh-2.mp4" type="video/mp4" size="1080">
+                        <source preload="none" src="media/artworks/pikhosh-2/pikhosh-2-720p.mp4" type="video/mp4" size="720">
+                        <source preload="none" src="media/artworks/pikhosh-2/pikhosh-2-480p.mp4" type="video/mp4" size="480">
+                        <source preload="none" src="media/artworks/pikhosh-2/pikhosh-2-360p.mp4" type="video/mp4" size="360">
+                        <source preload="none" src="media/artworks/pikhosh-2/pikhosh-2-240p.mp4" type="video/mp4" size="240">
+    
+            </video>
+
+
+        </div>
+
+        <h3>
+            Special FX
+        </h3>
+    </div>
+    </section>
+    <section id="system">
+        <h2 data-aos="new-animation">
+            <span class="dash">-</span> System Requirements <span class="dash">-</span>
+        </h2>
+        <ul class="nomarker">
+            <li data-aos="new-animation">
+                <span class="bold">OS (Windows)</span>: Microsoft Windows 8.1/10 (64-bit required)
+            </li>
+            <li data-aos="new-animation">
+                <span class="bold">OS (macOS)</span>: macOS 10.13 or a later version
+            </li>
+            <li data-aos="new-animation">
+                <span class="bold">CPU</span>: Intel Core i series processor or better
+            </li>
+            <li data-aos="new-animation">
+                <span class="bold">RAM</span>: 4GB or more RAM
+            </li>
+            <li data-aos="new-animation">
+                <span class="bold">HDD</span>: 500MB or more available storage space
+            </li>
+            <li data-aos="new-animation">
+                <span class="bold">Monitor</span>: 1280 x 1024 or higher monitor resolution
+            </li>
+        </ul>
+    </section>
+    <section id="compare">
+        <h2 data-aos="new-animation">
+            <span class="dash">-</span> Tahoma2D Vs. OpenToonz <span class="dash">-</span>
+        </h2>
+
+        <figure data-aos="new-animation">
+            <img src="media/screenshots/tahoma2d_ui.png" alt="The UI image is missing" title="Example of Tahoma2D's UI" style="max-width:1680px;" class="sideimg" loading="lazy">
+        </figure>
+        <ul class="marker">
+            <li data-aos="new-animation" class="nomarker bold">Tahoma2D's unique features:</li>
+            <li data-aos="new-animation">The simplified workspace</li>
+            <li data-aos="new-animation">Easier project management</li>
+            <li data-aos="new-animation">Rhubarb Lip Sync integration for automatic lip syncing</li>
+            <li data-aos="new-animation">Perspective guides and grids for precision drawing</li>
+            <li data-aos="new-animation">A status bar with helpful hints for new users</li>
+            <li data-aos="new-animation">No additional libraries needed to export in common formats like mp4 and gif</li>
+            <li data-aos="new-animation">Support for Canon DSLR cameras on macOS - not just Windows</li>
+            <li data-aos="new-animation">And many more small quality of life improvements</li>
+        </ul>
+    </section>
+    <section id="faq">
+        <h2 data-aos="new-animation">
+            <span class="dash">-</span> FAQ <span class="dash">-</span>
+        </h2>
+        <article data-aos="new-animation"><input type="checkbox" name="faq" id="bug">
+            <label for="bug">I found a bug in the software. How can I report it?
                 <span class="open">
                     <i class="bi bi-chevron-down" id="faq_icon"></i>
                 </span>
@@ -212,14 +294,14 @@
                     <i class="bi bi-chevron-up" id="faq_icon"></i>
                 </span>
             </label>
-                <div>
-                    <p>If this is an unreported issue, create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues/new?assignees=&labels=bug&template=bug_report.md&title=" target="_blank">to start a new issue</a>.</p>
-                    <p>The more information you can add <span class="emphasize">(ie. screenshots, screencaptures, crash reports, and/or repeatable steps)</span>, the more likely it is that a developer will be able to fix the problem in a timely manner.</p>
-                    <p>If there is already <a href="https://github.com/tahoma2d/tahoma2d/issues" target="_blank">an existing bug report</a> for the same issue, please add more information to it instead of creating a new issue.</p>
-                </div>
-            </article>
-            <article data-aos="new-animation"><input type="checkbox" name="faq" id="request">
-                <label for="request">I have an idea for a new feature. How can I send it to you?
+            <div>
+                <p>If this is an unreported issue, create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues/new?assignees=&labels=bug&template=bug_report.md&title=" target="_blank">to start a new issue</a>.</p>
+                <p>The more information you can add <span class="emphasize">(ie. screenshots, screencaptures, crash reports, and/or repeatable steps)</span>, the more likely it is that a developer will be able to fix the problem in a timely manner.</p>
+                <p>If there is already <a href="https://github.com/tahoma2d/tahoma2d/issues" target="_blank">an existing bug report</a> for the same issue, please add more information to it instead of creating a new issue.</p>
+            </div>
+        </article>
+        <article data-aos="new-animation"><input type="checkbox" name="faq" id="request">
+            <label for="request">I have an idea for a new feature. How can I send it to you?
                 <span class="open">
                     <i class="bi bi-chevron-down" id="faq_icon"></i>
                 </span>
@@ -227,14 +309,14 @@
                     <i class="bi bi-chevron-up" id="faq_icon"></i>
                  </span>
                 </label>
-                <div>
-                    <p>
-                        Create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues" target="_blank"> to submit a feature request.</a>
-                    </p>
-                </div>
-            </article>
-            <article data-aos="new-animation"><input type="checkbox" name="faq" id="upgrade">
-                <label for="upgrade">
+            <div>
+                <p>
+                    Create an account on Github and sign-in <a href="https://github.com/tahoma2d/tahoma2d/issues" target="_blank"> to submit a feature request.</a>
+                </p>
+            </div>
+        </article>
+        <article data-aos="new-animation"><input type="checkbox" name="faq" id="upgrade">
+            <label for="upgrade">
                 How can I upgrade to the latest version of Tahoma2D?
                     <span class="open">
                         <i class="bi bi-chevron-down" id="faq_icon"></i>
@@ -243,37 +325,37 @@
                         <i class="bi bi-chevron-up" id="faq_icon"></i>
                     </span>
                  </label>
-                <div>
-                    <p>Tahoma2D is portable so you can still keep prior versions around if you want. Just put the Tahoma2D 1.2 folder in a different place, or rename the old version's folder <span class="emphasize">(ie: "Tahoma2D" &rarr; "Tahoma2D 1.1")</span>.
-                        On macOS, rename the Tahoma2D app instead <span class="emphasize">(ie. "Tahoma2D.app" &rarr; "Tahoma2D 1.1.app")</span>.</p>
-                    <p>Transfering all your settings and configurations from v1.x to v1.2 is easy with the following steps:</p>
-                    <ol>
-                        <li>Open the latest version of Tahoma2D</li>
-                        <li>Go to File &rarr; Preferences</li>
-                        <li>Click on the "Import Preferences" button</li>
-                        <li>Select the Tahoma2D v1.x folder, wherever you placed it</li>
-                        <li>Select all the things you want to bring over
-                            <ul>
-                                <li>Please do not migrate Plugins</li>
-                            </ul>
-                        </li>
-                        <li>Click the "Import" button</li>
-                        <li>Close and restart Tahoma2d 1.2</li>
-                    </ol>
-                </div>
-            </article>
-            <div class="top">
-
-                <a href="#">
-                    <i class="bi bi-chevron-double-up" style="font-size: 0.9em;"></i> TOP
-                </a>
+            <div>
+                <p>Tahoma2D is portable so you can still keep prior versions around if you want. Just put the Tahoma2D 1.2 folder in a different place, or rename the old version's folder <span class="emphasize">(ie: "Tahoma2D" &rarr; "Tahoma2D 1.1")</span>.
+                    On macOS, rename the Tahoma2D app instead <span class="emphasize">(ie. "Tahoma2D.app" &rarr; "Tahoma2D 1.1.app")</span>.</p>
+                <p>Transfering all your settings and configurations from v1.x to v1.2 is easy with the following steps:</p>
+                <ol>
+                    <li>Open the latest version of Tahoma2D</li>
+                    <li>Go to File &rarr; Preferences</li>
+                    <li>Click on the "Import Preferences" button</li>
+                    <li>Select the Tahoma2D v1.x folder, wherever you placed it</li>
+                    <li>Select all the things you want to bring over
+                        <ul>
+                            <li>Please do not migrate Plugins</li>
+                        </ul>
+                    </li>
+                    <li>Click the "Import" button</li>
+                    <li>Close and restart Tahoma2d 1.2</li>
+                </ol>
             </div>
-        </section>
+        </article>
+        <div class="top">
+
+            <a href="#">
+                <i class="bi bi-chevron-double-up" style="font-size: 0.9em;"></i> TOP
+            </a>
+        </div>
+    </section>
     </main>
     </label>
     <!-- Copyright goes in the footer-->
     <footer>&copy; 2020-<span id="year"></span> Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>
-<!--
+    <!--
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -282,11 +364,15 @@
             duration: 700,
         })
     </script>-->
-<script>
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("year").innerHTML = year;
-</script>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
+
+    <script>
+        const players = Plyr.setup('.js-player');
+    </script>
 
 </body>
 

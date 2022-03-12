@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../img/branding/favicon.ico" />
+    <link rel="shortcut icon" href="../media/branding/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/current_page.js"></script>
@@ -21,10 +21,10 @@
     <!-- Branding goes in the header -->
     <header>
         <a class="logo" href="../index.html" style="z-index: 4;">
-            <img src="../img/branding/small_logo.png" alt="There should be a logo image here" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
+            <img src="../media/branding/small_logo.png" alt="There should be a logo image here" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
         </a>
         <!-- The menu goes in nav. To have a dropdown, it's best to use a list structure. -->
-<nav>
+        <nav>
             <input type="checkbox" id="toggle" autocomplete="off" />
             <label for="toggle">+</label>
             <ul id="menu" class="menu_hover">
@@ -56,12 +56,12 @@
                         <li><a href="https://groups.google.com/g/tahoma2d" target="_blank">Google Group</a></li>
                     </ul>
                 </li>
-                 <input type="radio" name="dropm" id="deselectrad">
+                <input type="radio" name="dropm" id="deselectrad">
             </ul>
         </nav>
     </header>
     <!-- Page content goes in main-->
-     <label for="deselectrad">
+    <label for="deselectrad">
     <main class="download_page">
 
         <h2>
@@ -107,10 +107,11 @@
     <!-- Copyright goes in the footer-->
     <footer>&copy; 2020-<span id="year"></span> Tahoma2D&nbsp;|&nbsp;Website created by: <a href="https://www.youtube.com/channel/UCky4IRq9d_XRdNuWcQCqD3g" target="_blank">@Pikhosh </a> &amp; <a href="https://github.com/artisteacher" target="_blank">@Artisteacher</a></footer>
 
-<script>
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("year").innerHTML = year;
-</script>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
 </body>
+
 </html>
