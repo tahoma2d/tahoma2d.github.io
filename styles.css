@@ -504,8 +504,7 @@ nav ul,
 #download aside,
 #plugins,
 #mac div,
-#download_section,
-.download_page {
+#download_section {
     justify-content: space-around;
 }
 
