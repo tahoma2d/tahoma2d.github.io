@@ -418,6 +418,14 @@ a:focus {
 
 /* Flexible Layout */
 
+#compare {
+    justify-content: center;
+}
+
+ul.marker {
+    width: fit-content;
+}
+
 .download_buttons {
     align-items: center;
 }
@@ -492,7 +500,6 @@ header,
 
 nav ul,
 #system,
-#compare,
 #features,
 #faq,
 #features figure,
@@ -1189,9 +1196,11 @@ body[data-aos-easing="new-easing"] [data-aos],
     #menu li li a {
         padding: .5em;
     }
-    #compare ul,
     #compare figure {
         width: 40%;
+    }
+    #compare ul {
+        width: fit-content;
     }
     #download a {
         width: 20%;
