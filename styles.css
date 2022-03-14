@@ -115,8 +115,23 @@ body {
     padding-bottom: 0;
 }
 
+#download_page_content_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+#download_page_content_section aside {
+    width: 80vw;
+}
+
 .download_page_text span {
     font-weight: 700;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 ul {
@@ -402,6 +417,10 @@ a:focus {
 
 
 /* Flexible Layout */
+
+.download_buttons {
+    align-items: center;
+}
 
 body,
 header,
@@ -1047,6 +1066,9 @@ body[data-aos-easing="new-easing"] [data-aos],
         border-radius: 15px;
     }
     /* Plyr */
+    #download_page_content_section aside {
+        width: 40vw;
+    }
     #faq article {
         width: 50%;
     }

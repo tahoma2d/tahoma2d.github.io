@@ -70,19 +70,19 @@
         <section>
 
             <div class="download_buttons">
-                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d/releases/download/v1.2/Tahoma2D-win.zip">Windows</a>
-                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d/releases/download/v1.2/Tahoma2D-osx.dmg">macOS</a>
-                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d/releases/download/v1.2/Tahoma2D-linux.tar.gz">Linux</a>
+                <a id="windows_link" class="download_button" href="">Windows</a>
+                <a id="mac_link" class="download_button" href="">macOS</a>
+                <a id="linux_link" class="download_button" href="">Linux</a>
 
 
             </div>
             <span class="release_notes">Latest Release:
-                <a href="https://github.com/tahoma2d/tahoma2d/releases/tag/v1.2" target="_blank">1.2.0 - May 13th</a>
+                <a id="official_date" href="" target="_blank"></a>
             </span>
 
         </section>
 
-        <section>
+        <section id="download_page_content_section">
 
             <div class="download_page_text">
 
@@ -166,6 +166,31 @@
         let year = d.getFullYear();
         document.getElementById("year").innerHTML = year;
     </script>
+    <script>
+        var releaseDate = document.querySelector("#official_date")
+        var windowsLink = document.querySelector("#windows_link")
+        var macLink = document.querySelector("#mac_link")
+        var linuxLink = document.querySelector("#linux_link")
+
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
+            .then(response => response.json())
+            .then(data => {
+                releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
+                releaseDate.href = data.html_url
+            })
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/assets/38694525")
+            .then(response => response.json())
+            .then(data => windowsLink.href = data.browser_download_url)
+
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/assets/36855483")
+            .then(response => response.json())
+            .then(data => macLink.href = data.browser_download_url)
+
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/assets/36868620")
+            .then(response => response.json())
+            .then(data => linuxLink.href = data.browser_download_url)
+    </script>
+
 </body>
 
 </html>
