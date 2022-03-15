@@ -1225,9 +1225,13 @@ body[data-aos-easing="new-easing"] [data-aos],
     }
     #compare figure {
         width: 40%;
+        margin:0;
     }
+    
+    
     #compare ul {
-        width: fit-content;
+        /* fit-content is on the newer side and isn't fully supported. For now, it's better to choose a responsive size so that we don't get sideways scrolling. We need all the widths + margins to = 100% or less. */   
+        width: 50%;
     }
     #download a {
         width: 20%;
