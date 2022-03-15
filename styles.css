@@ -88,12 +88,14 @@ html {
     content: "#v1.3";
     background-color: #d62196;
     padding: 0.2em;
-    border-radius: 0 0.2em 0.2em 0;
-    margin-left: 0.5em;
+    border-radius: .313em;
+    position: absolute;
+    right: -50px;
+    top: 0;
 }
 
 #compare li.new {
-    padding-right: 0;
+    position: relative;
 }
 
 body {
