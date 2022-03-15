@@ -249,8 +249,7 @@ label[for="toggle"],
     color: #ffffff;
 }
 
-#compare h3,
-#compare .note {
+#compare h3 {
     color: #222F3E;
 }
 
@@ -406,11 +405,6 @@ a:focus {
 .bold,
 #compare .bold {
     font-weight: 600;
-}
-
-#compare .note {
-    margin-left: 1em;
-    font-style: italic;
 }
 
 #compare li {
