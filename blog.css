@@ -1,0 +1,55 @@
+.post {
+    background-color: white;
+    box-shadow: #0000000f 0 0 20px 0;
+    padding: 1em 2.5em;
+    border-radius: var(--BorderRadius);
+    margin: 2em;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+img {
+    width: -webkit-fill-available;
+    border-radius: var(--BorderRadius);
+    max-width: fit-content;
+}
+
+#post-list {
+    width: 100%;
+    max-width: 45em;
+}
+
+#post-list input {
+    display: none;
+}
+
+#post-list input:checked~* {
+    display: block;
+}
+
+#post-list input:not(:checked)~*:not(label) {
+    display: none;
+}
+
+#title {
+    cursor: pointer;
+}
+
+.date,
+.tahoma2d-version {
+    color: #ffffff;
+    border-radius: 0.2em;
+    padding: 0 0.2em;
+    font-weight: 100;
+    margin-right: 0.3em;
+}
+
+.date {
+    background-color: #6621d6;
+}
+
+.tahoma2d-version {
+    background-color: #d62196;
+}
