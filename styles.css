@@ -84,6 +84,18 @@ html {
 
 /* Colors and Backgrounds */
 
+.new::after {
+    content: "#v1.3";
+    background-color: #d62196;
+    padding: 0.1em;
+    border-radius: 0.2em;
+    margin-left: 0.5em;
+}
+
+#compare li.new {
+    padding: 0.1em 0em 0.1em .2em;
+}
+
 body {
     background-color: #f9fafb;
     opacity: 1;
@@ -237,7 +249,8 @@ label[for="toggle"],
     color: #ffffff;
 }
 
-#compare h3, #compare .note {
+#compare h3,
+#compare .note {
     color: #222F3E;
 }
 
@@ -395,8 +408,10 @@ a:focus {
     font-weight: 600;
 }
 
-#compare .note {margin-left: 1em; 
-    font-style: italic;}
+#compare .note {
+    margin-left: 1em;
+    font-style: italic;
+}
 
 #compare li {
     border-radius: 0.313em;
@@ -1079,7 +1094,6 @@ body[data-aos-easing="new-easing"] [data-aos],
     #faq article {
         width: 50%;
     }
-
     #features .left {
         border-radius: 0 1vw 1vw 0;
     }
@@ -1095,7 +1109,6 @@ body[data-aos-easing="new-easing"] [data-aos],
     #faq div.top {
         padding: 0 5em 0 0;
     }
-
     .slide-content {
         flex-direction: row;
         gap: 2em;
