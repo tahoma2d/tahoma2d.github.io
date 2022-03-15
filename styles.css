@@ -87,13 +87,13 @@ html {
 .new::after {
     content: "#v1.3";
     background-color: #d62196;
-    padding: 0.1em;
-    border-radius: 0.2em;
+    padding: 0.2em;
+    border-radius: 0 0.2em 0.2em 0;
     margin-left: 0.5em;
 }
 
 #compare li.new {
-    padding: 0.1em 0em 0.1em .5em;
+    padding-right: 0;
 }
 
 body {
