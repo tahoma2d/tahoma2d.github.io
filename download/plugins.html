@@ -123,19 +123,11 @@
             .then(data => {
                 releaseDate.innerHTML = data.tag_name + " - " + data.published_at;
                 releaseDate.href = data.html_url
+
+                windowsLink.href = data.assets[2].browser_download_url
+                macLink.href = data.assets[1].browser_download_url
+                linuxLink.href = data.assets[0].browser_download_url
             })
-
-        fetch("https://api.github.com/repos/tahoma2d/tahoma2d_plugins/releases/assets/36494067")
-            .then(response => response.json())
-            .then(data => windowsLink.href = data.browser_download_url)
-
-        fetch("https://api.github.com/repos/tahoma2d/tahoma2d_plugins/releases/assets/36494068")
-            .then(response => response.json())
-            .then(data => macLink.href = data.browser_download_url)
-
-        fetch("https://api.github.com/repos/tahoma2d/tahoma2d_plugins/releases/assets/37328986")
-            .then(response => response.json())
-            .then(data => linuxLink.href = data.browser_download_url)
     </script>
 </body>
 

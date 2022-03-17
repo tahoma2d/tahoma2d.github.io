@@ -4,14 +4,14 @@ $(function() {
     var os_name = "Download";
     var os_link = "download/official_releases.html"
 
-    function fetchData(versionURL) {
-        fetch(versionURL)
+    function fetchData(assetsNumber) {
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
             .then(response => response.json())
-            .then(data => button.href = data.browser_download_url)
+            .then(data => button.href = data.assets[assetsNumber].browser_download_url)
     }
 
     if (navigator.userAgent.indexOf("Win") != -1) {
-        fetchData("https://api.github.com/repos/tahoma2d/tahoma2d/releases/assets/38694525")
+        fetchData(3)
 
         os_name =
             "Download For Windows";
@@ -26,7 +26,7 @@ $(function() {
 
 
     } else if (navigator.userAgent.indexOf("Mac") != -1) {
-        fetchData("https://api.github.com/repos/tahoma2d/tahoma2d/releases/assets/36855483")
+        fetchData(2)
 
         os_name =
             "Download For macOS";
@@ -41,7 +41,7 @@ $(function() {
 
 
     } else if (navigator.userAgent.indexOf("Linux") != -1) {
-        fetchData("https://api.github.com/repos/tahoma2d/tahoma2d/releases/assets/36868620")
+        fetchData(1)
 
         os_name =
             "Download For Linux";
