@@ -17,7 +17,7 @@
 </head>
 <!-- Content that displays on the page goes in the body-->
 
-<body>
+<body onload="beta()">
     <!-- Branding goes in the header -->
     <header>
         <a class="logo" href="../index.html" style="z-index: 4;">
@@ -70,6 +70,8 @@
         <section>
 
             <div class="download_buttons">
+		<input type="checkbox" id="beta" onclick="beta()">
+        	<label for="beta" id="beta_label">v1.3 beta</label>
                 <a id="windows_link" class="download_button" href="">Windows</a>
                 <a id="mac_link" class="download_button" href="">macOS</a>
                 <a id="linux_link" class="download_button" href="">Linux</a>
@@ -167,21 +169,37 @@
         document.getElementById("year").innerHTML = year;
     </script>
     <script>
-        var releaseDate = document.querySelector("#official_date")
-        var windowsLink = document.querySelector("#windows_link")
-        var macLink = document.querySelector("#mac_link")
-        var linuxLink = document.querySelector("#linux_link")
+        function beta() {
+            var releaseDate = document.querySelector("#official_date")
+            var windowsLink = document.querySelector("#windows_link")
+            var macLink = document.querySelector("#mac_link")
+            var linuxLink = document.querySelector("#linux_link")
+            var betaCheckBox = document.querySelector("#beta").checked
+            if (betaCheckBox == false) {
+                fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
+                    .then(response => response.json())
+                    .then(data => {
+                        releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
+                        releaseDate.href = data.html_url
 
-        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
-            .then(response => response.json())
-            .then(data => {
-                releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
-                releaseDate.href = data.html_url
+                        windowsLink.href = data.assets[3].browser_download_url
+                        macLink.href = data.assets[2].browser_download_url
+                        linuxLink.href = data.assets[1].browser_download_url
+                    })
 
-                windowsLink.href = data.assets[3].browser_download_url
-                macLink.href = data.assets[2].browser_download_url
-                linuxLink.href = data.assets[1].browser_download_url
-            })
+            } else {
+                fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.3-beta.1")
+                    .then(response => response.json())
+                    .then(data => {
+                        releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
+                        releaseDate.href = data.html_url
+
+                        windowsLink.href = data.assets[2].browser_download_url
+                        macLink.href = data.assets[1].browser_download_url
+                        linuxLink.href = data.assets[0].browser_download_url
+                    })
+            }
+        }
     </script>
 
 </body>

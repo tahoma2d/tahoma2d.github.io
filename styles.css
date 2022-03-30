@@ -94,6 +94,23 @@ html {
 
 /* Colors and Backgrounds */
 
+#beta {
+    display: none;
+}
+
+#beta~#beta_label {
+    background-color: #ced8e4;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all .3s ease !important;
+    color: white;
+}
+
+#beta:checked~#beta_label {
+    background-color: #d62196;
+}
+
 body {
     background-color: #f9fafb;
     opacity: 1;
