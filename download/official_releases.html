@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../media/branding/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/current_page.js"></script>
     <link rel="stylesheet" type="text/css" href="../styles.css">
@@ -70,16 +70,38 @@
         <section>
 
             <div class="download_buttons">
-                <a id="windows_link" class="download_button" href="">Windows</a>
-                <a id="mac_link" class="download_button" href="">macOS</a>
-                <a id="linux_link" class="download_button" href="">Linux</a>
+		
+                <a id="windows_link" class="official_download_button" href="">Windows</a>
+                <a id="mac_link" class="official_download_button" href="">macOS</a>
+                <a id="linux_link" class="official_download_button" href="">Linux</a>
 
 
             </div>
+
             <span class="release_notes">Latest Release:
                 <a id="official_date" href="" target="_blank"></a>
             </span>
 
+            <div id="beta_download_box">
+
+                <h3><i class="bi bi-magic"></i> Try v1.3 beta!</h3>
+
+                <div class="download_buttons">
+                
+                    <a id="windows_beta_link" class="beta_download_button" href=""><i class="bi bi-stars"></i>Windows</a>
+                    <a id="mac_beta_link" class="beta_download_button" href=""><i class="bi bi-stars"></i>macOS</a>
+                    <a id="linux_beta_link" class="beta_download_button" href=""><i class="bi bi-stars"></i>Linux</a>
+    
+    
+                </div>
+                <span class="release_notes">Latest Beta:
+                    <a id="beta_date" href="" target="_blank"></a>
+                </span>
+
+
+            </div>
+
+            
         </section>
 
         <section id="download_page_content_section">
@@ -172,6 +194,11 @@
         var macLink = document.querySelector("#mac_link")
         var linuxLink = document.querySelector("#linux_link")
 
+        var betaReleaseDate = document.querySelector("#beta_date")
+        var windowsBetaLink = document.querySelector("#windows_beta_link")
+        var macBetaLink = document.querySelector("#mac_beta_link")
+        var linuxBetaLink = document.querySelector("#linux_beta_link")
+
         fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
             .then(response => response.json())
             .then(data => {
@@ -181,6 +208,18 @@
                 windowsLink.href = data.assets[3].browser_download_url
                 macLink.href = data.assets[2].browser_download_url
                 linuxLink.href = data.assets[1].browser_download_url
+            })
+
+
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.3-beta.1")
+            .then(response => response.json())
+            .then(data => {
+                betaReleaseDate.innerHTML = data.tag_name + " - " + data.created_at;
+                betaReleaseDate.href = data.html_url
+
+                windowsBetaLink.href = data.assets[2].browser_download_url
+                macBetaLink.href = data.assets[1].browser_download_url
+                linuxBetaLink.href = data.assets[0].browser_download_url
             })
     </script>
 
