@@ -490,11 +490,11 @@ a:focus {
     font-weight: inherit !important;
 }
 
-#menu_icon {
+.menu_icon {
     font-size: 0.7em;
 }
 
-#faq_icon {
+.faq_icon {
     font-size: 1.6em;
     color: #222F3E;
 }
