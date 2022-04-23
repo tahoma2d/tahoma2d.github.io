@@ -84,6 +84,7 @@ html {
 
 /* Colors and Backgrounds */
 
+
 .new::after {
     content: "#v1.3";
     background-color: #d62196;
@@ -96,6 +97,84 @@ html {
 
 #compare li.new {
     position: relative;
+
+
+/* */
+
+@-webkit-keyframes Beta_Box {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Beta_Box {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes Beta_Box {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Beta_Box {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+/* */
+
+#beta_download_box {
+    box-shadow: #dfdfdf 0 0 20px;
+    border-radius: var(--BorderRadius);
+    padding: 10px 0 25px 0;
+    margin-top: 2vw;
+    text-align: center;
+    color: white;
+    background: linear-gradient(270deg, #e34faf, #8e60ff);
+    background-size: 400% 400%;
+    -webkit-animation: Beta_Box 30s ease infinite;
+    -moz-animation: Beta_Box 30s ease infinite;
+    -o-animation: Beta_Box 30s ease infinite;
+    animation: Beta_Box 30s ease infinite;
+}
+
+.beta_download_button {
+    box-shadow: 0px 5px #9021d6;
+}
+
+.download_button,
+.official_download_button {
+    box-shadow: 0px 5px #d62196;
+
 }
 
 body {
@@ -119,8 +198,23 @@ body {
     padding-bottom: 0;
 }
 
+#download_page_content_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+#download_page_content_section aside {
+    width: 80vw;
+}
+
 .download_page_text span {
     font-weight: 700;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 ul {
@@ -143,7 +237,9 @@ ul {
     margin-block-end: 0em;
 }
 
-.download_button {
+.download_button,
+.official_download_button,
+.beta_download_button {
     background-color: #222F3E;
     width: 14.119em;
     padding: 0.813em 1.375em;
@@ -151,14 +247,18 @@ ul {
     text-decoration: none;
     color: #FFFF;
     font-weight: 700;
-    box-shadow: 0px 5px #d62196;
     transition: box-shadow .5s ease !important;
     text-align: center;
     margin: 0 0.625em;
 }
 
+.official_download_button:hover,
 .download_button:hover {
     box-shadow: 0 0 0px 2px #d62196;
+}
+
+.beta_download_button:hover {
+    box-shadow: 0 0 0px 2px #9021d6;
 }
 
 #intro #home_release_notes {
@@ -432,17 +532,29 @@ a:focus {
     font-weight: inherit !important;
 }
 
-#menu_icon {
+.menu_icon {
     font-size: 0.7em;
 }
 
-#faq_icon {
+.faq_icon {
     font-size: 1.6em;
     color: #222F3E;
 }
 
 
 /* Flexible Layout */
+
+#compare {
+    justify-content: center;
+}
+
+ul.marker {
+    width: fit-content;
+}
+
+.download_buttons {
+    align-items: center;
+}
 
 body,
 header,
@@ -525,8 +637,7 @@ nav ul,
 #download aside,
 #plugins,
 #mac div,
-#download_section,
-.download_page {
+#download_section {
     justify-content: space-around;
 }
 
@@ -1087,6 +1198,9 @@ body[data-aos-easing="new-easing"] [data-aos],
         border-radius: 15px;
     }
     /* Plyr */
+    #download_page_content_section aside {
+        width: 40vw;
+    }
     #faq article {
         width: 50%;
     }
@@ -1232,6 +1346,9 @@ body[data-aos-easing="new-easing"] [data-aos],
     #compare ul {
         /* fit-content is on the newer side and isn't fully supported. For now, it's better to choose a responsive size so that we don't get sideways scrolling. We need all the widths + margins to = 100% or less. */   
         width: 50%;
+    }
+    #compare ul {
+        width: fit-content;
     }
     #download a {
         width: 20%;

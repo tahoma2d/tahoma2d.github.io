@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Tahoma2D - Free 2D & stop motion animation software</title>
+    <meta name="description" content="Tahoma2D is based on OpenToonz which itself is based on Toonz, developed by Digital Video in Italy. The mission of Tahoma2D is to be a powerful and user-friendly animation program for digital 2D artists and stop motion animators.">
+
+    <meta property="og:title" content="Tahoma2D - Free 2D & stop motion animation software">
+    <meta property="og:description" content="Tahoma2D is based on OpenToonz which itself is based on Toonz, developed by Digital Video in Italy. The mission of Tahoma2D is to be a powerful and user-friendly animation program for digital 2D artists and stop motion animators.">
+    <meta property="og:image" content="https://tahoma2d.org/media/branding/favicon-96x96.png">
+    <meta property="og:url" content="https://tahoma2d.org">
+
+    <meta name="twitter:title" content="Tahoma2D - Free 2D & stop motion animation software">
+    <meta name="twitter:description" content="Tahoma2D is based on OpenToonz which itself is based on Toonz, developed by Digital Video in Italy. The mission of Tahoma2D is to be a powerful and user-friendly animation program for digital 2D artists and stop motion animators.">
+    <meta name="twitter:url" content="https://tahoma2d.org/media/branding/favicon-96x96.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="media/branding/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/top.js"></script>
     <script src="./js/detect_os.js"></script>
     <script src="./js/current_page.js"></script>
     <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" -->
 
 </head>
 <!-- Content that displays on the page goes in the body-->
@@ -27,7 +40,7 @@
     <!-- Branding goes in the header -->
     <header>
         <a class="logo" href="index.html" style="z-index: 4;">
-            <img src="media/branding/small_logo.png" alt="There should be a logo image here" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
+            <img src="media/branding/small_logo.png" alt="Tahoma2D logo" style="border-radius: 5px; box-shadow: 0 0 0px 2px #fff;">
         </a>
         <!-- The menu goes in nav. To have a dropdown, it's best to use a list structure. -->
         <nav>
@@ -35,7 +48,7 @@
             <label for="toggle">+</label>
             <ul id="menu" class="menu_hover">
                 <li><input type="radio" name="dropm" id="home">
-                    <label for="home">Home <i class="bi bi-caret-down-fill" id="menu_icon"></i></label>
+                    <label for="home">Home <i class="bi bi-caret-down-fill menu_icon"></i></label>
                     <ul class="home">
                         <li><a href="#features">Features</a></li>
                         <li><a href="#system">System Requirements</a></li>
@@ -44,7 +57,7 @@
                     </ul>
                 </li>
                 <li><input type="radio" name="dropm" id="download">
-                    <label for="download">Download <i class="bi bi-caret-down-fill" id="menu_icon"></i></label>
+                    <label for="download">Download <i class="bi bi-caret-down-fill menu_icon"></i></label>
                     <ul>
                         <li><a href="download/official_releases.html">Official Releases</a></li>
                         <li><a href="download/nightly_builds.html">Nightly Builds</a></li>
@@ -55,7 +68,7 @@
                 <li><a href="https://tahoma2d.readthedocs.io/en/latest/" target="_blank">Learn</a></li>
                 <li><a href="https://github.com/tahoma2d" target="_blank">Contribute</a></li>
                 <li><input type="radio" name="dropm" id="social">
-                    <label for="social">Social <i class="bi bi-caret-down-fill" id="menu_icon"></i></label>
+                    <label for="social">Social <i class="bi bi-caret-down-fill menu_icon"></i></label>
                     <ul>
                         <li><a href="https://discord.gg/de9C9cZ9Hv" target="_blank">Discord</a></li>
                         <li><a href="https://www.reddit.com/r/Tahoma2D/" target="_blank">Reddit</a></li>
@@ -71,7 +84,7 @@
     <label for="deselectrad">
     <main>
         <section id="intro" class="flex">
-            <img data-aos-easing="new-easing" data-aos="fade-right" src="media/branding/moose.svg">
+            <img data-aos-easing="new-easing" data-aos="fade-right" src="media/branding/moose.svg" alt="There should be a moose image here">
             <div id="intro-text-and-button">
 
                 <div>
@@ -82,7 +95,7 @@
                         <a id="home_download_button" class="download_button" href="download/official_releases.html">Download</a>
                         <!-- In terms of syntax, p should only be used for paragraphs and span is better for small spans of text ie. a word, phrase, or sometimes character. -->
                         <span id="home_release_notes">Latest Release:
-                            <a href="https://github.com/tahoma2d/tahoma2d/releases/tag/v1.2" target="_blank">1.2.0 - May 13th</a>
+                            <a id="official_date" href="" target="_blank"></a>
                         </span>
                 </section>
             </div>
@@ -98,24 +111,24 @@
             <input type="radio" name="features" id="sync">
             <input type="radio" name="features" id="sfx">
             <label for="brush">
-                <span class="left"> <img src="media/icons/slider_left.png"> </span>
-                <span class="right"> <img src="media/icons/slider_right.png"> </span>
+                <span class="left"> <img src="media/icons/slider_left.png" alt="Left button"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png" alt="Right button"> </span>
             </label>
     <label for="palettes">
-                <span class="left"> <img src="media/icons/slider_left.png"> </span>
-                <span data-aos="new-animation" class="right"> <img src="media/icons/slider_right.png"> </span>
+                <span class="left"> <img src="media/icons/slider_left.png" alt="Left button"> </span>
+                <span data-aos="new-animation" class="right"> <img src="media/icons/slider_right.png" alt="Right button"> </span>
             </label>
     <label for="type">
-                <span class="left"> <img src="media/icons/slider_left.png"> </span>
-                <span class="right"> <img src="media/icons/slider_right.png"> </span>
+                <span class="left"> <img src="media/icons/slider_left.png" alt="Left button"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png" alt="Right button"> </span>
             </label>
     <label for="sync">
-                <span class="left"> <img src="media/icons/slider_left.png"> </span>
-                <span class="right"> <img src="media/icons/slider_right.png"> </span>
+                <span class="left"> <img src="media/icons/slider_left.png" alt="Left button"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png" alt="Right button"> </span>
             </label>
     <label for="sfx">
-                <span data-aos="new-animation" class="left"> <img src="media/icons/slider_left.png"> </span>
-                <span class="right"> <img src="media/icons/slider_right.png"> </span>
+                <span data-aos="new-animation" class="left"> <img src="media/icons/slider_left.png" alt="Left button"> </span>
+                <span class="right"> <img src="media/icons/slider_right.png" alt="Right button"> </span>
             </label>
 
     <div id="brushes" class="slide">
@@ -296,10 +309,10 @@
         <article data-aos="new-animation"><input type="checkbox" name="faq" id="bug">
             <label for="bug">I found a bug in the software. How can I report it?
                 <span class="open">
-                    <i class="bi bi-chevron-down" id="faq_icon"></i>
+                    <i class="bi bi-chevron-down faq_icon"></i>
                 </span>
                 <span class="close">
-                    <i class="bi bi-chevron-up" id="faq_icon"></i>
+                    <i class="bi bi-chevron-up faq_icon"></i>
                 </span>
             </label>
             <div>
@@ -311,10 +324,10 @@
         <article data-aos="new-animation"><input type="checkbox" name="faq" id="request">
             <label for="request">I have an idea for a new feature. How can I send it to you?
                 <span class="open">
-                    <i class="bi bi-chevron-down" id="faq_icon"></i>
+                    <i class="bi bi-chevron-down faq_icon"></i>
                 </span>
                 <span class="close">
-                    <i class="bi bi-chevron-up" id="faq_icon"></i>
+                    <i class="bi bi-chevron-up faq_icon"></i>
                  </span>
                 </label>
             <div>
@@ -327,10 +340,10 @@
             <label for="upgrade">
                 How can I upgrade to the latest version of Tahoma2D?
                     <span class="open">
-                        <i class="bi bi-chevron-down" id="faq_icon"></i>
+                        <i class="bi bi-chevron-down faq_icon"></i>
                     </span>
                     <span class="close">
-                        <i class="bi bi-chevron-up" id="faq_icon"></i>
+                        <i class="bi bi-chevron-up faq_icon"></i>
                     </span>
                  </label>
             <div>
@@ -380,6 +393,16 @@
 
     <script>
         const players = Plyr.setup('.js-player');
+    </script>
+
+    <script>
+        var releaseDate = document.querySelector("#official_date")
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
+            .then(response => response.json())
+            .then(data => {
+                releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
+                releaseDate.href = data.html_url
+            })
     </script>
 
 </body>

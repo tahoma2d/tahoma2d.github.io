@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Tahoma2D - Plugins</title>
+    <meta name="description" content="Tahoma2D is based on OpenToonz which itself is based on Toonz, developed by Digital Video in Italy. The mission of Tahoma2D is to be a powerful and user-friendly animation program for digital 2D artists and stop motion animators.">
+
+    <meta property="og:title" content="Tahoma2D - Plugins">
+    <meta property="og:description" content="Tahoma2D is based on OpenToonz which itself is based on Toonz, developed by Digital Video in Italy. The mission of Tahoma2D is to be a powerful and user-friendly animation program for digital 2D artists and stop motion animators.">
+    <meta property="og:image" content="https://tahoma2d.org/media/branding/favicon-96x96.png">
+    <meta property="og:url" content="https://tahoma2d.org/download/plugins">
+
+    <meta name="twitter:title" content="Tahoma2D - Plugins">
+    <meta name="twitter:description" content="Tahoma2D is based on OpenToonz which itself is based on Toonz, developed by Digital Video in Italy. The mission of Tahoma2D is to be a powerful and user-friendly animation program for digital 2D artists and stop motion animators.">
+    <meta name="twitter:url" content="https://tahoma2d.org/media/branding/favicon-96x96.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../media/branding/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/current_page.js"></script>
-    <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 <!-- Content that displays on the page goes in the body-->
 
@@ -71,19 +86,19 @@
         <section>
 
             <div class="download_buttons">
-                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d_plugins/releases/download/v1.1/Tahoma2D_plugins_win.zip">Windows</a>
-                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d_plugins/releases/download/v1.1/Tahoma2D_plugins_osx.zip">macOS</a>
-                <a class="download_button" href="https://github.com/tahoma2d/tahoma2d_plugins/releases/download/v1.1/Tahoma2D_plugins_linux.zip">Linux</a>
+                <a id="windows_link" class="download_button" href="">Windows</a>
+                <a id="mac_link" class="download_button" href="">macOS</a>
+                <a id="linux_link" class="download_button" href="">Linux</a>
 
 
             </div>
             <span class="release_notes">Latest Release:
-                <a href="https://github.com/tahoma2d/tahoma2d_plugins/releases/tag/v1.1" target="_blank">1.1.0 - May 6th</a>
+                <a id="plugins_date" href="" target="_blank"></a>
             </span>
 
         </section>
 
-        <section>
+        <section id="download_page_content_section">
 
             <div class="download_page_text">
 
@@ -97,7 +112,7 @@
                         </ul>
                     </li>
                     <li>Open Tahoma2D and access the plugins with the special FX</li>
-                    <li class="download_page_no_marker">(For macOS only, OpenCV 4.5.1 (or a later version) must be installed on the system.)</li>
+                    <li class="download_page_no_marker">(For Linux only, OpenCV 4.5.1 must be installed to /usr/local/lib.)</li>
                 </ol>
             </div>
 
@@ -112,6 +127,23 @@
         const d = new Date();
         let year = d.getFullYear();
         document.getElementById("year").innerHTML = year;
+    </script>
+    <script>
+        var releaseDate = document.querySelector("#plugins_date")
+        var windowsLink = document.querySelector("#windows_link")
+        var macLink = document.querySelector("#mac_link")
+        var linuxLink = document.querySelector("#linux_link")
+
+        fetch("https://api.github.com/repos/tahoma2d/tahoma2d_plugins/releases/latest")
+            .then(response => response.json())
+            .then(data => {
+                releaseDate.innerHTML = data.tag_name + " - " + data.published_at;
+                releaseDate.href = data.html_url
+
+                windowsLink.href = data.assets[2].browser_download_url
+                macLink.href = data.assets[1].browser_download_url
+                linuxLink.href = data.assets[0].browser_download_url
+            })
     </script>
 </body>
 
