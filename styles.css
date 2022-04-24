@@ -156,7 +156,7 @@ html {
     box-shadow: #dfdfdf 0 0 20px;
     border-radius: var(--BorderRadius);
     padding: 10px 0 25px 0;
-    margin-top: 2vw;
+    margin: 2vw 1em;
     text-align: center;
     color: white;
     background: linear-gradient(270deg, #e34faf, #8e60ff);
@@ -184,6 +184,7 @@ body {
     background-size: 80px 80px;
     background-position: 0 0, 40px 40px;
     color: #222F3E;
+    line-height: 1.5;
 }
 
 #faq,
@@ -227,7 +228,7 @@ ul {
 
 .release_notes {
     display: block;
-    padding: 1.563em 0;
+    padding: 1.563em 0.5em;
     text-align: center;
 }
 
@@ -235,6 +236,7 @@ ul {
     width: 100%;
     text-align: center;
     margin-block-end: 0em;
+    margin-block-start: 15vh;
 }
 
 .download_button,
@@ -276,30 +278,23 @@ ul {
     border: none;
 }
 
-#faq div.top {
-    background: transparent;
-    text-align: right;
-    position: relative;
-    margin: 0 auto;
-    padding: 0 2em 0 0;
-    top: 12.4em;
-    width: -webkit-fill-available;
-    width: -moz-available;
+
+.top {
+    position: fixed;
+    right: .3em;
+    font-size: 2em;
+    color: #e6078c;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+
 }
 
-#faq div.top a {
-    text-decoration: none;
-    color: #ffff;
+.top_shown {
+    display: block;
+    bottom: 0;
 }
 
-#faq div.top a img {
-    margin-bottom: -0.313em;
-    margin-right: -0.25em;
-}
-
-header,
-nav,
-#menu,
 footer,
 section:nth-of-type(odd),
 #compare li,
@@ -426,10 +421,6 @@ ul.marker {
 #plugins {
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-nav label {
-    text-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 
 #download a:hover img,
@@ -673,10 +664,6 @@ nav ul,
 
 /* Dropdown menu */
 
-.logo {
-    padding: 1em;
-}
-
 nav ul {
     list-style: none;
     padding-inline-start: 0;
@@ -684,11 +671,7 @@ nav ul {
 }
 
 nav ul ul {
-    padding-inline-start: 0;
-    /* It is often better to use em as a unit rather than pixels as it is a more responsive unit */
-    border-radius: 1em;
-    box-shadow: 0px 5px 4px #d62196;
-    background-color: #222F3E;
+    background-color: #121921;
 }
 
 nav+ul+li {
@@ -701,10 +684,6 @@ nav li ul {
     padding: 0;
     width: 100%;
 }
-
-
-/* nav li:hover ul,
-nav li:focus ul, */
 
 nav input:checked~ul {
     display: block;
@@ -745,12 +724,38 @@ nav ul input {
 nav ul label::after {
     background-color: #fff;
     display: block;
+    height: 0.027em;
     width: 0;
     content: '';
 }
 
 
 /* Size/Spacing */
+
+.logo {
+    padding-top: .4em;
+}
+
+header {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    justify-content: space-between;
+    padding: 0 5vw;
+    position: fixed;
+    z-index: 2;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    height: 100px;
+}
+
+.sticky_header {
+    background-color: #222F3E;
+    height: 50px;
+}
+
+.download_page_header {
+    background-color: #222F3E;
+}
 
 * {
     box-sizing: border-box;
@@ -766,22 +771,11 @@ main {
     min-height: 90vh;
 }
 
-nav {
-    width: -webkit-fill-available;
-    width: -moz-available;
-    position: fixed;
-}
-
 nav a,
 nav ul label {
     display: block;
     width: 100%;
-    padding: .5em;
-}
-
-header {
-    position: relative;
-    z-index: 2;
+    padding: 1em;
 }
 
 footer {
@@ -806,7 +800,7 @@ footer {
 }
 
 #intro {
-    padding: 10vw;
+    padding: 15vh 20vw 10vh;
     gap: 2em;
 }
 
@@ -816,7 +810,6 @@ footer {
 
 #intro img {
     left: 12vw;
-    width: 70%;
     height: 30%;
     z-index: 1;
 }
@@ -889,25 +882,8 @@ section {
     border-radius: 2vw 0 0 2vw;
 }
 
-#brushes img:first-of-type {
-    /*margin-bottom: 10px;*/
-}
-
 #brushes img:last-of-type {
     width: 37%;
-}
-
-#palette img,
-#fx img {
-    /* margin-bottom: 20px; */
-}
-
-#types .plyr:first-of-type {
-    /*margin-bottom: 30px;*/
-}
-
-#lipsync img {
-    /*margin-top: 20px;*/
 }
 
 #features figcaption {
@@ -979,7 +955,6 @@ section {
 
 label[for="toggle"],
 #toggle {
-    position: absolute;
     right: 10px;
     top: -.3em;
     z-index: 4;
@@ -1016,17 +991,14 @@ label[for="toggle"],
 
 #menu {
     flex-flow: column;
+    background-color: #222F3E;
+    box-shadow: 0px 5px 0px #d62196;
     position: absolute;
     width: 100%;
-    top: 28px;
     left: 0;
     border-radius: .5em;
     padding: 0;
-}
-
-#menu>li>a,
-nav ul label {
-    padding: .5em 1em;
+    gap: 1em;
 }
 
 #menu>li:first-child>a {
@@ -1057,6 +1029,21 @@ label[for="toggle"] {
 
 /* Expand or Close FAQ */
 
+#faq label:hover,
+#faq input:checked~label {
+    background-color: #222F3E;
+    color: white;
+}
+
+#faq label:hover .faq_icon,
+#faq input:checked~label .faq_icon {
+    color: white;
+}
+
+#faq label .faq_icon {
+    transition: all .2s ease-in-out;
+}
+
 #faq input {
     display: none;
 }
@@ -1071,21 +1058,15 @@ label[for="toggle"] {
     margin-bottom: 0.938em;
 }
 
-#faq input:not(:checked)+label .open,
-#faq input:checked+label .close {
-    display: block;
-}
-
-#faq input:not(:checked)+label .close,
 #faq input:checked+label .open {
-    display: none;
+    transform: rotate(180deg);
 }
 
-#faq .close,
 #faq .open {
     position: absolute;
     right: 1.4em;
     top: .75em;
+    transition: all .2s ease-in-out;
 }
 
 #faq label {
@@ -1094,6 +1075,7 @@ label[for="toggle"] {
     margin-bottom: 0.938em;
     padding-right: 1.5em;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
 #faq article {
@@ -1166,29 +1148,28 @@ label[for="toggle"] {
 }
 
 
-/* aos */
-
-
-/*
-body[data-aos-easing="new-easing"] [data-aos],
-[data-aos][data-aos][data-aos-easing="new-easing"] {
-    transition-timing-function: cubic-bezier(.8, 0, .2, 1);
-}
-
-[data-aos="new-animation"] {
-    opacity: 0;
-    transition-property: transform, opacity;
-}
-
-[data-aos="new-animation"].aos-animate {
-    opacity: 1;
-}
-*/
-
-
 /* Style adjustments for larger screens */
 
 @media (min-width:1200px) {
+    #beta_download_box {
+        margin: 2vw 0;
+    }
+    .top {
+        right: 1.5em;
+    }
+    .top_shown {
+        bottom: 1em;
+    }
+    nav a,
+    nav ul label {
+        padding: .5em;
+    }
+    header {
+        justify-content: center;
+    }
+    .logo {
+        padding-right: 1.5em;
+    }
     /* Plyr */
      :root {
         --WatermarkColor: #22303f40;
@@ -1242,6 +1223,7 @@ body[data-aos-easing="new-easing"] [data-aos],
     }
     #intro {
         gap: 5em;
+        padding: 10vw;
     }
     #intro div {
         align-items: flex-start;
@@ -1258,6 +1240,13 @@ body[data-aos-easing="new-easing"] [data-aos],
     }
     nav {
         width: fit-content;
+    }
+    nav ul ul {
+        padding-inline-start: 0;
+        /* It is often better to use em as a unit rather than pixels as it is a more responsive unit */
+        border-radius: 1em;
+        box-shadow: 0px 5px 4px #d62196;
+        background-color: #222F3E;
     }
     #features figcaption {
         width: 75.25%;
@@ -1283,29 +1272,25 @@ body[data-aos-easing="new-easing"] [data-aos],
     #types .plyr:first-of-type {
         margin-bottom: 0px;
     }
-    main {
-        margin-top: 2em;
-    }
-    header {
-        position: fixed;
-        width: -webkit-fill-available;
-        width: -moz-available;
-        justify-content: center;
-    }
     .home a {
         width: 7.5em;
     }
     label[for="toggle"] {
         opacity: 0;
     }
+    label[for="toggle"],
+    #toggle {
+        position: absolute;
+    }
     #menu {
         flex-flow: row;
+        background-color: unset;
         border-radius: 0;
         box-shadow: none;
         top: 0;
         left: auto;
         position: relative;
-        padding: 0 1em;
+        margin-top: 0;
     }
     #menu ul {
         position: absolute;
