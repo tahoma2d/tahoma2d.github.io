@@ -796,7 +796,7 @@ footer {
 
 /* 💬 BETA DOWNLOAD BOX */
 
-@-webkit-keyframes Beta_Box {
+@-webkit-keyframes download_box {
     0% {
         background-position: 0% 50%
     }
@@ -808,7 +808,7 @@ footer {
     }
 }
 
-@-moz-keyframes Beta_Box {
+@-moz-keyframes download_box {
     0% {
         background-position: 0% 50%
     }
@@ -820,7 +820,7 @@ footer {
     }
 }
 
-@-o-keyframes Beta_Box {
+@-o-keyframes download_box {
     0% {
         background-position: 0% 50%
     }
@@ -832,7 +832,7 @@ footer {
     }
 }
 
-@keyframes Beta_Box {
+@keyframes download_box {
     0% {
         background-position: 0% 50%
     }
@@ -853,10 +853,10 @@ footer {
     color: white;
     background: linear-gradient(270deg, #e34faf, #8e60ff);
     background-size: 400% 400%;
-    -webkit-animation: Beta_Box 30s ease infinite;
-    -moz-animation: Beta_Box 30s ease infinite;
-    -o-animation: Beta_Box 30s ease infinite;
-    animation: Beta_Box 30s ease infinite;
+    -webkit-animation: download_box 30s ease infinite;
+    -moz-animation: download_box 30s ease infinite;
+    -o-animation: download_box 30s ease infinite;
+    animation: download_box 30s ease infinite;
 }
 
 .beta_download_button {
@@ -975,55 +975,7 @@ footer {
 
 #compare li.new {
     position: relative;
-    /* */
-    @-webkit-keyframes Beta_Box {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
-    @-moz-keyframes Beta_Box {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
-    @-o-keyframes Beta_Box {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
-    @keyframes Beta_Box {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
 }
-
-
-/* */
 
 .download_button,
 .official_download_button {
