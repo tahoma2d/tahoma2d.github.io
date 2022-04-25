@@ -15,7 +15,6 @@ html {
     font-size: 0.7em;
 }
 
-
 .logo {
     padding-top: .4em;
 }
@@ -43,7 +42,6 @@ header {
 
 nav li li a {
     font-weight: 300;
-
 }
 
 
@@ -83,11 +81,9 @@ nav ul label {
     padding: 1em;
 }
 
-
 nav ul input {
     display: none;
 }
-
 
 .emphasize {
     font-style: italic;
@@ -133,14 +129,12 @@ label[for="toggle"],
     line-height: .6em;
 }
 
-
 #toggle:checked+label+#menu {
     z-index: 3;
     opacity: 1;
     height: auto;
     visibility: visible;
     transition: transform 500ms ease;
-
 }
 
 #toggle:not(:checked)+label+#menu {
@@ -232,12 +226,9 @@ label[for="toggle"] {
     margin: 0;
 }
 
-
 #intro {
     padding: 15vh 20vw 10vh;
     gap: 2em;
-    background: url(media/backgrounds/header_bg.png);
-
 }
 
 #intro section {
@@ -307,27 +298,13 @@ body {
 
 
 /* 💬 FEATURES SECTION */
-  #features .left {
+
+#features .left {
     border-radius: 0 2vw 2vw 0;
 }
 
 #features .right {
     border-radius: 2vw 0 0 2vw;
-  }
-  
-  #system,
-#linux {
-    background: url(media/backgrounds/system_bg.png);
-    position: relative;
-}
-
-#system::after {
-    content: "Made by: @JerHenning";
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
-    font-size: smaller;
-    opacity: 25%;
 }
 
 #faq::after {
@@ -338,14 +315,6 @@ body {
     font-size: smaller;
     opacity: 25%;
     color: white;
-}
-
-#system {
-    padding: 20vw 0;
-}
-
-#system h2 {
-    margin-block-start: 0;
 }
 
 #compare {
@@ -360,9 +329,8 @@ ul.marker {
 #plugins {
     background: url(media/backgrounds/footer_bg.png);
     position: relative;
-  }
-  
-  
+}
+
 #brushes-art:after {
     content: "Made by: @Rodney";
     position: absolute;
@@ -391,7 +359,7 @@ ul.marker {
     left: 10px;
     top: 5px;
     font-size: smaller;
-  }
+}
 
 .slide-content,
 .slide-content-types {
@@ -401,7 +369,6 @@ ul.marker {
     align-items: center;
     gap: 2em;
 }
-
 
 .slide-types,
 .slide {
@@ -423,7 +390,6 @@ ul.marker {
     font-weight: 300;
     margin-block-start: 0;
     margin-block-end: 0;
-
 }
 
 
@@ -596,7 +562,24 @@ ul.marker {
 /* 💬 SYSTEM SECTION */
 
 #system {
-    background: url(media/backgrounds/system_bg.png);
+    position: relative;
+}
+
+#system::after {
+    content: "Made by: @JerHenning";
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    font-size: smaller;
+    opacity: 25%;
+}
+
+#system {
+    padding: 20vw 0;
+}
+
+#system h2 {
+    margin-block-start: 0;
 }
 
 
@@ -604,6 +587,7 @@ ul.marker {
 
 
 /* 💬 COMPARE SECTION */
+
 .new::after {
     content: "#v1.3";
     background-color: #d62196;
@@ -616,9 +600,7 @@ ul.marker {
 
 #compare li.new {
     position: relative;
-
-
-
+}
 
 .marker {
     list-style-type: circle;
@@ -667,7 +649,6 @@ ul.marker {
 /* 💬 FAQ */
 
 #faq {
-    background: url(media/backgrounds/footer_bg.png);
     padding-bottom: 13em;
 }
 
@@ -682,7 +663,10 @@ ul.marker {
 
 #faq p {
     margin-inline-start: 0px;
-    margin-inline-end: 0px;#features .left {
+    margin-inline-end: 0px;
+}
+
+#features .left {
     border-radius: 0 2vw 2vw 0;
 }
 
@@ -766,8 +750,8 @@ ul.marker {
 
 
 /* 💬 SCROLL TO TOP */
-  
-  .top {
+
+.top {
     position: fixed;
     right: .3em;
     font-size: 2em;
@@ -775,6 +759,7 @@ ul.marker {
     z-index: 1;
     cursor: pointer;
     display: none;
+}
 
 .top {
     position: fixed;
@@ -863,7 +848,7 @@ footer {
     box-shadow: #dfdfdf 0 0 20px;
     border-radius: var(--BorderRadius);
     padding: 10px 0 25px 0;
-    margin: 2vw 1em;
+    margin: 5vw 0;
     text-align: center;
     color: white;
     background: linear-gradient(270deg, #e34faf, #8e60ff);
@@ -887,12 +872,163 @@ footer {
 
 
 /* 💬 DOWNLOAD PAGES */
-    
-    .download_button,
+
+.beta_download_buttons {
+    flex-direction: column;
+}
+
+#download_box {
+    flex-direction: column;
+}
+
+#download_page_content_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+#download_page_content_section aside {
+    width: 80vw;
+}
+
+.download_page_text span {
+    font-weight: 700;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/* */
+
+.download_buttons {
+    padding: 1em;
+    border-radius: var(--BorderRadius);
+    background: linear-gradient(270deg, #ced8e4, #f1a7d7);
+    background-size: 400% 400%;
+    -webkit-animation: download_box 30s ease infinite;
+    -moz-animation: download_box 30s ease infinite;
+    -o-animation: download_box 30s ease infinite;
+    animation: download_box 30s ease infinite;
+}
+
+#download_box :nth-child(2) {
+    margin: 1em 0;
+}
+
+.download_buttons i {
+    font-size: 3em;
+}
+
+#download_box .download_buttons a {
+    margin: 1em 0;
+}
+
+#download_box .download_buttons a:last-child {
+    margin: 1em 0 0 0;
+}
+
+#download_box {
+    margin-bottom: 1em;
+}
+
+#download_page_content {
+    margin: 1em 0 4em;
+    max-width: fit-content;
+    width: min-content;
+}
+
+.beta_release_notes {
+    margin-top: 1em;
+}
+
+.release_notes {
+    width: -webkit-fill-available;
+    padding: 1em;
+    border-radius: var(--BorderRadius);
+    background: linear-gradient(270deg, #f1a7d7, #ced8e4);
+    background-size: 400% 400%;
+    -webkit-animation: download_box 30s ease infinite;
+    -moz-animation: download_box 30s ease infinite;
+    -o-animation: download_box 30s ease infinite;
+    animation: download_box 30s ease infinite;
+}
+
+.release_notes:nth-of-type(2) {
+    margin: 1em 0;
+}
+
+
+/* end of download box */
+
+.new::after {
+    content: "#v1.3";
+    background-color: #d62196;
+    padding: 0.2em;
+    border-radius: .313em;
+    position: absolute;
+    right: -50px;
+    top: 0;
+}
+
+#compare li.new {
+    position: relative;
+    /* */
+    @-webkit-keyframes Beta_Box {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    @-moz-keyframes Beta_Box {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    @-o-keyframes Beta_Box {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    @keyframes Beta_Box {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+}
+
+
+/* */
+
+.download_button,
 .official_download_button {
     box-shadow: 0px 5px #d62196;
-    }
-
+}
 
 #download a {
     width: 50%;
@@ -900,7 +1036,6 @@ footer {
 
 #download p {
     margin: 1em 5vw;
-
 }
 
 .download_buttons a {
@@ -953,7 +1088,6 @@ footer {
 
 .release_notes {
     display: block;
-    padding: 1.563em 0.5em;
     text-align: center;
 }
 
@@ -969,7 +1103,7 @@ footer {
     font-weight: 700;
     transition: box-shadow .5s ease !important;
     text-align: center;
-    margin: 0 0.625em;
+    margin: 0.625em 0;
 }
 
 .official_download_button:hover,
@@ -979,6 +1113,105 @@ footer {
 
 
 /* 💬❗ DOWNLOAD PAGES */
+
+
+/* 💬 WHAT'S NEW PAGE */
+
+#other li {
+    border-radius: 0.313em;
+    font-weight: 300;
+    margin: .5em;
+    padding: .2em .5em;
+    width: fit-content;
+}
+
+#other {
+    justify-content: center;
+}
+
+#other ul {
+    width: 80%;
+}
+
+#other ul {
+    margin: 0;
+    padding: 0;
+}
+
+#whats-new img {
+    border-radius: var(--BorderRadius);
+    max-width: 100%;
+}
+
+.wn-content,
+#wn-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.wn-content p {
+    width: 70%;
+    background-color: #fff;
+    border-radius: var(--BorderRadius);
+    color: var(--plyr-color-main);
+    margin: 1em;
+    padding: 2em;
+    box-shadow: 0px 5px #00000033;
+}
+
+#wn-intro h1 {
+    font-size: 10.8vw;
+    font-weight: 900;
+    margin: 0;
+}
+
+#wn-intro p {
+    font-size: 4.8vw;
+    font-weight: 300;
+}
+
+#wn-download_section {
+    background: transparent;
+}
+
+#wn-intro #home_release_notes {
+    font-size: .8em !important;
+    margin-top: 1.375em;
+}
+
+#wn-download_section {
+    padding-top: 2.8em;
+}
+
+#wn-intro * {
+    margin: 0;
+}
+
+#wn-intro {
+    padding: 15vh 20vw 10vh;
+    gap: 2em;
+}
+
+#wn-intro section {
+    padding-bottom: 0;
+}
+
+#wn-intro img {
+    left: 12vw;
+    height: 30%;
+    z-index: 1;
+}
+
+#wn-intro {
+    padding: 15vh 20vw 10vh;
+    gap: 2em;
+    background-image: url(./media/backgrounds/whats_new_bg.png);
+}
+
+
+/* 💬❗ WHAT'S NEW PAGE */
 
 
 /* 💬 COMMON FLEX */
@@ -998,8 +1231,11 @@ nav ul,
 .download_page,
 .download_page_text,
 .download_buttons,
+.beta_download_buttons,
 .download_page_text div,
-#missing404 {
+#missing404,
+#wn-download_section,
+#download_box {
     display: flex;
 }
 
@@ -1013,7 +1249,8 @@ body,
 .download_page,
 .download_buttons,
 .download_page_text,
-#download_section {
+#download_section,
+#wn-download_section {
     flex-flow: column;
 }
 
@@ -1034,7 +1271,8 @@ header,
 .download_page,
 .download_page_text,
 #intro,
-#missing404 {
+#missing404,
+.beta_download_buttons {
     align-items: center;
 }
 
@@ -1053,7 +1291,8 @@ nav ul,
 #intro div,
 .download_page_text,
 #intro,
-#missing404 {
+#missing404,
+.beta_download_buttons {
     justify-content: center;
 }
 
@@ -1063,7 +1302,6 @@ nav ul,
 
 #compare,
 #features figure,
-.download_page,
 #intro {
     flex-wrap: wrap;
 }
@@ -1086,7 +1324,9 @@ section:nth-of-type(odd),
 #compare h2,
 #features h2,
 #faq div,
-#faq label {
+#faq label,
+.wn-content p,
+#other li {
     color: #222F3E;
 }
 
@@ -1104,15 +1344,20 @@ label[for="toggle"],
 #compare ul,
 #faq h2,
 #features figcaption,
-#features label {
+#features label,
+#wn-intro,
+#reference_fills,
+#cell_mark,
+#other {
     color: #ffffff;
 }
 
 #faq label,
 #faq div,
 #download figure,
-#plugins a:link {
-    background: white;
+#plugins a:link,
+#other li {
+    background: #fff;
 }
 
 
@@ -1132,7 +1377,8 @@ label[for="toggle"],
 
 #compare h2,
 #features h2,
-#download h2 {
+#download h2,
+#whats-new h2 {
     width: 100%;
     text-align: center;
 }
@@ -1159,6 +1405,23 @@ label[for="toggle"],
 
 /* 💬 COMMON BACKGROUND */
 
+#system,
+#reference_fills {
+    background: url(media/backgrounds/system_bg.png);
+}
+
+#faq,
+#cell_mark {
+    background: url(media/backgrounds/footer_bg.png);
+}
+
+#intro,
+#other {
+    padding: 15vh 20vw 10vh;
+    gap: 2em;
+    background: url(media/backgrounds/header_bg.png);
+}
+
 #faq,
 #system,
 #intro {
@@ -1180,7 +1443,28 @@ label[for="toggle"],
 /* Style adjustments for larger screens */
 
 @media (min-width:1200px) {
+    .download_button,
+    .official_download_button,
+    .beta_download_button {
+        margin: 0 0.625em;
+    }
+    .beta_download_buttons {
+        flex-direction: row;
+    }
+    #download_box :nth-child(2) {
+        margin: 0 1em;
+    }
+    .wn-content p {
+        width: 30%;
+    }
+    .wn-content,
+    #wn-intro,
+    #download_box {
+        flex-direction: row;
+    }
     #beta_download_box {
+        display: flex;
+        flex-direction: column;
         margin: 2vw 0;
     }
     .top {
@@ -1261,6 +1545,12 @@ label[for="toggle"],
         font-size: 2.380vw;
     }
     #intro h1 {
+        font-size: 5.952vw;
+    }
+    #wn-intro p {
+        font-size: 2.380vw;
+    }
+    #wn-intro h1 {
         font-size: 5.952vw;
     }
     #intro img {
@@ -1351,12 +1641,10 @@ label[for="toggle"],
     }
     #compare figure {
         width: 40%;
-        margin:0;
+        margin: 0;
     }
-    
-    
     #compare ul {
-        /* fit-content is on the newer side and isn't fully supported. For now, it's better to choose a responsive size so that we don't get sideways scrolling. We need all the widths + margins to = 100% or less. */   
+        /* fit-content is on the newer side and isn't fully supported. For now, it's better to choose a responsive size so that we don't get sideways scrolling. We need all the widths + margins to = 100% or less. */
         width: 50%;
     }
     #compare ul {
@@ -1378,18 +1666,21 @@ label[for="toggle"],
     #intro section {
         width: auto;
     }
+    #wn-intro #home_release_notes {
+        margin-top: 0;
+        padding: 0 1em;
+    }
+    #wn-intro section {
+        width: auto;
+    }
 }
 
 @media (min-width:800px) {
-    .download_buttons,
     .download_page_text {
         flex-flow: row;
     }
     .download_buttons a {
         margin: 1em;
-    }
-    .release_notes {
-        padding: 1.563em 0 0 0;
     }
     #intro #home_release_notes {
         font-size: 1em !important;
