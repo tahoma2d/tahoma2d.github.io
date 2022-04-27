@@ -309,11 +309,6 @@ body {
 
 #faq::after {
     content: "Made by: @JerHenning";
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
-    font-size: smaller;
-    opacity: 25%;
     color: white;
 }
 
@@ -561,17 +556,8 @@ ul.marker {
 
 /* 💬 SYSTEM SECTION */
 
-#system {
-    position: relative;
-}
-
 #system::after {
     content: "Made by: @JerHenning";
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
-    font-size: smaller;
-    opacity: 25%;
 }
 
 #system {
@@ -1069,6 +1055,29 @@ footer {
 
 /* 💬 WHAT'S NEW PAGE */
 
+#reference_fills::after {
+    content: "Made by: @JerHenning";
+    color: white;
+}
+
+#cell_mark::after {
+    content: "Made by: @yogib33r";
+    color: white;
+}
+
+#other::after {
+    content: "Made by: @JerHenning";
+    color: white;
+}
+
+#other {
+    background: url(media/backgrounds/other_bg.png);
+}
+
+#cell_mark {
+    background: url(media/backgrounds/cell_mark_bg.png);
+}
+
 #other li {
     border-radius: 0.313em;
     font-weight: 300;
@@ -1318,6 +1327,25 @@ label[for="toggle"],
 
 /* 💬 COMMON SIZE AND SPACING */
 
+#system,
+#reference_fills,
+#cell_mark,
+#other {
+    position: relative;
+}
+
+#faq::after,
+#system::after,
+#reference_fills::after,
+#cell_mark::after,
+#other::after {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    font-size: smaller;
+    opacity: 25%;
+}
+
 .nomarker {
     list-style: none;
     margin-block-start: 0em;
@@ -1362,13 +1390,11 @@ label[for="toggle"],
     background: url(media/backgrounds/system_bg.png);
 }
 
-#faq,
-#cell_mark {
+#faq {
     background: url(media/backgrounds/footer_bg.png);
 }
 
-#intro,
-#other {
+#intro {
     padding: 15vh 20vw 10vh;
     gap: 2em;
     background: url(media/backgrounds/header_bg.png);
@@ -1376,14 +1402,20 @@ label[for="toggle"],
 
 #faq,
 #system,
-#intro {
+#intro,
+#reference_fills,
+#cell_mark,
+#other {
     background-attachment: fixed !important;
     background-position: center !important;
 }
 
 #system,
 #intro,
-#faq {
+#faq,
+#reference_fills,
+#cell_mark,
+#other {
     background-size: cover;
     background-repeat: no-repeat;
 }
