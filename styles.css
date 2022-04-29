@@ -9,7 +9,6 @@ html {
 }
 
 
-
 /* 💬 HEADER */
 
 .menu_icon {
@@ -191,127 +190,6 @@ label[for="toggle"] {
 .nopointer {
     cursor: default;
     pointer-events: none;
-}
-/* Header Buttons */
-
-.header-button {
-    border-radius: 10em;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-@-webkit-keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-#sponser {
-    background: linear-gradient(270deg, #d62196, #9021d6);
-    background-size: 400% 400%;
-    -webkit-animation: Sponser 59s ease infinite;
-    -moz-animation: Sponser 59s ease infinite;
-    -o-animation: Sponser 59s ease infinite;
-    animation: Sponser 59s ease infinite;
-}
-
-@-webkit-keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes Sponser {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-#contribute {
-    background: linear-gradient(270deg, #238636, #237c86);
-    background-size: 400% 400%;
-    -webkit-animation: Sponser 59s ease infinite;
-    -moz-animation: Sponser 59s ease infinite;
-    -o-animation: Sponser 59s ease infinite;
-    animation: Sponser 59s ease infinite;
 }
 
 
@@ -1171,9 +1049,6 @@ label[for="toggle"],
 /* Style adjustments for larger screens */
 
 @media (min-width:1200px) {
-    .header-button {
-        margin-bottom: 0;
-    }
     #beta_download_box {
         margin: 2vw 0;
     }
