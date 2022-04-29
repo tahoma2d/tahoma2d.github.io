@@ -260,6 +260,7 @@ a:focus {
 a {
     color: #FB9300;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 ul {
@@ -934,7 +935,7 @@ footer {
     width: -webkit-fill-available;
     padding: 1em;
     border-radius: var(--BorderRadius);
-    background: linear-gradient(270deg, #f1a7d7, #ced8e4);
+    background: linear-gradient(270deg, #f8d3eb, #ced8e4);
     background-size: 400% 400%;
     -webkit-animation: download_box 30s ease infinite;
     -moz-animation: download_box 30s ease infinite;
@@ -942,7 +943,7 @@ footer {
     animation: download_box 30s ease infinite;
 }
 
-.release_notes:nth-of-type(2) {
+.release_notes {
     margin: 1em 0;
 }
 

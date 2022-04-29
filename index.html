@@ -56,6 +56,7 @@
                     </ul>
                 </li>
                 <li><a href="./download.html">Download</a></li>
+                <li><a href="./whats_new.html">What's New</a></li>
                 <li><a href="https://tahoma2d.readthedocs.io/en/latest/" target="_blank">Learn</a></li>
                 <li><a href="https://github.com/tahoma2d" target="_blank">Contribute</a></li>
                 <li><input type="radio" name="dropm" id="social">
@@ -254,7 +255,7 @@
                 <span class="bold">OS (Windows)</span>: Microsoft Windows 8.1/10 (64-bit required)
             </li>
             <li>
-                <span class="bold">OS (macOS)</span>: macOS 10.13 or a later version
+                <span class="bold">OS (macOS)</span>: macOS 10.14 (Catalina) or a later version
             </li>
             <li>
                 <span class="bold">CPU</span>: Intel Core i series processor or better
@@ -329,7 +330,8 @@
                 </p>
             </div>
         </article>
-        <article><input type="checkbox" name="faq" id="upgrade">
+        <article id="faq-upgrade">
+            <input type="checkbox" name="faq" id="upgrade">
             <label for="upgrade">
                 How can I upgrade to the latest version of Tahoma2D?
                     <span class="open">
@@ -352,7 +354,7 @@
                         </ul>
                     </li>
                     <li>Click the "Import" button</li>
-                    <li>Close and restart Tahoma2d 1.2</li>
+                    <li>Close and restart Tahoma2D 1.2</li>
                 </ol>
             </div>
         </article>
@@ -388,6 +390,13 @@
                 releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
                 releaseDate.href = data.html_url
             })
+    </script>
+
+    <script>
+        var mmd = document.querySelector("#upgrade")
+        if (window.location.hash == "#faq-upgrade") {
+            mmd.checked = true
+        }
     </script>
 
 </body>
