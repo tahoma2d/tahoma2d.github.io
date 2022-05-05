@@ -1056,6 +1056,14 @@ footer {
 
 /* 💬 WHAT'S NEW PAGE */
 
+#home_download_button {
+    background-image: url(./media/artworks/jerhenning-3.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 18em 0 1em;
+}
+
 #reference_fills::after {
     content: "Made by: @JerHenning";
     color: white;
@@ -1110,7 +1118,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#wn-intro {
     flex-direction: column-reverse;
+}
+
+.wn-content {
+    flex-direction: column;
 }
 
 .wn-content p {
