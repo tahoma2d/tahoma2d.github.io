@@ -845,6 +845,14 @@ footer {
 
 /* 💬 DOWNLOAD PAGES */
 
+#faq-upgrade-link {
+    background: #fff;
+    padding: 1em;
+    display: block;
+    border-radius: var(--BorderRadius);
+    width: fit-content;
+}
+
 [name="instruction-type"] {
     display: none;
 }
@@ -998,7 +1006,7 @@ footer {
     align-items: flex-start;
     margin: 2em 5em 5em;
     background-color: #ffffff;
-    padding: 1em 1em 0 0;
+    padding: 1em 1em 0;
     border-radius: var(--BorderRadius);
 }
 
