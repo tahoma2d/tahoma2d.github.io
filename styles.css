@@ -422,22 +422,6 @@ ul.marker {
     left: 10px;
 }
 
-#lipsync .plyr::after {
-    content: "Made by: @Pikhosh";
-    position: absolute;
-    font-weight: 900;
-    color: var(--WatermarkColor);
-    left: 10px;
-}
-
-#fx .plyr::after {
-    content: "Made by: @Pikhosh";
-    position: absolute;
-    font-weight: 900;
-    color: var(--WatermarkColor);
-    right: 10px;
-}
-
 
 /* Plyr */
 
