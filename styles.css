@@ -1145,10 +1145,8 @@ footer {
 
 #wn-download_section {
     background: transparent;
-}
-
-#wn-download_section {
     padding-top: 2em;
+    align-items: center;
 }
 
 #wn-intro * {
@@ -1532,6 +1530,7 @@ label[for="toggle"],
     }
     #wn-intro p {
         font-size: 2.380vw;
+        text-align: center;
     }
     #wn-intro h1 {
         font-size: 5.952vw;
