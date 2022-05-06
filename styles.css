@@ -582,7 +582,7 @@ ul.marker {
     padding: 0.2em;
     border-radius: .313em;
     position: absolute;
-    right: -50px;
+    right: -2.95em;
     top: 0;
 }
 
@@ -950,16 +950,6 @@ footer {
 
 
 /* end of download box */
-
-.new::after {
-    content: "#v1.3";
-    background-color: #d62196;
-    padding: 0.2em;
-    border-radius: .313em;
-    position: absolute;
-    right: -50px;
-    top: 0;
-}
 
 #compare li.new {
     position: relative;
