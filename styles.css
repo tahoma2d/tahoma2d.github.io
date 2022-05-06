@@ -213,8 +213,9 @@ label[for="toggle"] {
     background: transparent;
 }
 
-#intro #home_release_notes {
-    font-size: .8em !important;
+#intro #home_release_notes,
+#wn-intro #home_release_notes {
+    font-size: .8em;
     margin-top: 1.375em;
 }
 
@@ -1056,6 +1057,19 @@ footer {
 
 /* 💬 WHAT'S NEW PAGE */
 
+#other .wn-content {
+    flex-direction: column;
+}
+
+#whats-new section:not(#wn-intro) {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#whats-new section:not(#wn-intro):nth-child(odd) {
+    padding-bottom: 5em;
+}
+
 #reference_fills::after {
     content: "Made by: @JerHenning";
     color: white;
@@ -1092,7 +1106,7 @@ footer {
 }
 
 #other ul {
-    width: 80%;
+    width: fit-content;
 }
 
 #other ul {
@@ -1110,18 +1124,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#wn-intro {
-    flex-direction: column-reverse;
-}
-
-.wn-content {
     flex-direction: column;
 }
 
 .wn-content p {
-    width: 70%;
     background-color: #fff;
     border-radius: var(--BorderRadius);
     color: var(--plyr-color-main);
@@ -1145,13 +1151,8 @@ footer {
     background: transparent;
 }
 
-#wn-intro #home_release_notes {
-    font-size: .8em !important;
-    margin-top: 1.375em;
-}
-
 #wn-download_section {
-    padding-top: 2.8em;
+    padding-top: 2em;
 }
 
 #wn-intro * {
@@ -1160,7 +1161,8 @@ footer {
 
 #wn-intro {
     padding: 15vh 20vw 10vh;
-    gap: 2em;
+    gap: 1em;
+    background-image: url(./media/backgrounds/whats_new_bg.png);
 }
 
 #wn-intro section {
@@ -1171,12 +1173,6 @@ footer {
     left: 12vw;
     height: 30%;
     z-index: 1;
-}
-
-#wn-intro {
-    padding: 15vh 20vw 10vh;
-    gap: 2em;
-    background-image: url(./media/backgrounds/whats_new_bg.png);
 }
 
 
@@ -1450,7 +1446,6 @@ label[for="toggle"],
         width: 30%;
     }
     .wn-content,
-    #wn-intro,
     #download_box {
         flex-direction: row;
     }
@@ -1658,10 +1653,6 @@ label[for="toggle"],
     #intro section {
         width: auto;
     }
-    #wn-intro #home_release_notes {
-        margin-top: 0;
-        padding: 0 1em;
-    }
     #wn-intro section {
         width: auto;
     }
@@ -1674,7 +1665,8 @@ label[for="toggle"],
     .download_buttons a {
         margin: 1em;
     }
-    #intro #home_release_notes {
-        font-size: 1em !important;
+    #intro #home_release_notes,
+    #wn-intro #home_release_notes {
+        font-size: 1em;
     }
 }
