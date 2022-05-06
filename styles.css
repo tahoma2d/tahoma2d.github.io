@@ -413,7 +413,7 @@ ul.marker {
 
 #features img {
     border: solid 10px #222F3E;
-    border-radius: 0.938em;
+    border-radius: var(--BorderRadius);
 }
 
 #features figcaption {
@@ -579,7 +579,7 @@ ul.marker {
 
 #compare img {
     width: 100%;
-    border-radius: 0.938em;
+    border-radius: var(--BorderRadius);
     border: solid 10px #222F3E;
 }
 
@@ -693,7 +693,7 @@ ul.marker {
     position: relative;
     width: 100%;
     padding: 1.063em 1.563em;
-    border-radius: 0.938em;
+    border-radius: var(--BorderRadius);
     padding-right: 4.5em;
 }
 
