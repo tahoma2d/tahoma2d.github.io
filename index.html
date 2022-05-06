@@ -55,14 +55,8 @@
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </li>
-                <li><input type="radio" name="dropm" id="download">
-                    <label for="download">Download <i class="bi bi-caret-down-fill menu_icon"></i></label>
-                    <ul>
-                        <li><a href="download/official_releases.html">Official Releases</a></li>
-                        <li><a href="download/nightly_builds.html">Nightly Builds</a></li>
-                        <li><a href="download/plugins.html">Plugins</a></li>
-                    </ul>
-                </li>
+                <li><a href="./download.html">Download</a></li>
+                <li><a href="./whats_new.html">What's New</a></li>
                 <li><input type="radio" name="dropm" id="contribute">
                     <label for="contribute">Contribute <i class="bi bi-caret-down-fill menu_icon"></i></label>
                     <ul>
@@ -91,17 +85,17 @@
     </header>
     <!-- Page content goes in main-->
     <label for="deselectrad">
-    <main>
+    <main >
         <section id="intro" class="flex">
             <img  src="media/branding/moose.svg" alt="There should be a moose image here">
             <div id="intro-text-and-button">
 
                 <div>
-                    <h1 >Tahoma2D</h1>
+                    <h1>Tahoma2D</h1>
                     <p >Free and powerful software<br>for 2D and stop motion<br>animators.</p>
                 </div>
                 <section  id="download_section">
-                        <a id="home_download_button" class="download_button" href="download/official_releases.html">Download</a>
+                        <a id="home_download_button" class="download_button" href="download.html">Download</a>
                         <!-- In terms of syntax, p should only be used for paragraphs and span is better for small spans of text ie. a word, phrase, or sometimes character. -->
                         <span id="home_release_notes">Latest Release:
                             <a id="official_date" href="" target="_blank"></a>
@@ -142,14 +136,18 @@
 
     <div id="brushes" class="slide">
         <div class="slide-content">
+
             <img src="media/artworks/rodney.png" alt="The example image should display" title="Example of brushwork in Tahoma2D by Rodney" style="max-width: 800px;" id="brushes-art">
             <img src="media/screenshots/brushs.png" alt="The example image should display" title="Example of brushes in Tahoma2D" style="min-width: 22vw;">
 
 
 
+
         </div>
+
         <h3>
-            A variety of brushes for different tastes
+            A variety of brushes for different tastes and new style management options
+
         </h3>
     </div>
     <div id="palette" class="slide">
@@ -268,7 +266,7 @@
                 <span class="bold">OS (Windows)</span>: Microsoft Windows 8.1/10 (64-bit required)
             </li>
             <li>
-                <span class="bold">OS (macOS)</span>: macOS 10.13 or a later version
+                <span class="bold">OS (macOS)</span>: macOS 10.14 (Catalina) or a later version
             </li>
             <li>
                 <span class="bold">CPU</span>: Intel Core i series processor or better
@@ -293,15 +291,24 @@
             <img src="media/screenshots/tahoma2d_ui.png" alt="The UI image is missing" title="Example of Tahoma2D's UI" style="max-width:1680px;" class="sideimg" loading="lazy">
         </figure>
         <ul class="marker">
+
             <li class="nomarker bold">Tahoma2D's unique features:</li>
             <li>The simplified workspace</li>
+
+            <li class="new">Style Set management</li>
+
             <li>Easier project management</li>
+
+            <li class="new"><b>Implicit holds</b> - images automatically hold their display until the next image, until the hold is ended, or until the scene ends</li>
+            <li class="new"><b>Perspective Grid Tool</b> - for precision drawing</li>
+            <li class="new"><b>Referenced fills</b> - fill while referencing other layers as part of the fill boundaries</li>
+
             <li>Rhubarb Lip Sync integration for automatic lip syncing</li>
-            <li>Perspective guides and grids for precision drawing</li>
             <li>A status bar with helpful hints for new users</li>
             <li>No additional libraries needed to export in common formats like mp4 and gif</li>
             <li>Support for Canon DSLR cameras on macOS - not just Windows</li>
             <li>And many more small quality of life improvements</li>
+
         </ul>
     </section>
     <section id="faq">
@@ -334,7 +341,8 @@
                 </p>
             </div>
         </article>
-        <article><input type="checkbox" name="faq" id="upgrade">
+        <article id="faq-upgrade">
+            <input type="checkbox" name="faq" id="upgrade">
             <label for="upgrade">
                 How can I upgrade to the latest version of Tahoma2D?
                     <span class="open">
@@ -357,7 +365,7 @@
                         </ul>
                     </li>
                     <li>Click the "Import" button</li>
-                    <li>Close and restart Tahoma2d 1.2</li>
+                    <li>Close and restart Tahoma2D 1.2</li>
                 </ol>
             </div>
         </article>
@@ -393,6 +401,13 @@
                 releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
                 releaseDate.href = data.html_url
             })
+    </script>
+
+    <script>
+        var mmd = document.querySelector("#upgrade")
+        if (window.location.hash == "#faq-upgrade") {
+            mmd.checked = true
+        }
     </script>
 
 </body>
