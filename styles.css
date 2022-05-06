@@ -249,7 +249,7 @@ label[for="toggle"] {
 /* 💬 TAGS */
 
 h2 {
-    font-size: 6vw;
+    font-size: 5.5vw;
     font-weight: 900;
 }
 
@@ -861,6 +861,27 @@ footer {
 
 /* 💬 DOWNLOAD PAGES */
 
+[name="instruction-type"] {
+    display: none;
+}
+
+.label-input {
+    background-color: #d62196;
+    padding: .5em;
+    border-radius: var(--BorderRadius);
+    margin: 0 0.5em;
+    color: white;
+    cursor: pointer;
+}
+
+.checked-input {
+    background-color: #ea7bc3;
+}
+
+.display-none {
+    display: none !important;
+}
+
 .beta_download_buttons {
     flex-direction: column;
 }
@@ -869,14 +890,14 @@ footer {
     flex-direction: column;
 }
 
-#download_page_content_section {
+.download_page_instruction {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 1em 0;
 }
 
-#download_page_content_section aside {
+.download_page_instruction aside {
     width: 80vw;
 }
 
@@ -981,19 +1002,23 @@ footer {
     box-shadow: 0px 5px #d62196;
 }
 
-.download_page section {
-    background-color: transparent !important;
+#download_page_content,
+#download_page_content section {
+    background-color: transparent;
     padding-bottom: 0;
 }
 
-#download_page_content_section {
+#download_page .download_page_instruction {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 1em 0;
+    margin: 2em 5em 5em;
+    background-color: #ffffff;
+    padding: 1em 1em 0 0;
+    border-radius: var(--BorderRadius);
 }
 
-#download_page_content_section aside {
+.download_page_instruction aside {
     width: 80vw;
 }
 
@@ -1009,7 +1034,7 @@ footer {
     list-style: none;
 }
 
-.download_page h2 {
+#download_page h2 {
     width: 100%;
     text-align: center;
     margin-block-end: 0em;
@@ -1058,6 +1083,7 @@ footer {
 
 #whats-new section:not(#wn-intro):nth-child(odd) {
     padding-bottom: 5em;
+    padding-top: .5em;
 }
 
 #reference_fills::after {
@@ -1097,10 +1123,6 @@ footer {
 
 #other ul {
     width: fit-content;
-}
-
-#other ul {
-    margin: 0;
     padding: 0;
 }
 
@@ -1127,7 +1149,7 @@ footer {
 }
 
 #wn-intro h1 {
-    font-size: 10.8vw;
+    font-size: 15vw;
     font-weight: 900;
     margin: 0;
 }
@@ -1183,7 +1205,7 @@ nav ul,
 #features figure,
 #download aside,
 #download_section,
-.download_page,
+#download_page,
 .download_page_text,
 .download_buttons,
 .beta_download_buttons,
@@ -1201,7 +1223,7 @@ body,
 #faq,
 #features,
 #download aside,
-.download_page,
+#download_page,
 .download_buttons,
 .download_page_text,
 #download_section,
@@ -1223,7 +1245,7 @@ header,
 #features .right,
 #download aside,
 #download_section,
-.download_page,
+#download_page,
 .download_page_text,
 #intro,
 #missing404,
@@ -1469,7 +1491,7 @@ label[for="toggle"],
         border-radius: 15px;
     }
     /* Plyr */
-    #download_page_content_section aside {
+    .download_page_instruction aside {
         width: 40vw;
     }
     #faq article {
@@ -1554,7 +1576,7 @@ label[for="toggle"],
         font-size: 2.678vw;
     }
     h2 {
-        font-size: 4.166vw;
+        font-size: 4.5em;
         font-weight: 900;
     }
     #features .left,

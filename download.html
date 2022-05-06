@@ -83,7 +83,7 @@
     </header>
     <!-- Page content goes in main-->
     <label for="deselectrad">
-    <main class="download_page">
+    <main id="download_page">
 
         <h2>
             <span class="dash">-</span> Download <span class="dash">-</span>
@@ -157,9 +157,130 @@
                 <i class="bi bi-box-arrow-up-left"></i> <a href="./index.html#faq-upgrade">How can I upgrade to the latest version of Tahoma2D?</a>
             </span>
         </section>
-        
 
-    
+        <div>
+             
+            <label class="label-input"  id="official-input" onchange="inputChecked()">
+                <input type="radio" id="input-official-release" name="instruction-type" checked="checked" >
+                Official Release
+            </label>
+
+
+    <label class="label-input" id="plugin-input" onchange="inputChecked()">
+        <input type="radio" id="input-plugin" name="instruction-type" >
+        Plugin
+    </label>
+
+    </div>
+
+    <section class="download_page_instruction" id="official-instruction">
+
+        <div class="download_page_text">
+
+            <span>
+                Windows
+            </span>
+
+            <aside>
+                <ol>
+                    <li>Click on the link to download the zipped Tahoma2D directory</li>
+                    <li>Right-click on the zipped file and choose "Extract All"</li>
+                    <li>Save the Tahoma2D directory in the location of your choice
+                        <ul>
+                            <li>DO NOT separate the Tahoma2D executable or the tahomastuff folder from the Tahoma2D directory</li>
+                        </ul>
+                    </li>
+                    <li>Open the Tahoma2D directory and find the file called Tahoma2D</li>
+                    <li>Double-click on Tahoma2D to open</li>
+                </ol>
+            </aside>
+
+        </div>
+
+        <div class="download_page_text">
+
+            <span>
+                macOS
+            </span>
+
+            <aside>
+                <ol>
+                    <li>Click on the link to download the Tahoma2D DMG file</li>
+                    <li>Open the DMG and drag the app to the desired location</li>
+                    <li>Open Tahoma2D</li>
+                    <li>Choose "Cancel" from the unknown developer notification dialog</li>
+                    <li>Right-click on Tahoma2D.app and choose "Open"</li>
+                    <li>Choose "Open" from the unknown developer notification dialog &mdash; afterwards Tahoma2D should open normally</li>
+                    <li class="download_page_no_marker">(For some versions of macOS, Tahoma2D must be granted permission to run for the first time in Security &amp; Privacy, under System Preferences.)</li>
+
+                </ol>
+            </aside>
+
+        </div>
+
+
+        <div class="download_page_text">
+
+            <span>
+                Linux
+            </span>
+
+            <aside>
+                <ol>
+                    <li>Click on the link to download the gzip'd tarball'd Tahoma2D directory</li>
+                    <li>Right-click on the gzip'd tarball and choose "Extract Here"
+                        <ul>
+                            <li>Alternatively from Terminal window: $ tar -xvf *.tar.gz</li>
+                        </ul>
+                    </li>
+                    <li>Save the Tahoma2D directory in the location of your choice
+                        <ul>
+                            <li>DO NOT separate the Tahoma2D AppImage or the tahomastuff folder from the Tahoma2D directory</li>
+                        </ul>
+                    </li>
+                    <li>Open the Tahoma2D directory and find the file called Tahoma2D.AppImage</li>
+                    <li>Double-click on Tahoma2D.AppImage to open</li>
+                </ol>
+            </aside>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="download_page_instruction" id="plugin-instruction">
+
+
+        <div class="download_page_text">
+
+            <ol>
+                <li>Download the plugins for your OS</li>
+                <li>Unzip the plugins directory</li>
+                <li>Place the plugins in the tahomastuff folder's plugins directory
+                    <ul>
+                        <li>On macOS, right-click on the Tahoma2D.app and choose "Show Package Contents" to access the tahomastuff folder
+                        </li>
+                    </ul>
+                </li>
+                <li>Open Tahoma2D and access the plugins with the special FX</li>
+                <li class="download_page_no_marker">(For Linux only, OpenCV 4.5.1 must be installed to /usr/local/lib.)</li>
+            </ol>
+        </div>
+
+    </section>
+
 
     </main>
     </label>
@@ -170,6 +291,44 @@
         const d = new Date();
         let year = d.getFullYear();
         document.getElementById("year").innerHTML = year;
+    </script>
+
+    <script>
+        var officialInputs = document.querySelector("#input-official-release")
+        var pluginInputs = document.querySelector("#input-plugin")
+        var officialIns = document.querySelector("#official-instruction")
+        var pluginIns = document.querySelector("#plugin-instruction")
+        var officialLable = document.querySelector("#official-input")
+        var pluginLable = document.querySelector("#plugin-input")
+
+
+
+        function inputChecked() {
+            if (officialInputs.checked) {
+                officialIns.classList.remove("display-none")
+                pluginLable.classList.remove("checked-input")
+
+
+            } else {
+                officialIns.classList.add("display-none")
+                pluginLable.classList.add("checked-input")
+
+
+            }
+            if (pluginInputs.checked) {
+                pluginIns.classList.remove("display-none")
+                officialLable.classList.remove("checked-input")
+
+
+            } else {
+                pluginIns.classList.add("display-none")
+                officialLable.classList.add("checked-input")
+
+
+            }
+
+        }
+        window.addEventListener('load', inputChecked)
     </script>
 
 
