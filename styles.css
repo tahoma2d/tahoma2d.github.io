@@ -328,13 +328,17 @@ ul.marker {
     position: relative;
 }
 
-#brushes-art:after {
+#brushes .slide-content {
+    position: relative;
+}
+
+#brushes-art {
     content: "Made by: @Rodney";
     position: absolute;
     font-weight: 900;
     color: var(--WatermarkColor);
-    left: 10px;
-    top: 5px;
+    left: 20px;
+    top: 15px;
     font-size: smaller;
 }
 
@@ -396,30 +400,6 @@ ul.marker {
     min-width: 18em;
     border-radius: var(--BorderRadius);
     box-shadow: 0 0 0 10px #222f3e;
-}
-
-#brushes-art:after {
-    content: "Made by: @Rodney";
-    position: absolute;
-    font-weight: 900;
-    color: var(--WatermarkColor);
-    left: 10px;
-}
-
-#palette .plyr::after {
-    content: "Made by: @Rattus";
-    position: absolute;
-    font-weight: 900;
-    color: var(--WatermarkColor);
-    right: 10px;
-}
-
-#types .plyr::after {
-    content: "Made by: @JerHenning";
-    position: absolute;
-    font-weight: 900;
-    color: var(--WatermarkColor);
-    left: 10px;
 }
 
 
