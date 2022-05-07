@@ -830,7 +830,7 @@ footer {
     padding: 1em;
     display: block;
     border-radius: var(--BorderRadius);
-    width: fit-content;
+    text-align: center;
 }
 
 [name="instruction-type"] {
