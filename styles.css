@@ -844,6 +844,14 @@ footer {
     margin: 0 0.5em;
     color: white;
     cursor: pointer;
+    display: block;
+    width: fit-content;
+}
+
+#input-div {
+    display: flex;
+    flex-direction: row;
+    max-width: 92vw;
 }
 
 .checked-input {
