@@ -839,7 +839,7 @@ footer {
 
 .label-input {
     background-color: #d62196;
-    padding: .5em;
+    padding: .4em;
     border-radius: var(--BorderRadius);
     margin: 0 0.5em;
     color: white;
