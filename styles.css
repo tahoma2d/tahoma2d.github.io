@@ -868,14 +868,15 @@ footer {
 }
 
 .label-input {
-  background-color: #d62196;
+  background-color: #a5a5a5;
   padding: 0.4em;
-  border-radius: var(--BorderRadius);
+  border-radius: 15px 15px 0 0;
   margin: 0 0.5em;
   color: white;
   cursor: pointer;
   display: block;
   width: fit-content;
+  text-align: center;
 }
 
 #input-div {
@@ -885,7 +886,7 @@ footer {
 }
 
 .checked-input {
-  background-color: #ea7bc3;
+  background-color: #d62196;
 }
 
 .display-none {
@@ -907,10 +908,6 @@ footer {
   margin: 1em 0;
 }
 
-.download_page_instruction aside {
-  width: 80vw;
-}
-
 .download_page_text span {
   font-weight: 700;
   width: 5vw;
@@ -930,6 +927,8 @@ footer {
   -moz-animation: download_box 30s ease infinite;
   -o-animation: download_box 30s ease infinite;
   animation: download_box 30s ease infinite;
+
+  flex: auto;
 }
 
 #download_box :nth-child(2) {
@@ -954,8 +953,7 @@ footer {
 
 #download_page_content {
   margin: 1em 0 4em;
-  max-width: fit-content;
-  width: min-content;
+  width: inherit;
 }
 
 .beta_release_notes {
@@ -964,6 +962,7 @@ footer {
 
 .release_notes {
   width: -webkit-fill-available;
+  width: -moz-available;
   padding: 1em;
   border-radius: var(--BorderRadius);
   background: linear-gradient(270deg, #f8d3eb, #ced8e4);
@@ -1016,18 +1015,26 @@ footer {
   padding-bottom: 0;
 }
 
+#download_page {
+  width: clamp(20rem, 45vw, 55rem);
+  margin: auto;
+}
+
+#download_page .download_button {
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+
 #download_page .download_page_instruction {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 2em 5em 5em;
+  align-items: center;
+  margin: 0 0 5em;
   background-color: #ffffff;
-  padding: 1em 1em 0;
+  padding: 1em;
   border-radius: var(--BorderRadius);
-}
-
-.download_page_instruction aside {
-  width: 80vw;
+  border: #222f3e 1px solid;
+  width: inherit;
 }
 
 .download_page_text span {
@@ -1486,7 +1493,8 @@ label[for="toggle"],
   }
   /* Plyr */
   .download_page_instruction aside {
-    width: 40vw;
+    width: -webkit-fill-available;
+    width: -moz-available;
   }
   #faq article {
     width: 50%;
@@ -1653,6 +1661,9 @@ label[for="toggle"],
   #download_section {
     flex-flow: row;
   }
+  .download_page_text {
+    flex-flow: row;
+  }
   #intro #home_release_notes {
     margin-top: 0;
     padding: 0 1em;
@@ -1666,9 +1677,6 @@ label[for="toggle"],
 }
 
 @media (min-width: 800px) {
-  .download_page_text {
-    flex-flow: row;
-  }
   .download_buttons a {
     margin: 1em;
   }
