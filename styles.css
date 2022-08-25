@@ -825,12 +825,46 @@ footer {
 
 /* 💬 DOWNLOAD PAGES */
 
+
+@-webkit-keyframes faq-upgrade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes faq-upgrade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes faq-upgrade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes faq-upgrade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 #faq-upgrade-link {
-    background: #fff;
+    background: linear-gradient(270deg, #f9d17f, #ff8162);
+    background-size: 400% 400%;
+    -webkit-animation: faq-upgrade 30s ease infinite;
+    -moz-animation: faq-upgrade 30s ease infinite;
+    -o-animation: faq-upgrade 30s ease infinite;
+    animation: faq-upgrade 30s ease infinite;
+    
     padding: 1em;
     display: block;
     border-radius: var(--BorderRadius);
     text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#faq-upgrade-link a {
+    color: inherit;
 }
 
 [name="instruction-type"] {
