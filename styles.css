@@ -1131,10 +1131,10 @@ footer {
 }
 
 #other li {
-  border-radius: 0.313em;
+  border-radius: var(--BorderRadius);
   font-weight: 300;
-  margin: 0.5em;
-  padding: 0.2em 0.5em;
+  margin: 0.6em;
+  padding: 0.4rem;
   width: fit-content;
 }
 
@@ -1160,13 +1160,19 @@ footer {
   flex-direction: column;
 }
 
-.wn-content p {
-  background-color: #fff;
-  border-radius: var(--BorderRadius);
+.wn-content div {
   color: var(--plyr-color-main);
-  margin: 1em;
-  padding: 2em;
-  box-shadow: 0px 5px #00000033;
+  margin: 1rem 0;
+  background: white;
+  border: #f1f1f1 1px solid;
+  border-radius: var(--BorderRadius);
+  padding: 0.5rem 1.5rem;
+  width: fit-content;
+}
+
+#other .wn-content {
+  width: clamp(20rem, 70vw, 50rem);
+  margin: auto;
 }
 
 #wn-intro h1 {
@@ -1317,7 +1323,7 @@ section:nth-of-type(odd),
 #features h2,
 #faq div,
 #faq label,
-.wn-content p,
+.wn-content div,
 #other li {
   color: #222f3e;
 }
@@ -1463,9 +1469,11 @@ label[for="toggle"],
   #download_box :nth-child(2) {
     margin: 0 1em;
   }
-  .wn-content p {
+  .wn-content div {
     width: 30%;
+    margin: 0 1rem;
   }
+
   .wn-content,
   #download_box {
     flex-direction: row;
