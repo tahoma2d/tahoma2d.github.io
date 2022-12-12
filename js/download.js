@@ -16,9 +16,9 @@ window.onload = function changeDownloadLinks() {
             releaseDate.innerHTML = data.tag_name + " - " + data.created_at;
             releaseDate.href = data.html_url
 
-            windowsLink.href = data.assets[4].browser_download_url
-            macLink.href = data.assets[3].browser_download_url
-            linuxLink.href = data.assets[2].browser_download_url
+            windowsLink.href = data.assets[3].browser_download_url
+            macLink.href = data.assets[2].browser_download_url
+            linuxLink.href = data.assets[1].browser_download_url
         })
 
 
