@@ -30,12 +30,12 @@ function getCorrectLinkBasedOnOS(assetsData, theOS) {
         }
         break;
       case OSNames.macOS:
-        if (theLink.endsWith(theLink.endsWith(fileSuffix.macOSZip || fileSuffix.macOSDMG))) {
+        if (theLink.endsWith(fileSuffix.macOSZip) || theLink.endsWith(fileSuffix.macOSDMG)) {
           return theLink;
         }
         break;
       case OSNames.Linux:
-        if (theLink.endsWith(fileSuffix.Linux) || theLink.endsWith(fileSuffix.LinuxTar || theLink.endsWith(fileSuffix.LinuxClang))) {
+        if (theLink.endsWith(fileSuffix.Linux) || theLink.endsWith(fileSuffix.LinuxTar) || theLink.endsWith(fileSuffix.LinuxClang)) {
           return theLink;
         }
         break;
