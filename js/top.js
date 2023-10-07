@@ -1,14 +1,15 @@
-window.onscroll = function topButton() {
-    if (document.documentElement.scrollTop > 100) {
-        document.querySelector(".top").classList.add("top_shown")
+function checkScrollFromTop() {
+  const topDisplayClassName = "top_shown";
 
-
-    } else {
-        document.querySelector(".top").classList.remove("top_shown")
-    }
-
+  if (document.documentElement.scrollTop > 100) {
+    document.querySelector(".top").classList.add(topDisplayClassName);
+  } else {
+    document.querySelector(".top").classList.remove(topDisplayClassName);
+  }
 }
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavier: "smooth" })
+  window.scrollTo({ top: 0, behavier: "smooth" });
 }
+
+window.addEventListener("scroll", checkScrollFromTop);
