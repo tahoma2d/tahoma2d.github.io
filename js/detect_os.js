@@ -1,53 +1,34 @@
-$(function() {
+function checkUserOS() {
+  var button = document.getElementById("home_download_button");
+  var osName = "Download";
+  var osLink = "download/official_releases.html";
 
-    var button = document.getElementById("home_download_button");
-    var os_name = "Download";
-    var os_link = "download/official_releases.html"
+  function fetchData(assetsNumber) {
+    fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
+      .then((response) => response.json())
+      .then(
+        (data) => (button.href = data.assets[assetsNumber].browser_download_url)
+      );
+  }
 
-    function fetchData(assetsNumber) {
-        fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest")
-            .then(response => response.json())
-            .then(data => button.href = data.assets[assetsNumber].browser_download_url)
-    }
+  if (navigator.userAgent.indexOf("Win") != -1) {
+    fetchData(3);
+    osName = "Download For Windows";
+  } else if (navigator.userAgent.indexOf("like Mac") != -1) {
+    osName = "Download";
+    button.href = osLink;
+  } else if (navigator.userAgent.indexOf("Mac") != -1) {
+    fetchData(2);
+    osName = "Download For macOS";
+  } else if (navigator.userAgent.indexOf("Android") != -1) {
+    osName = "Download";
+    button.href = osLink;
+  } else if (navigator.userAgent.indexOf("Linux") != -1) {
+    fetchData(1);
+    osName = "Download For Linux";
+  }
 
-    if (navigator.userAgent.indexOf("Win") != -1) {
-        fetchData(3)
+  button.text = osName;
+}
 
-        os_name =
-            "Download For Windows";
-
-
-
-    } else if (navigator.userAgent.indexOf("like Mac") != -1) {
-        os_name =
-            "Download";
-        button.href = os_link;
-
-
-
-    } else if (navigator.userAgent.indexOf("Mac") != -1) {
-        fetchData(2)
-
-        os_name =
-            "Download For macOS";
-
-
-
-    } else if (navigator.userAgent.indexOf("Android") != -1) {
-        os_name =
-            "Download";
-        button.href = os_link;
-
-
-
-    } else if (navigator.userAgent.indexOf("Linux") != -1) {
-        fetchData(1)
-
-        os_name =
-            "Download For Linux";
-
-    }
-
-    button.text = os_name;
-
-});
+window.addEventListener("load", checkUserOS);

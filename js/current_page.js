@@ -1,18 +1,26 @@
-  $(function() {
-      $("[href]").each(function() {
-          if (this.href == window.location.href) {
-              $(this).addClass("current_page");
-          }
-      });
-  });
+function checkForActiveNavLink() {
+  const allPossibleLinks = document.querySelectorAll(".activable-link");
 
-  $(window).on('hashchange', function() {
+  const currentHref = window.location.href;
 
-      $("[href]").each(function() {
-          if (this.href == window.location.href) {
-              $(this).addClass("current_page");
-          } else {
-              $(this).removeClass("current_page");
-          }
-      });
+  allPossibleLinks.forEach((link) => {
+    let linkHref = link.getAttribute("href");
+
+    if (linkHref.startsWith("./")) {
+      linkHref = linkHref.slice(1);
+    }
+
+    const activeLinkClassName = "current-page";
+
+    if (currentHref.includes(linkHref)) {
+      link.classList.add(activeLinkClassName);
+    } else {
+      if (link.classList.contains(activeLinkClassName)) {
+        link.classList.remove(activeLinkClassName);
+      }
+    }
   });
+}
+
+window.addEventListener("load", checkForActiveNavLink);
+window.addEventListener("hashchange", checkForActiveNavLink);

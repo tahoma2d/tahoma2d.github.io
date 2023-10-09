@@ -87,7 +87,7 @@ nav ul input {
   font-style: italic;
 }
 
-.current_page::after {
+.activable-link.current-page::after {
   width: 100% !important;
   height: 0.027em !important;
   border-radius: 5em !important;

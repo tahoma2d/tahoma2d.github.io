@@ -86,17 +86,19 @@ window.onload = function changeDownloadLinks() {
 
   // ==================================================
   // Get download links for the beta version
-  fetch(betaLink)
-    .then((response) => response.json())
-    .then((data) => {
-      // We combine the tag name and creation date to get something like "v1.3 - 2022".
-      betaReleaseDateElement.innerHTML = data.tag_name + " - " + data.created_at;
-      betaReleaseDateElement.href = data.html_url;
-
-      betaWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Windows);
-      betaMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.macOS);
-      betaLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Linux);
+  if (betaReleaseDateElement !== null) {
+    fetch(betaLink)
+      .then((response) => response.json())
+      .then((data) => {
+        // We combine the tag name and creation date to get something like "v1.3 - 2022".
+        betaReleaseDateElement.innerHTML = data.tag_name + " - " + data.created_at;
+        betaReleaseDateElement.href = data.html_url;
+  
+        betaWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Windows);
+        betaMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.macOS);
+        betaLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Linux);
     });
+  }
   // ==================================================
 
   // ==================================================
