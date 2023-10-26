@@ -22,15 +22,15 @@ window.onload = function changeDownloadLinks() {
         })
 
 
-    fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.3-beta.1")
+    fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.4-beta.1")
         .then(response => response.json())
         .then(data => {
             betaReleaseDate.innerHTML = data.tag_name + " - " + data.created_at;
             betaReleaseDate.href = data.html_url
 
-            windowsBetaLink.href = data.assets[3].browser_download_url
-            macBetaLink.href = data.assets[2].browser_download_url
-            linuxBetaLink.href = data.assets[1].browser_download_url
+            windowsBetaLink.href = data.assets[5].browser_download_url
+            macBetaLink.href = data.assets[4].browser_download_url
+            linuxBetaLink.href = data.assets[3].browser_download_url
         })
 
     var pluginReleaseDate = document.querySelector("#plugins_date")
