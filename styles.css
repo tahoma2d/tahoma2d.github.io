@@ -1191,7 +1191,6 @@ footer {
 
 #clipping_masks {
   background-image: url(./media/backgrounds/clipping-masks.png);
-  background-position: bottom;
 }
 
 /* 💬❗ WHAT'S NEW PAGE */
@@ -1411,6 +1410,7 @@ label[for="toggle"],
 #system,
 #intro,
 #wn-intro,
+#clipping_masks,
 #other {
   background-attachment: fixed !important;
   background-position: center !important;
@@ -1420,6 +1420,7 @@ label[for="toggle"],
 #intro,
 #wn-intro,
 #faq,
+#clipping_masks,
 #other {
   background-size: cover;
   background-repeat: no-repeat;
