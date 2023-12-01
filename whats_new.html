@@ -85,7 +85,7 @@
         <section id="wn-intro" class="flex">
           <div id="intro-text-and-button">
             <div>
-              <h1>What's New in v1.3</h1>
+              <h1>What's New in v1.4</h1>
               <p>With a great update comes great features!</p>
             </div>
           </div>
@@ -99,90 +99,60 @@
             </span>
           </section>
         </section>
-
-        <section id="implicit_hold">
-          <h2><span class="dash">-</span> Introducing Implicit Holds! <span class="dash">-</span></h2>
-
+<!--
+        <section id="symmetry_tool">
+          <h2><span class="dash">-</span>  <span class="dash">-</span></h2>
           <div class="wn-content">
-            <span id="ih-img">
-              <img src="./media/screenshots/whats_new/implicit_hold.png" />
-            </span>
+            <img src="./media/screenshots/whats_new/symmetry_tool.png" />
 
             <div>
-              <p>There is no longer a need to manually stretch out the exposure of your images!</p>
-              <p>In new scenes, by default each image holds its display in the <code>Timeline</code> (or <code>Xsheet</code>) until the next image is reached, a stop hold frame is encountered, or until the end of the scene.</p>
-              <p>This is a much faster way of working!</p>
-              <p>Existing scenes will still open with explicit holds (the old behavior).</p>
-              <p>Scenes can be converted to either implicit or explicit holds as needed from the Scene menu.</p>
-              <p>For compatibility with OpenToonz and older releases of Tahoma2D, implicit hold scenes do need to be converted to use explicit holds.</p>
-              <p>In Column Header context menu, Quick Toolbar or Preferences under Drawing, implicit holds can be disabled to return back to the explicit holds as the default.</p>
             </div>
           </div>
         </section>
 
-        <section id="reference_fills">
-          <h2><span class="dash">-</span> Now with Reference Fills! <span class="dash">-</span></h2>
+        <section id="clipping_masks">
+          <h2><span class="dash">-</span> Introducing Clipping Masks! <span class="dash">-</span></h2>
 
           <div class="wn-content">
             <div>
-              <p>In older versions of Tahoma2D, the boundaries for a fillable region had to be on the current layer.</p>
-              <p>No more! Now draw your lines on one or more layers and fill on a separate raster or smart raster level in another layer.</p>
-              <p>In the <code>Fill tool</code> options, check <code>Refer Visible</code> to fill through any visible layers (even vector) onto the active raster or smart raster level!</p>
-              <p>Any drawings in visible layers can become part of the boundary for a fillable region.</p>
-              <p>To prevent a layer from being used for a reference fill, turn off the layer visibility in the <code>Timeline</code>.</p>
-              <p>For Smart Raster levels, refer visible is only possible for <code>Normal</code> type and the <code>Areas</code> or <code>Lines & Areas</code> fill modes.</p>
-              <p>Referenced fills themselves do not distinguish lines from areas and so will always be treated as areas.</p>
-            </div>
+             </div>
 
-            <img src="./media/screenshots/whats_new/reference_fills.png" />
+             <img src="./media/screenshots/whats_new/clipping_masks.png" />
           </div>
         </section>
 
-        <section id="style_management">
-          <h2><span class="dash">-</span> Finally including style management! <span class="dash">-</span></h2>
-          <div class="wn-content">
-            <img src="./media/screenshots/whats_new/style_management.png" />
 
-            <div>
-              <p>Right-click on the style swatches in <code>Raster</code>, <code>Texture</code>, and <code>Vector</code> tabs of the <code>Style Editor</code> to see the context menu with new style set options.</p>
-              <p>Create your own sets, copy or move brushes/styles to different sets, and set styles as favorites for quick access.</p>
-              <p>Sets can be easily minimized or maximized for fast access to the styles you use while also saving on space.</p>
-              <p>Custom sets can be accessed in the Browser room’s Library or Favorites and can also be imported through preferences from other installations of T2D.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="cell_mark">
-          <h2><span class="dash">-</span> New Cell Mark and Frame Pinning features! <span class="dash">-</span></h2>
+-->  
+<!---->
+        <section id="symmetry_tool">
+          <h2><span class="dash">-</span> Presenting the Symmetry Tool! <span class="dash">-</span></h2>
 
           <div class="wn-content">
-            <div>
-              <p>Mark specific cells with color-coding to keep track of important cells in the <code>Timeline</code> or <code>XSheet</code>.</p>
-              <p>Right-click on the cell to add or remove a cell mark with one of 12 colors.</p>
-              <p>Frame pinning can also be added and navigated through the frame number’s context menu.</p>
-              <p>Pins display directly above the frame numbers.</p>
-              <p>For fast navigation between pinned frames, add the pinning commands to the command bar or use your own custom shortcuts.</p>
-            </div>
-
-            <img src="./media/screenshots/whats_new/cell_mark.png" />
-          </div>
-        </section>
-
-        <section id="perspective_grid_tool">
-          <h2><span class="dash">-</span> Presenting a new Perspective Grid Tool! <span class="dash">-</span></h2>
-          <div class="wn-content">
-            <img src="./media/screenshots/whats_new/perspective_grid_tool.png" />
+            <img src="./media/screenshots/whats_new/symmetry_tool.png" />
 
             <div>
-              <p>This replaces how grids and vanishing points were added in 1.2 (other overlays remain the same).</p>
-              <p>Vanishing points and lines can be added through this new tool for customized grids and perspectives.</p>
-              <p>Tool options allow for better customization and precise control.</p>
-              <p>Extend lines to a grid by turning on “parallel”.</p>
-              <p>Easily reposition vanishing points by dragging.</p>
-              <p>Save presets to the project or the library for easy reuse or changing between different perspective grid setups.</p>
+              <p>Mirror or repeat strokes over 1 or multiple lines of symmetry.</p>
+              <p>Works with a number of tools.</p>
+              <p>Save presets to the project or the library for easy reuse or changing between different symmetry setups.</p>
               <p>Presets can be imported from other installations of T2D and also accessed through the Browser Room.</p>
-              <p>Visibility of perspective grids outside of the Perspective Tool is still controlled with the Overlay button and dropdown at the top of the viewer.</p>
+              <p>Visibility of symmetry guide outside of the Symmetry Tool is still controlled with the Overlay button and dropdown at the top of the viewer.</p>
             </div>
+          </div>
+        </section>
+
+        <section id="clipping_masks">
+          <h2><span class="dash">-</span> Introducing Clipping Masks! <span class="dash">-</span></h2>
+
+          <div class="wn-content">
+            <div>
+              <p>Use any Vector level as a live Clipping Mask.</p>
+              <p>No need to turn on Preview mode to see it or use Matte In/Out</p>
+              <p>Clip layers above/right of the mask to show only what's in the mask area or what's outside the area.</p>
+              <p>Clipping masks can be rendered while stil acting as a mask for another layer.</p>
+              <p>Since clipping masks are column based, you can animate the mask with the Animate or Skeleton Tools.</p>
+            </div>
+
+            <img src="./media/screenshots/whats_new/clipping_masks.png" />
           </div>
         </section>
 
@@ -190,17 +160,16 @@
           <h2><span class="dash">-</span> Other helpful additions <span class="dash">-</span></h2>
 
           <div class="wn-content">
-            <img src="./media/screenshots/whats_new/other.png" />
+            <img src="./media/screenshots/whats_new/subscene_nav_bar.png" />
 
             <ul class="marker">
-              <li>In the <code>Style Editor</code>, use hex colors, color names, and a color name editor</li>
-              <li>Layer names now use the name of the first level</li>
-              <li>Lock Alpha now enabled for Paint Brush Tool, Smart Raster Brush Tool, and the Standard Raster brush</li>
-              <li>Mypaint brushes are now enabled for the <code>Geometric Tool</code> when using Raster/Smart Raster levels</li>
-              <li>Shortcuts can now be set with multiple keystrokes</li>
-              <li><code>tahomastuff</code> folder now accessible in the Browser room</li>
-              <li><code>Type tool</code> now enabled for Raster levels</li>
-              <li>When using the <code>Geometric tool</code>’s polyline, move a curve’s second handle freely with alt or opt</li>
+              <li>Easily move between sub-scenes with the <code>Sub-Scene Navigation Bar</code></li>
+              <li>Create Command Bars with different button sets</li>
+              <li>Focus on a particular drawing with <code>Current Drawing on Top</code> and <code>Light Table</code> commands</li>
+              <li>Apply an image, like a cel template or watermark, as a Scene Overlay in Settings Properties</li>
+              <li>Options to Render Key Drawings only and render level drawings to separate folders</li>
+              <li>More DSLR cameras are supported for Stop Motion animators</li>
+              <li>Show Advanced Preferences and Options for hidden OpenToonz UI controls</li>
             </ul>
           </div>
         </section>

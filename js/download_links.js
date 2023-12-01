@@ -15,6 +15,7 @@ const fileSuffix = {
   macOSDMG: "osx.dmg",
   Linux: "linux.zip",
   LinuxTar: "linux.tar.gz",
+  LinuxGcc: "linux-gcc.tar.gz",
   LinuxClang: "linux-clang.tar.gz",
 };
 
@@ -35,7 +36,7 @@ function getCorrectLinkBasedOnOS(assetsData, theOS) {
         }
         break;
       case OSNames.Linux:
-        if (theLink.endsWith(fileSuffix.Linux) || theLink.endsWith(fileSuffix.LinuxTar) || theLink.endsWith(fileSuffix.LinuxClang)) {
+        if (theLink.endsWith(fileSuffix.Linux) || theLink.endsWith(fileSuffix.LinuxTar) || theLink.endsWith(fileSuffix.LinuxGcc)) {
           return theLink;
         }
         break;

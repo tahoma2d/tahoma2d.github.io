@@ -533,7 +533,7 @@ ul.marker {
 /* 💬 COMPARE SECTION */
 
 .new::after {
-  content: "#v1.3";
+  content: "#v1.4";
   background-color: #d62196;
   padding: 0.2em;
   border-radius: 0.313em;
@@ -1107,29 +1107,6 @@ footer {
   padding-top: 0.5em;
 }
 
-#reference_fills::after {
-  content: "Made by: @JerHenning";
-  color: white;
-}
-
-#cell_mark::after {
-  content: "Made by: @yogib33r";
-  color: white;
-}
-
-#other::after {
-  content: "Made by: @JerHenning";
-  color: white;
-}
-
-#other {
-  background: url(media/backgrounds/other_bg.png);
-}
-
-#cell_mark {
-  background: url(media/backgrounds/cell_mark_bg.png);
-}
-
 #other li {
   border-radius: var(--BorderRadius);
   font-weight: 300;
@@ -1343,10 +1320,8 @@ label[for="toggle"],
 #faq h2,
 #features figcaption,
 #features label,
-#wn-intro,
-#reference_fills,
-#cell_mark,
-#other {
+#clipping_masks,
+#wn-intro {
   color: #ffffff;
 }
 
@@ -1363,16 +1338,13 @@ label[for="toggle"],
 /* 💬 COMMON SIZE AND SPACING */
 
 #system,
-#reference_fills,
-#cell_mark,
+#clipping_masks,
 #other {
   position: relative;
 }
 
 #faq::after,
 #system::after,
-#reference_fills::after,
-#cell_mark::after,
 #other::after {
   position: absolute;
   left: 1em;
@@ -1416,8 +1388,7 @@ label[for="toggle"],
 
 /* 💬 COMMON BACKGROUND */
 
-#system,
-#reference_fills {
+#system {
   background: url(media/backgrounds/system_bg.png);
 }
 
@@ -1435,8 +1406,6 @@ label[for="toggle"],
 #system,
 #intro,
 #wn-intro,
-#reference_fills,
-#cell_mark,
 #other {
   background-attachment: fixed !important;
   background-position: center !important;
@@ -1446,8 +1415,6 @@ label[for="toggle"],
 #intro,
 #wn-intro,
 #faq,
-#reference_fills,
-#cell_mark,
 #other {
   background-size: cover;
   background-repeat: no-repeat;
