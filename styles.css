@@ -1189,6 +1189,11 @@ footer {
   z-index: 1;
 }
 
+#clipping_masks {
+  background-image: url(./media/backgrounds/clipping-masks.png);
+  background-position: bottom;
+}
+
 /* 💬❗ WHAT'S NEW PAGE */
 
 /* 💬 COMMON FLEX */
