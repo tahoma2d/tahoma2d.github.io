@@ -22,7 +22,7 @@ window.onload = function changeDownloadLinks() {
     var macBetaLink = document.querySelector("#mac_beta_link")
     var linuxBetaLink = document.querySelector("#linux_beta_link")
 
-    fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.4-beta.1")
+    fetch("https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.5-beta.1")
         .then(response => response.json())
         .then(data => {
             betaReleaseDate.innerHTML = data.tag_name + " - " + data.created_at;

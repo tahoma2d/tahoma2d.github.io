@@ -1,5 +1,5 @@
 const latestLink = "https://api.github.com/repos/tahoma2d/tahoma2d/releases/latest";
-const betaLink = "https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.4-beta.1";
+const betaLink = "https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/v1.5-beta.1";
 const nightlyLink = "https://api.github.com/repos/tahoma2d/tahoma2d/releases/tags/nightly";
 const pluginLink = "https://api.github.com/repos/tahoma2d/tahoma2d_plugins/releases/latest";
 
