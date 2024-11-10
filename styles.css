@@ -1650,9 +1650,9 @@ label[for="toggle"],
   #download_section {
     flex-flow: row;
   }
-  .download_page_text {
+  /*.download_page_text {
     flex-flow: row;
-  }
+  }*/
   #intro #home_release_notes {
     margin-top: 0;
     padding: 0 1em;
