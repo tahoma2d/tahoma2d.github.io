@@ -533,7 +533,7 @@ ul.marker {
 /* 💬 COMPARE SECTION */
 
 .new::after {
-  content: "#v1.4";
+  content: "#v1.5";
   background-color: #d62196;
   padding: 0.2em;
   border-radius: 0.313em;
@@ -1093,7 +1093,7 @@ footer {
 
 /* 💬 WHAT'S NEW PAGE */
 
-#other .wn-content {
+#wn_section_other .wn-content {
   flex-direction: column;
 }
 
@@ -1107,7 +1107,7 @@ footer {
   padding-top: 0.5em;
 }
 
-#other li {
+#wn_section_other li {
   border-radius: var(--BorderRadius);
   font-weight: 300;
   margin: 0.6em;
@@ -1115,11 +1115,11 @@ footer {
   width: fit-content;
 }
 
-#other {
+#wn_section_other {
   justify-content: center;
 }
 
-#other ul {
+#wn_section_other ul {
   width: fit-content;
   padding: 0;
 }
@@ -1147,7 +1147,7 @@ footer {
   width: fit-content;
 }
 
-#other .wn-content {
+#wn_section_other .wn-content {
   width: clamp(20rem, 70vw, 50rem);
   margin: auto;
 }
@@ -1189,8 +1189,11 @@ footer {
   z-index: 1;
 }
 
-#clipping_masks {
-  background-image: url(./media/backgrounds/clipping-masks.png);
+#wn_section_rtol
+,#wn_section_other {
+  padding: 15vh 20vw 10vh;
+  gap: 1em;
+  background-image: url(./media/backgrounds/xsheet.png);
 }
 
 /* 💬❗ WHAT'S NEW PAGE */
@@ -1305,7 +1308,7 @@ section:nth-of-type(odd),
 #faq div,
 #faq label,
 .wn-content div,
-#other li {
+#wn_section_other li {
   color: #222f3e;
 }
 
@@ -1324,7 +1327,8 @@ label[for="toggle"],
 #faq h2,
 #features figcaption,
 #features label,
-#clipping_masks,
+#wn_section_rtol,
+#wn_section_other,
 #wn-intro {
   color: #ffffff;
 }
@@ -1333,7 +1337,7 @@ label[for="toggle"],
 #faq div,
 #download figure,
 #plugins a:link,
-#other li {
+#wn_section_other li {
   background: #fff;
 }
 
@@ -1342,14 +1346,13 @@ label[for="toggle"],
 /* 💬 COMMON SIZE AND SPACING */
 
 #system,
-#clipping_masks,
-#other {
+#wn_section_ltor {
   position: relative;
 }
 
 #faq::after,
 #system::after,
-#other::after {
+#wn_section_other::after {
   position: absolute;
   left: 1em;
   bottom: 1em;
@@ -1410,8 +1413,9 @@ label[for="toggle"],
 #system,
 #intro,
 #wn-intro,
-#clipping_masks,
-#other {
+#wn_section_rtol,
+#wn_section_ltor,
+#wn_section_other {
   background-attachment: fixed !important;
   background-position: center !important;
 }
@@ -1420,8 +1424,9 @@ label[for="toggle"],
 #intro,
 #wn-intro,
 #faq,
-#clipping_masks,
-#other {
+#wn_section_rtol,
+#wn_section_ltor,
+#wn_section_other {
   background-size: cover;
   background-repeat: no-repeat;
 }
