@@ -533,7 +533,7 @@ ul.marker {
 /* 💬 COMPARE SECTION */
 
 .new::after {
-  content: "#v1.5";
+  content: "#v1.6";
   background-color: #d62196;
   padding: 0.2em;
   border-radius: 0.313em;
@@ -1092,7 +1092,7 @@ footer {
 /* 💬❗ DOWNLOAD PAGES */
 
 /* 💬 WHAT'S NEW PAGE */
-
+#wn_section_center .wn-content,
 #wn_section_other .wn-content {
   flex-direction: column;
 }
@@ -1115,6 +1115,8 @@ footer {
   width: fit-content;
 }
 
+
+#wn_section_center,
 #wn_section_other {
   justify-content: center;
 }
@@ -1147,8 +1149,8 @@ footer {
   width: fit-content;
 }
 
+#wn_section_center .wn-content,
 #wn_section_other .wn-content {
-  width: clamp(20rem, 70vw, 50rem);
   margin: auto;
 }
 
@@ -1337,6 +1339,7 @@ label[for="toggle"],
 #faq div,
 #download figure,
 #plugins a:link,
+#wn_section_center li,
 #wn_section_other li {
   background: #fff;
 }
@@ -1415,6 +1418,7 @@ label[for="toggle"],
 #wn-intro,
 #wn_section_rtol,
 #wn_section_ltor,
+#wn_section_center,
 #wn_section_other {
   background-attachment: fixed !important;
   background-position: center !important;
@@ -1426,6 +1430,7 @@ label[for="toggle"],
 #faq,
 #wn_section_rtol,
 #wn_section_ltor,
+#wn_section_center,
 #wn_section_other {
   background-size: cover;
   background-repeat: no-repeat;
