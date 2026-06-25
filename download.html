@@ -94,65 +94,102 @@
             <div class="download_buttons">
               <i class="bi bi-windows"></i>
               <h3>Windows</h3>
-              <a id="windows-official" class="download_button" href="">Official Release</a>
-              <a id="windows-nightly" class="download_button" href="">Nightly Build</a>
-              <a id="windows-plugin" class="download_button" href="">Plugins</a>
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Official</h3>
+                <a id="windows-official-portable" class="download_button" href="">Portable*</a>
+                <a id="windows-official-install" class="download_button" href="">Installer</a>
+                </section>
+
+              <hr style="width: 70%; height: 5px; background-color: #060000; margin: 2em 0 0 0;">
+
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Nightly</h3>
+                <a id="windows-nightly-portable" class="download_button" href="">Portable*</a>
+                <a id="windows-nightly-install" class="download_button" href="">Installer</a>
+              </section>  
             </div>
+
             <div class="download_buttons">
               <i class="bi bi-apple"></i>
               <h3>macOS</h3>
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Official (Intel)</h3>
+                <a id="macos-official-inteldmg" class="download_button" href="">Portable*</a>
+                <a id="macos-official-intelpkg" class="download_button" href="">Installer</a>
+              </section>  
 
-              <a id="macos-official" class="download_button" href="">Official Release</a>
-              <a id="macos-nightly" class="download_button" href="">Nightly Build</a>
-              <a id="macos-plugin" class="download_button" href="">Plugins</a>
+              <hr style="width: 70%; height: 5px; background-color: #060000; margin: 2em 0 0 0;">
+
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Nightly (Intel)</h3>
+                <a id="macos-nightly-inteldmg" class="download_button" href="">Portable*</a>
+                <a id="macos-nightly-intelpkg" class="download_button" href="">Installer</a>
+              </section>  
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Nightly (Silicon)</h3>
+                <a id="macos-nightly-silicondmg" class="download_button" href="">Portable*</a>
+                <a id="macos-nightly-siliconpkg" class="download_button" href="">Installer</a>
+              </section>  
             </div>
+
             <div class="download_buttons">
               <i class="bi bi-terminal-fill"></i>
               <h3>Linux</h3>
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Official</h3>
+                <a id="linux-official" class="download_button" href="">Portable*</a>
+              </section>  
 
-              <a id="linux-official" class="download_button" href="">Official Release</a>
-              <a id="linux-nightly" class="download_button" href="">Nightly Build</a>
-              <a id="linux-plugin" class="download_button" href="">Plugins</a>
+              <hr style="width: 70%; height: 5px; background-color: #060000; margin: 2em 0 0 0;">
+
+              <section id="download_official_box">
+                <h3 style="text-align: center;">Nightly</h3>
+                <a id="linux-nightly" class="download_button" href="">Portable*</a>
+              </section>  
             </div>
           </section>
+          <p style="text-align: center;"><i>*See <a href="#official-input">below</a> for instructions on using the Portable Builds</i></p>
+          <section>
+            <span class="release_notes"
+              >Latest Official Release:
+              <a id="official_date" href="" target="_blank"></a>
+            </span>
+            <span class="release_notes"
+              >Latest Nightly Build:
+              <a id="nightly_date" href="" target="_blank"></a>
+            </span>
+          </section>
 
-          <!---div id="beta_download_box">
-
+          <!--div id="beta_download_box">
                 <h3><i class="bi bi-magic"></i> Try v1.6 beta!</h3>
-
                 <div class="beta_download_buttons">
-                
                     <a id="windows_beta_link" class="beta_download_button" href=""><i class="bi bi-stars"></i>Windows</a>
                     <a id="mac_beta_link" class="beta_download_button" href=""><i class="bi bi-stars"></i>macOS</a>
                     <a id="linux_beta_link" class="beta_download_button" href=""><i class="bi bi-stars"></i>Linux</a>
-    
-    
                 </div>
                 <span class="beta_release_notes">Latest Beta:
                     <a id="beta_date" href="" target="_blank"></a>
                 </span>
+          </div-->
 
-
-            </div--->
-
-          <span class="release_notes"
-            >Latest Official Release:
-            <a id="official_date" href="" target="_blank"></a>
-          </span>
-          <span class="release_notes"
-            >Latest Nightly Build:
-            <a id="nightly_date" href="" target="_blank"></a>
-          </span>
-          <span class="release_notes"
-            >Latest Plugins:
-            <a id="plugins_date" href="" target="_blank"></a>
-          </span>
+          <div id="plugin_download_box">
+                <h3><i></i>Plugins</h3>
+                <div class="plugin_download_buttons">
+                  <a id="windows-plugin" class="plugin_download_button" href="">Windows</a>
+                  <a id="macos-plugin" class="plugin_download_button" href="">macOS</a>
+                  <a id="linux-plugin" class="plugin_download_button" href="">Linux</a>
+                </div>
+                <span class="plugin_release_notes"
+                  >Latest Plugins:
+                  <a id="plugins_date" href="" target="_blank"></a>
+                </span>
+              </div>
         </section>
 
         <div id="input-div">
           <label class="label-input" id="official-input" onchange="inputChecked()">
             <input type="radio" id="input-official-release" name="instruction-type" checked="checked" />
-            How to run the Official Release/Nightly Build
+            How to run the Portable Builds
           </label>
 
           <label class="label-input" id="plugin-input" onchange="inputChecked()">
@@ -164,7 +201,6 @@
         <section class="download_page_instruction" id="official-instruction">
           <div class="download_page_text">
             <span> Windows </span>
-
             <aside>
               <ol>
                 <li>Click on the link to download the zipped Tahoma2D directory</li>
@@ -181,31 +217,51 @@
             </aside>
           </div>
 
+          <hr style="width: 70%; height: 5px; background-color: #060000;">
+
           <div class="download_page_text">
             <span> macOS </span>
-
             <aside>
               <ol>
                 <li>Click on the link to download the Tahoma2D DMG file</li>
                 <li>Open the DMG and drag the app to the desired location</li>
                 <li>Open Tahoma2D</li>
-                <li>Since Tahoma2D is not part of the Apple Developer program, Apple will display a warning notification about either potential malware or an unknown developer instead of opening immediately &mdash; choose "Done" or "Cancel" depending upon your version of macOS
+                <li>Since Tahoma2D is not part of the Apple Developer program, certin warning notifications or errors may appear instead of opening immediately.</li>
+                <li>If the system displays that the application is damaged and cannot be opened, try the following:
+                  <br />
+                  <img src="./media/screenshots/mac_download/mac-false-damage.png" alt="False damage image" style="max-width: 520px; width:40%;" />
+                  <ul>
+                    <li>Click <code>Cancel</code> to dismiss the warning.</li>
+                    <li>Open a Terminal window and navigate to the directory where the Tahoma2D.app is located.</li>
+                    <li>Run the following command: <code>$ xattr -cr Tahoma2D.app</code></li>
+                    <li>Try to open Tahoma2D again.</li>
+                  </ul>
+                </li>
+                <li>If the system displays a warning notification about potential malware or an unknown developer, do the following:
+                  <br />
+                  <img src="./media/screenshots/mac_download/mac-warning-1.png" alt="First macOS warning image" style="max-width: 520px; width:40%;" />
+                  <ul>
+                    <li>Click <code>Done</code> or <code>Cancel</code> to dismiss the warning.</li>
+                    <li>In <code>System Settings</code>, go to <code>Privacy &amp; Security</code> and click <code>Open Anyway</code>
+                        <br />
+                      <img src="./media/screenshots/mac_download/mac-override.png" alt="Override in System Settings image" style="max-width: 600px; width:90%;" />
+                    </li>
+                    <li>Try to open Tahoma2D again if it doesn't open on its own.</li>
+                  </ul>
+                </li>
+                <li>The system might display a notification to input an administrative password to open. Please do so. 
                     <br />
-                  <img src="./media/screenshots/mac_download/mac-warning-1.png" alt="First macOS warning image" style="max-width: 520px; width:50%;" />
-                <li>In "System Settings", go to "Privacy &amp; Security" to "Open Anyway"
-                    <br />
-                  <img src="./media/screenshots/mac_download/mac-override.png" alt="Override in System Settings image" style="max-width: 600px; width:100%;" />
-                  </li>
-                <li>Another warning notification may display &mdash; input an administrative password to open 
-                    <br />
-                    <img src="./media/screenshots/mac_download/mac-warning-2.png" alt="Last macOS warning image" style="max-width: 516px; width:50%;" /></li>
+                    <img src="./media/screenshots/mac_download/mac-warning-2.png" alt="Last macOS warning image" style="max-width: 516px; width:35%;" />
+                </li>
+                <li>When Tahoma2D opens for the first time, you may be prompted for access to certain folders. Please grant these accesses to ensure the application functions correctly.</li>
               </ol>
             </aside>
           </div>
 
+          <hr style="width: 70%; height: 5px; background-color: #060000;">
+
           <div class="download_page_text">
             <span> Linux </span>
-
             <aside>
               <ol>
                 <li>Click on the link to download the gzip'd tarball'd Tahoma2D directory</li>

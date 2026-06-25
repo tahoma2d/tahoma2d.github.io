@@ -10,36 +10,33 @@ const OSNames = {
 };
 
 const fileSuffix = {
-  Windows: "win.zip",
-  macOSZip: "osx.zip",
-  macOSDMG: "osx.dmg",
-  Linux: "linux.zip",
-  LinuxTar: "linux.tar.gz",
+  WindowsPortable: "portable-win.zip",
+  WindowsInstall: "install-win.exe",
+
+  macOSDMG: "portable-osx.dmg",
+  macOSPkg: "install-osx.pkg",
+
+  macOSIntelDMG: "portable-osx-intel.dmg",
+  macOSIntelPkg: "install-osx-intel.pkg",
+
+  macOSSiliconDMG: "portable-osx-silicon.dmg",
+  macOSSiliconPkg: "install-osx-silicon.pkg",
+
   LinuxGcc: "linux-gcc.tar.gz",
   LinuxClang: "linux-clang.tar.gz",
+
+  WindowsPlugin: "plugins_win.zip",
+  macOSPlugin: "plugins_osx.zip",
+  LinuxPlugin: "plugins_linux.zip",
 };
 
 // ==================================================
-function getCorrectLinkBasedOnOS(assetsData, theOS) {
+function getCorrectLinkBasedOnOS(assetsData, fileEnding) {
   for (let eachAsset of assetsData) {
     const theLink = eachAsset.browser_download_url;
 
-    switch (theOS) {
-      case OSNames.Windows:
-        if (theLink.endsWith(fileSuffix.Windows)) {
-          return theLink;
-        }
-        break;
-      case OSNames.macOS:
-        if (theLink.endsWith(fileSuffix.macOSZip) || theLink.endsWith(fileSuffix.macOSDMG)) {
-          return theLink;
-        }
-        break;
-      case OSNames.Linux:
-        if (theLink.endsWith(fileSuffix.Linux) || theLink.endsWith(fileSuffix.LinuxTar) || theLink.endsWith(fileSuffix.LinuxGcc)) {
-          return theLink;
-        }
-        break;
+    if (theLink.endsWith(fileEnding)) {
+      return theLink;
     }
   }
 }
@@ -47,20 +44,32 @@ function getCorrectLinkBasedOnOS(assetsData, theOS) {
 // ==================================================
 window.onload = function changeDownloadLinks() {
   // Latest version download button elements
-  const latestWindowsElement = document.querySelector("#windows-official");
-  const latestMacOSElement = document.querySelector("#macos-official");
+  const latestWindowsPortableElement = document.querySelector("#windows-official-portable");
+  const latestWindowsInstallElement = document.querySelector("#windows-official-install");
+  const latestMacOSIntelDMGElement = document.querySelector("#macos-official-inteldmg");
+  const latestMacOSIntelPkgElement = document.querySelector("#macos-official-intelpkg");
+  const latestMacOSSiliconDMGElement = document.querySelector("#macos-official-silicondmg");
+  const latestMacOSSiliconPkgElement = document.querySelector("#macos-official-siliconpkg");
   const latestLinuxElement = document.querySelector("#linux-official");
   const latestReleaseDateElement = document.querySelector("#official_date");
 
   // Beta version download button elements
-  const betaWindowsElement = document.querySelector("#windows_beta_link");
-  const betaMacOSElement = document.querySelector("#mac_beta_link");
-  const betaLinuxElement = document.querySelector("#linux_beta_link");
+  const betaWindowsPortableElement = document.querySelector("#windows-beta-portable");
+  const betaWindowsInstallElement = document.querySelector("#windows-beta-install");
+  const betaMacOSIntelDMGElement = document.querySelector("#mac-beta-inteldmg");
+  const betaMacOSIntelPkgElement = document.querySelector("#mac-beta-intelpkg");
+  const betaMacOSSiliconDMGElement = document.querySelector("#mac-beta-silicondmg");
+  const betaMacOSSiliconPkgElement = document.querySelector("#mac-beta-siliconpkg");
+  const betaLinuxElement = document.querySelector("#linux-beta");
   const betaReleaseDateElement = document.querySelector("#beta_date");
 
   // Nightly version download button elements
-  const nightlyWindowsElement = document.querySelector("#windows-nightly");
-  const nightlyMacOSElement = document.querySelector("#macos-nightly");
+  const nightlyWindowsPortableElement = document.querySelector("#windows-nightly-portable");
+  const nightlyWindowsInstallElement = document.querySelector("#windows-nightly-install");
+  const nightlyMacOSIntelDMGElement = document.querySelector("#macos-nightly-inteldmg");
+  const nightlyMacOSIntelPkgElement = document.querySelector("#macos-nightly-intelpkg");
+  const nightlyMacOSSiliconDMGElement = document.querySelector("#macos-nightly-silicondmg");
+  const nightlyMacOSSiliconPkgElement = document.querySelector("#macos-nightly-siliconpkg");
   const nightlyLinuxElement = document.querySelector("#linux-nightly");
   const nightlyReleaseDateElement = document.querySelector("#nightly_date");
 
@@ -79,9 +88,48 @@ window.onload = function changeDownloadLinks() {
       latestReleaseDateElement.innerHTML = data.tag_name + " - " + data.created_at;
       latestReleaseDateElement.href = data.html_url;
 
-      latestWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Windows);
-      latestMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.macOS);
-      latestLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Linux);
+      latestWindowsPortableElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsPortable);
+      latestWindowsInstallElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsInstall);
+      latestMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSDMG);
+      latestMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSPkg);
+//      latestMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelDMG);
+//      latestMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelPkg);
+//      latestMacOSSiliconDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconDMG);
+//      latestMacOSSiliconPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconPkg);
+      latestLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.LinuxGcc);
+    });
+  // ==================================================
+
+  // ==================================================
+  // Get download links for the nightly version
+  fetch(nightlyLink)
+    .then((response) => response.json())
+    .then((data) => {
+      nightlyReleaseDateElement.innerHTML = data.created_at;
+      nightlyReleaseDateElement.href = data.html_url;
+
+      nightlyWindowsPortableElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsPortable);
+      nightlyWindowsInstallElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsInstall);
+      nightlyMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelDMG);
+      nightlyMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelPkg);
+      nightlyMacOSSiliconDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconDMG);
+      nightlyMacOSSiliconPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconPkg);
+      nightlyLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.LinuxGcc);
+    });
+  // ==================================================
+
+  // ==================================================
+  // Get download links for plugins
+  fetch(pluginLink)
+    .then((response) => response.json())
+    .then((data) => {
+      // We combine the tag name and creation date to get something like "v1.3 - 2022".
+      pluginReleaseDateElement.innerHTML = data.tag_name + " - " + data.published_at;
+      pluginReleaseDateElement.href = data.html_url;
+
+      pluginWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsPlugin);
+      pluginMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSPlugin);
+      pluginLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.LinuxPlugin);
     });
   // ==================================================
 
@@ -95,38 +143,14 @@ window.onload = function changeDownloadLinks() {
         betaReleaseDateElement.innerHTML = data.tag_name + " - " + data.created_at;
         betaReleaseDateElement.href = data.html_url;
   
-        betaWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Windows);
-        betaMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.macOS);
-        betaLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Linux);
+        betaWindowsPortableElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsPortable);
+        betaWindowsInstallElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsInstall);
+        betaMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelDMG);
+        betaMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelPkg);
+        betaMacOSSiliconDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconDMG);
+        betaMacOSSiliconPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconPkg);
+        betaLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.LinuxGcc);
     });
   }
   // ==================================================
-
-  // ==================================================
-  // Get download links for the nightly version
-  fetch(nightlyLink)
-    .then((response) => response.json())
-    .then((data) => {
-      nightlyReleaseDateElement.innerHTML = data.created_at;
-      nightlyReleaseDateElement.href = data.html_url;
-
-      nightlyWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Windows);
-      nightlyMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.macOS);
-      nightlyLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Linux);
-    });
-  // ==================================================
-
-  // ==================================================
-  // Get download links for plugins
-  fetch(pluginLink)
-    .then((response) => response.json())
-    .then((data) => {
-      // We combine the tag name and creation date to get something like "v1.3 - 2022".
-      pluginReleaseDateElement.innerHTML = data.tag_name + " - " + data.published_at;
-      pluginReleaseDateElement.href = data.html_url;
-
-      pluginWindowsElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Windows);
-      pluginMacOSElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.macOS);
-      pluginLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, OSNames.Linux);
-    });
 };
