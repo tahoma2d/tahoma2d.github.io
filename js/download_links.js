@@ -90,12 +90,12 @@ window.onload = function changeDownloadLinks() {
 
       latestWindowsPortableElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsPortable);
       latestWindowsInstallElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.WindowsInstall);
-      latestMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSDMG);
-      latestMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSPkg);
-//      latestMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelDMG);
-//      latestMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelPkg);
-//      latestMacOSSiliconDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconDMG);
-//      latestMacOSSiliconPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconPkg);
+//      latestMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSDMG);
+//      latestMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSPkg);
+      latestMacOSIntelDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelDMG);
+      latestMacOSIntelPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSIntelPkg);
+      latestMacOSSiliconDMGElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconDMG);
+      latestMacOSSiliconPkgElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.macOSSiliconPkg);
       latestLinuxElement.href = getCorrectLinkBasedOnOS(data.assets, fileSuffix.LinuxGcc);
     });
   // ==================================================
